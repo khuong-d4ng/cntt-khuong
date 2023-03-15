@@ -27,6 +27,10 @@ body{
   background-color: transparent;
   border-radius: 7px;
 }
+ul.menu-parent{ /* kỉ niệm ngồi đến 3h sáng nhận ra padding mặc định = 40 :))*/
+  padding: 0;
+  margin: 0;
+}
 ul.menu-parent li{
   list-style: none;
   float: left;
