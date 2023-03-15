@@ -7,7 +7,7 @@
     transition: opacity 5s ease-in;
     opacity: 0;
   }
-  @media screen and (max-width: 365px) {
+  @media screen and (max-width: 330px) {
     .mobile-container{
       display: block;
       opacity: 1; 
