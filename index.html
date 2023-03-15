@@ -7,203 +7,217 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@700&display=swap');
+</head>
+<body> 
+  <div class="menu-container">
+    <div id="menu">
+      <ul class="menu-parent">
+        <li><a href="">News</a></li>
+        <li>
+          <a class="datVe" href="">Đặt vé</a>
+            <ul class="submenu">
+              <li><a href="">Trong nước</a></li>
+              <li><a href="">Nước ngoài</a></li>
+              <li><a href="">Tuor Du lịch</a></li>
+            </ul>
+        </li>
+        <li><a class="textHome" style="font-size: 30px;"href="">HOME</a></li>
+        <li><a class="lienHe" href="">Liên hệ</a>
+          <ul class="submenu">
+            <li><a class="fb" href=""><p>Facebook</p></a></li>
+            <li><a class="instagram" href=""><p>Instagram</p></a></li>
+            <li><a class="hotline" href=""><p>Hotline: 09.xxx.xxx</p></a></li>
+          </ul>
+        </li>
+        <li><a href="">About</a></li>
+      </ul>
+    </div>
+  </div>
 
-body{
-  margin: 0;
-  padding: 0;
-  font-size: 16;
-  background-image: url(https://user-images.githubusercontent.com/127299101/225132231-2c4d23fe-a7b6-4799-9a96-e47207cdf009.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: 'Montserrat', sans-serif;
-}
-
-@media screen and (max-width: 500px) {
-  body {
-    background-size: auto;
-    background-position-x: center;
-  }
-}
-
-.menu-container{
-  display: grid;
-  justify-items: center;
-}
-#menu{
-  width: auto;
-  height: 40px;
-  background-color: transparent;
-  border-radius: 7px;
-}
-ul.menu-parent li{
-  list-style: none;
-  float: left;
-}
-#menu ul.menu-parent>li>a{
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 15px;
-  padding: 0px 5px 0px 5px;
-  line-height: 39px;
+  <div class="mobile-container">
+    <div id="mini-menu">
+      <ul class="mini-menu">
+        <li>
+          <label class="datVe" for="menu-a">Đặt vé</label>
+          <input type="checkbox" id="menu-a">
+          <ul class="datVe-ul">
+            <li><a href="">Trong nước</a></li>
+            <li><a href="">Nước ngoài</a></li>
+            <li><a href="">Tuor Du lịch</a></li>
+          </ul>
+        </li>
+        <li>
+          <label class="label-lienHe" for="menu-b">Liên hệ</label>
+          <input type="checkbox" id="menu-b">
+          <ul class="lienHe-ul">
+            <li><a class="fb2" href=""><p>Facebook</p></a></li>
+            <li><a class="instagram2" href=""><p>Instagram</p></a></li>
+            <li><a class="hotline2" href=""><p>Hotline: 09.xxx.xxx</p></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
   
-}
-#menu ul.menu-parent>li:first-child>a:hover {
-  transition: ease-in-out 0.3s;
-  font-size: 18px;
-  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
-}
-#menu ul.menu-parent>li:nth-child(2)>a:hover {
-  transition: ease-in-out 0.3s;
-  font-size: 18px;
-  background-image: linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(255, 183, 0), rgb(255, 0, 0)) 1;
-}
-#menu ul.menu-parent>li:nth-child(4)>a:hover {
-  transition: ease-in-out 0.3s;
-  font-size: 18px;
-  background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(38, 255, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 4)) 1;
-}
-#menu ul.menu-parent>li:nth-child(5)>a:hover {
-  transition: ease-in-out 0.3s;
-  font-size: 18px;
-  background-image: linear-gradient(to right, rgb(68, 255, 0), rgb(255, 255, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(43, 255, 0), rgb(255, 255, 255)) 1;
-}
+  <style>
+    .mobile-container{
+      background-color: transparent;
+      margin-top: 150px;
+      position: relative;
+      right: 5%;
+      display: none;
+      transition: opacity 5s ease-in;
+      opacity: 0;
+    }
+    @media screen and (max-width: 365px) {
+      .mobile-container{
+        display: block;
+        opacity: 1; 
+      }
+      .textHome{
+        font-size: 50px !important;
+      }
+      #menu ul.menu-parent>li:nth-child(3)>a:hover {
+        transition: ease-in-out 0.4s;
+        font-size: 54px !important;
+        background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0)) 1;
+      }
+      #menu ul.menu-parent>li>a{
+        transition: ease-in 0.45s; /* Thêm transition cho element a khi không hover */
+      }
+      .datVe:hover {
+        transition: ease-in-out 0.3s;
+        font-size: 25px !important;
+        background-image: linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(to right, rgb(255, 183, 0), rgb(255, 0, 0)) 1;
+      }
+      .lienHe:hover {
+        transition: ease-in-out 0.3s;
+        font-size: 25px !important;
+        background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(38, 255, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 4)) 1;
+      }
+    }
+    /*ẩn ul để khi click vào checkbox thì mới hiện*/
+    ul.mini-menu ul {
+      display: none;
+    }
+    /*sửa và thêm font-size, weight*/
+    ul.mini-menu > li {
+      margin-top: 20px;
+      list-style: none;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    
+    /*sửa độ dài của thẻ a nhằm tạo border dưới chân khi hover*/
+    ul.mini-menu li a{
+      display: block;
+      width: auto;
+      max-width: 100px;
+    }
+    /*sửa riêng độ dài của hottliine nhằm giữ border dưới chân khớp với hotline*/
+    ul.mini-menu li a.hotline2{
+      max-width: 170px;
+    }
+    ul.mini-menu li a:hover{
+      border-bottom: solid 2px;
+    }
 
-#menu ul.menu-parent>li:nth-child(3)>a:hover {
-  transition: ease-in-out 0.4s;
-  font-size: 44px !important;
-  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0)) 1;
-}
-#menu ul.menu-parent>li>a{
-  transition: ease-in 0.45s; /* Thêm transition cho element a khi không hover */
-}
-
-#menu ul.menu-parent>li>a:not(:hover){
-  font-size: 16px;
-}
-
-ul.submenu {
-  width: 230px;
-  min-height: auto;
-  background-color: transparent;
-  position: absolute;
-  display: none;
-  padding-left: 0px;
-}
-
-ul.menu-parent > li:hover > ul.submenu {
-  display: block;
-}
-
-ul.submenu li {
-  list-style: none;
-}
-
-ul.submenu li a {
-  display: block;
-  line-height: 40px;
-  text-indent: 20px;
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  font-weight: 700;
-  padding-right: 15px;
-  line-height: 39px;
-}
-#menu ul.submenu > li > a > p{
-  padding: 0;
-  margin: 0;
-}
-#menu ul.submenu > li > a{
-  transition: ease-in 0.3s;
-}
-#menu ul.submenu > li > a:hover{
-  transition: ease-in-out 0.3s;
-  font-size: 18px;
-  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
-}
-#menu ul.submenu > li > a:not(:hover){
-  font-size: 16px;
-}
-#menu ul.submenu > li > a.fb:hover >p{
-  transition: ease-in 0.27s ;
-  background-image: linear-gradient(to right, rgb(0, 17, 255), rgb(0, 157, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 18px;
-}
-#menu ul.submenu > li > a.fb:hover{
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 0, 255)) 1;
-
-}
-
-
-#menu ul.submenu > li > a.instagram:hover > p{
-  transition: ease-in 0.27s ;
-  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(25, 29, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 18px;
-}
-#menu ul.submenu > li > a.instagram:hover{
-border-bottom: 2px solid transparent;
-border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
-}
-
-#menu ul.submenu > li > a.hotline:hover{
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(0, 132, 4), rgb(0, 255, 0)) 1;
-}
-
-
-#menu ul.submenu > li > a.hotline:hover > p{
-  transition: ease-in 0.27s ;
-  background-image: linear-gradient(to right, rgb(19, 144, 0), rgb(0, 203, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 18px;
-
-}
-#menu ul.submenu > li > a.hotline:hover{
-  border-bottom: solid 2px rgb(0, 255, 42);
-}
+    /*loại bỏ padding và margin của thẻ p trong mini menu*/
+    ul.mini-menu ul li a p{
+      padding: 0;
+      margin: 0;
+    }
+    ul.mini-menu ul > li {
+      list-style: none;
+    }
+    ul.mini-menu ul > li > a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      padding-top: 15px;
+    }
+    ul.mini-menu ul.datVe-ul > li > a:hover{
+      transition: ease-in-out 0.3s;
+      background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
+    }
+    ul.mini-menu ul.lienHe-ul > li > a.fb2:hover{
+      border-bottom: none;
+    }
+    ul.mini-menu ul.lienHe-ul > li > a.instagram2:hover{
+      border-bottom: none;
+    }
+    ul.mini-menu ul.lienHe-ul > li > a.hotline2:hover{
+      border-bottom: none;
+    }
+    /*css cho khi click vào checkbox thì ul sẽ hiện ra bằng display block*/
+    input[type="checkbox"]:checked + ul {
+      display: block;
+      border-bottom: 4px solid transparent;
+      border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
+    }
+    .mini-menu input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      appearance: none;
+    }
+    /* LÀM HOVER MỚI CHO LABEL LIEN HE*/
+    .label-lienHe:hover{    
+      transition: ease-in-out 0.3s;
+      font-size: 25px !important;
+      background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(38, 255, 0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 4)) 1;
+    }
+    a.fb2:hover >p{
+      transition: ease-in 0.27s ;
+      background-image: linear-gradient(to right, rgb(0, 17, 255), rgb(0, 157, 255));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 0, 255)) 1;
+    }
+    a.instagram2:hover > p{
+      transition: ease-in 0.27s ;
+      background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(25, 29, 255));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
+    }
+    a.hotline2:hover > p{
+      transition: ease-in 0.27s ;
+      background-image: linear-gradient(to right, rgb(19, 144, 0), rgb(0, 203, 0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, rgb(0, 132, 4), rgb(0, 255, 0)) 1;
+    }
 @media screen and (max-width: 700px) {
   /*Ẩn đi 2 element thừa*/
   #menu .menu-parent>li:first-child,
@@ -217,34 +231,6 @@ border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
     justify-content: center;
   }
 }
-
   </style>
-
-</head>
-<body>
-  <div class="menu-container">
-    <div id="menu">
-      <ul class="menu-parent">
-        <li><a href="">News</a></li>
-        <li>
-          <a href="">Đặt vé</a>
-            <ul class="submenu">
-              <li><a href="">Trong nước</a></li>
-              <li><a href="">Nước ngoài</a></li>
-              <li><a href="">Tuor Du lịch</a></li>
-            </ul>
-        </li>
-        <li><a style="font-size: 30px;"href="">HOME</a></li>
-        <li><a href="">Liên hệ</a>
-          <ul class="submenu">
-            <li><a class="fb" href=""><p>Facebook</p></a></li>
-            <li><a class="instagram" href=""><p>Instagram</p></a></li>
-            <li><a class="hotline" href=""><p>Hotline: 09.xxx.xxx</p></a></li>
-          </ul>
-        </li>
-        <li><a href="">About</a></li>
-      </ul>
-    </div>
-  </div>
 </body>
 </html>

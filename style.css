@@ -12,7 +12,7 @@ body{
 
 @media screen and (max-width: 500px) {
   body {
-    background-size: auto;
+    background-size: 500px;
     background-position-x: center;
   }
 }
@@ -41,6 +41,8 @@ ul.menu-parent li{
   line-height: 39px;
   
 }
+
+/*(1) TOÀN BỘ ĐỐNG NÀY CHỈ NHẰM TẠO HIỆU ỨNG HOVER CHO MENU*/
 #menu ul.menu-parent>li:first-child>a:hover {
   transition: ease-in-out 0.3s;
   font-size: 18px;
@@ -51,9 +53,9 @@ ul.menu-parent li{
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
 }
-#menu ul.menu-parent>li:nth-child(2)>a:hover {
+.datVe:hover {
   transition: ease-in-out 0.3s;
-  font-size: 18px;
+  font-size: 18px !important;
   background-image: linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,9 +63,9 @@ ul.menu-parent li{
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(255, 183, 0), rgb(255, 0, 0)) 1;
 }
-#menu ul.menu-parent>li:nth-child(4)>a:hover {
+.lienHe:hover {
   transition: ease-in-out 0.3s;
-  font-size: 18px;
+  font-size: 18px !important;
   background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(38, 255, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -82,6 +84,7 @@ ul.menu-parent li{
   border-image: linear-gradient(to right, rgb(43, 255, 0), rgb(255, 255, 255)) 1;
 }
 
+/*child(3) la nut HOME*/
 #menu ul.menu-parent>li:nth-child(3)>a:hover {
   transition: ease-in-out 0.4s;
   font-size: 44px !important;
@@ -99,6 +102,7 @@ ul.menu-parent li{
 #menu ul.menu-parent>li>a:not(:hover){
   font-size: 16px;
 }
+/*(1) KẾT THÚC (1)*/
 
 ul.submenu {
   width: 230px;
@@ -128,6 +132,8 @@ ul.submenu li a {
   padding-right: 15px;
   line-height: 39px;
 }
+
+/*(2) TẠO HIỆU ỨNG HOVER CHO SUBMENU CỦA ĐẶT VÉ*/
 #menu ul.submenu > li > a > p{
   padding: 0;
   margin: 0;
@@ -148,7 +154,10 @@ ul.submenu li a {
 #menu ul.submenu > li > a:not(:hover){
   font-size: 16px;
 }
-#menu ul.submenu > li > a.fb:hover >p{
+/*(2) KẾT THÚC (2)*/
+
+/*(3) TẠO HIỆU ỨNG HOVER CHO SUBMENU CỦA LIÊN HỆ*/
+a.fb:hover >p{
   transition: ease-in 0.27s ;
   background-image: linear-gradient(to right, rgb(0, 17, 255), rgb(0, 157, 255));
   -webkit-background-clip: text;
@@ -161,9 +170,7 @@ ul.submenu li a {
   border-image: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 0, 255)) 1;
 
 }
-
-
-#menu ul.submenu > li > a.instagram:hover > p{
+a.instagram:hover > p{
   transition: ease-in 0.27s ;
   background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(25, 29, 255));
   -webkit-background-clip: text;
@@ -176,24 +183,22 @@ border-bottom: 2px solid transparent;
 border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
 }
 
-#menu ul.submenu > li > a.hotline:hover{
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(0, 132, 4), rgb(0, 255, 0)) 1;
-}
-
-
-#menu ul.submenu > li > a.hotline:hover > p{
+a.hotline:hover > p{
   transition: ease-in 0.27s ;
   background-image: linear-gradient(to right, rgb(19, 144, 0), rgb(0, 203, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 18px;
-
 }
 #menu ul.submenu > li > a.hotline:hover{
-  border-bottom: solid 2px rgb(0, 255, 42);
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, rgb(0, 132, 4), rgb(0, 255, 0)) 1;
 }
+
+/*(3) KẾT THÚC (3)*/
+
+/*(4) TẠO HIỆU ỨNG ẨN ĐI CHO ELEMENT 1, 2*/
 @media screen and (max-width: 700px) {
   /*Ẩn đi 2 element thừa*/
   #menu .menu-parent>li:first-child,
@@ -207,3 +212,21 @@ border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
     justify-content: center;
   }
 }
+/*LÀM CHO 4 ELEMENT THỪA ẨN ĐI KHI MÀN QUÁ NHỎ*/
+@media screen and (max-width: 370px) {
+  /*Ẩn đi 4 element thừa khi màn qúa nhỏ hehe*/
+  #menu .menu-parent > *:not(:nth-child(3)),
+  #menu .menu-parent > *:nth-child(1),
+  #menu .menu-parent > *:nth-child(2),
+  #menu .menu-parent > *:nth-child(4),
+  #menu .menu-parent > *:nth-child(5) {
+    display: none;
+  }
+  
+  /* Căn giữa */
+  #menu .menu-parent {
+    display: flex;
+    justify-content: center;
+  }
+}
+/*(4) KẾT THÚC (4)*/

@@ -1,0 +1,171 @@
+.mobile-container{
+    background-color: transparent;
+    margin-top: 150px;
+    position: relative;
+    right: 5%;
+    display: none;
+    transition: opacity 5s ease-in;
+    opacity: 0;
+  }
+  @media screen and (max-width: 365px) {
+    .mobile-container{
+      display: block;
+      opacity: 1; 
+    }
+    .textHome{
+      font-size: 50px !important;
+    }
+    #menu ul.menu-parent>li:nth-child(3)>a:hover {
+      transition: ease-in-out 0.4s;
+      font-size: 54px !important;
+      background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0)) 1;
+    }
+    #menu ul.menu-parent>li>a{
+      transition: ease-in 0.45s; /* Thêm transition cho element a khi không hover */
+    }
+    .datVe:hover {
+      transition: ease-in-out 0.3s;
+      font-size: 25px !important;
+      background-image: linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, rgb(255, 183, 0), rgb(255, 0, 0)) 1;
+    }
+    .lienHe:hover {
+      transition: ease-in-out 0.3s;
+      font-size: 25px !important;
+      background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(38, 255, 0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 4)) 1;
+    }
+  }
+  /*ẩn ul để khi click vào checkbox thì mới hiện*/
+  ul.mini-menu ul {
+    display: none;
+  }
+  /*sửa và thêm font-size, weight*/
+  ul.mini-menu > li {
+    margin-top: 20px;
+    list-style: none;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  /*sửa độ dài của thẻ a nhằm tạo border dưới chân khi hover*/
+  ul.mini-menu li a{
+    display: block;
+    width: auto;
+    max-width: 100px;
+  }
+  /*sửa riêng độ dài của hottliine nhằm giữ border dưới chân khớp với hotline*/
+  ul.mini-menu li a.hotline2{
+    max-width: 170px;
+  }
+  ul.mini-menu li a:hover{
+    border-bottom: solid 2px;
+  }
+
+  /*loại bỏ padding và margin của thẻ p trong mini menu*/
+  ul.mini-menu ul li a p{
+    padding: 0;
+    margin: 0;
+  }
+  ul.mini-menu ul > li {
+    list-style: none;
+  }
+  ul.mini-menu ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding-top: 15px;
+  }
+  ul.mini-menu ul.datVe-ul > li > a:hover{
+    transition: ease-in-out 0.3s;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
+  }
+  ul.mini-menu ul.lienHe-ul > li > a.fb2:hover{
+    border-bottom: none;
+  }
+  ul.mini-menu ul.lienHe-ul > li > a.instagram2:hover{
+    border-bottom: none;
+  }
+  ul.mini-menu ul.lienHe-ul > li > a.hotline2:hover{
+    border-bottom: none;
+  }
+  /*css cho khi click vào checkbox thì ul sẽ hiện ra bằng display block*/
+  input[type="checkbox"]:checked + ul {
+    display: block;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
+  }
+  .mini-menu input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+  }
+  /* LÀM HOVER MỚI CHO LABEL LIEN HE*/
+  .label-lienHe:hover{    
+    transition: ease-in-out 0.3s;
+    font-size: 25px !important;
+    background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(38, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 4)) 1;
+  }
+  a.fb2:hover >p{
+    transition: ease-in 0.27s ;
+    background-image: linear-gradient(to right, rgb(0, 17, 255), rgb(0, 157, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 0, 255)) 1;
+  }
+  a.instagram2:hover > p{
+    transition: ease-in 0.27s ;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(25, 29, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
+  }
+  a.hotline2:hover > p{
+    transition: ease-in 0.27s ;
+    background-image: linear-gradient(to right, rgb(19, 144, 0), rgb(0, 203, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 132, 4), rgb(0, 255, 0)) 1;
+  }
+@media screen and (max-width: 700px) {
+/*Ẩn đi 2 element thừa*/
+#menu .menu-parent>li:first-child,
+#menu .menu-parent>li:last-child {
+  display: none;
+}
+
+/* Căn giữa */
+#menu .menu-parent {
+  display: flex;
+  justify-content: center;
+}
+}
