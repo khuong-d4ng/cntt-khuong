@@ -5,24 +5,23 @@
     right: 5%;
     display: none;
   }
-  @media screen and (max-width: 505px) {
-    .mobile-container{
-      display: block;
+@media screen and (max-width: 505px) {.mobile-container{
+    display: block;
      
-    }
-    .textHome{
-      font-size: 50px !important;
-    }
-    #menu ul.menu-parent>li:nth-child(3)>a:hover {
-      transition: ease-in-out 0.4s;
-      font-size: 54px !important;
-      background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      border-bottom: 2px solid transparent;
-      border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0)) 1;
-    }
+  }
+  .textHome{
+    font-size: 50px !important;
+}
+#menu ul.menu-parent>li:nth-child(3)>a:hover {
+  transition: ease-in-out 0.4s;
+  font-size: 54px !important;
+  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0)) 1;
+}
     #menu ul.menu-parent>li>a{
       transition: ease-in 0.45s; /* Thêm transition cho element a khi không hover */
     }
@@ -105,17 +104,23 @@
   ul.mini-menu ul.lienHe-ul > li > a.hotline2:hover{
     border-bottom: none;
   }
-  /*css cho khi click vào checkbox thì ul sẽ hiện ra bằng display block*/
-  input[type="checkbox"]:checked + ul {
-    display: block;
-    border-bottom: 4px solid transparent;
-    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
-  }
-  .mini-menu input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    appearance: none;
-  }
+
+/*css cho khi click vào checkbox thì ul sẽ hiện ra bằng display block*/
+input[type="checkbox"]:checked + ul {
+  display: block;
+} 
+
+/*TẠO BORDER DƯỚI CHÂN UL ĐẶT VÉ KHI CLICK VÀO*/
+input[type="checkbox"]:checked + ul.datVe-ul {
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
+}
+
+.mini-menu input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
   /* LÀM HOVER MỚI CHO LABEL LIEN HE*/
   .label-lienHe:hover{    
     transition: ease-in-out 0.3s;
@@ -154,6 +159,8 @@
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(to right, rgb(0, 132, 4), rgb(0, 255, 0)) 1;
   }
+
+
 @media screen and (max-width: 765px) {
 /*Ẩn đi 2 element thừa*/
 #menu .menu-parent>li:first-child,
