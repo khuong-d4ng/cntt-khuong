@@ -577,3 +577,127 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
 }
 
 
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+
+.right-section-home {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.diaDiem-card-container-rSection {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+}
+.diaDiem-card-rSection {
+  position: relative;
+  list-style: none;
+  gap: 30px;
+  height: 100%;
+  width: 200px;
+  transition: .3s ease;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.diaDiem-card-rSection:before {
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+.diaDiem-card-background-rSection {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  background-size: 350px;
+  background-position: center;
+  filter: brightness(.9) saturate(1) contrast(1);
+  transform-origin: bottom;
+  transform: scale(1) translateZ(0);
+  transition: .3s ease;
+}
+.diaDiem-card-rSection:hover .diaDiem-card-background-rSection{
+  transform: scale(1.1) translateZ(0);
+  background-size: 260px;
+}
+.diaDiem-card-container-rSection:hover .card:not(:hover) {
+  transform: scale(.9);
+}
+.diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
+.diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
+  filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+.diaDiem-content-rSection {
+  top: 50%;
+  left: 0;
+  padding: 25px;
+  position: absolute;
+}
+.diaDiem-card-gioiThieu-rSection {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.diaDiem-card-heading {
+  color: #fff;
+  font-size: 25px;
+  line-height: 1;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
+@media screen and (max-width: 705px){
+  .diaDiem-card-rSection{
+    width: 190px;
+  }
+  .diaDiem-card-heading{
+    font-size: 18px;
+  }
+  .diaDiem-card-gioiThieu-rSection{
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 655px){
+  .diaDiem-card-rSection{
+    width: 160px;
+  }
+  .diaDiem-card-heading{
+    font-size: 18px;
+  }
+  .diaDiem-card-gioiThieu-rSection{
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 555px){
+  .diaDiem-card-rSection{
+    width: 145px;
+  }
+  .diaDiem-card-heading{
+    font-size: 18px;
+  }
+  .diaDiem-card-gioiThieu-rSection{
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 515px){
+  .diaDiem-card-rSection{
+    width: 130px;
+  }
+  .diaDiem-card-heading{
+    font-size: 18px;
+  }
+  .diaDiem-card-gioiThieu-rSection{
+    font-size: 9px;
+  }
+}

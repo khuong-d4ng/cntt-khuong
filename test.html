@@ -1,110 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <meta name="author" content="Pham Dang Khuong">
-  
-
-  <link rel="stylesheet" href="./js/scripts.js">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./mobile-responsive/mobile-style.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body> 
-
-  <header class="menu-container">
-    <nav id="menu">
-      <ul class="menu-parent">
-        <li><a href="">News</a></li>
-        <li>
-          <a class="datVe" href="">Đặt vé</a>
-            <ul class="submenu">
-              <li><a href="">Trong nước</a></li>
-              <li><a href="">Nước ngoài</a></li>
-              <li><a href="">Tuor Du lịch</a></li>
-            </ul>
-        </li>
-        <li><a class="textHome" style="font-size: 30px;"href="">HOME</a></li>
-        <li><a class="lienHe" href="">Liên hệ</a>
-          <ul class="submenu">
-            <li><a class="fb" href=""><p>Facebook</p></a></li>
-            <li><a class="instagram" href=""><p>Instagram</p></a></li>
-            <li><a class="hotline" href=""><p>Hotline: 09.xxx.xxx</p></a></li>
-          </ul>
-        </li>
-        <li><a href="">About</a></li>
-      </ul>
-    </nav>
-  </header>
-<!--LÀM RA XONG MỚI NHẬN RA LÀ CHỈ CÓ MOBILE MỚI NHÌN ĐC CÁI RESPONSIVE CÒN TRÊN PC THÌ KO CẦN THIẾT-->
-  <div class="mobile-container">
-    <div id="mini-menu">
-      <ul class="mini-menu">
-        <li>
-          <label class="datVe" for="menu-a">Đặt vé</label>
-          <input type="checkbox" id="menu-a">
-          <ul class="datVe-ul">
-            <li><a href="">Trong nước</a></li>
-            <li><a href="">Nước ngoài</a></li>
-            <li><a href="">Tuor Du lịch</a></li>
-          </ul>
-        </li>
-        <li>
-          <label class="label-lienHe" for="menu-b">Liên hệ</label>
-          <input type="checkbox" id="menu-b">
-          <ul class="lienHe-ul">
-            <li><a class="fb2" href=""><p>Facebook</p></a></li>
-            <li><a class="instagram2" href=""><p>Instagram</p></a></li>
-            <li><a class="hotline2" href=""><p>Hotline: 09.xxx.xxx</p></a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <table border="1" class="table-tourDulich">
-    <tr>
-      <td width="80%" class="container-diaDiem">
-        <a href="" class="card-hoverCard diaDiem1">
-          <h2 id="text-diaDiem1">Hang Sơn Đoòng</h2>
-          <h3 class="tourHot tourHot1">TOUR HOT</h3>
-          <img class="ratingStar" width="120px" src="https://th.bing.com/th/id/R.206f79e9a84611b44999c2d396cbcad9?rik=NSMVbw201fY75g&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2f5-stars-transparent-background%2f5-stars-transparent-background-20.png&ehk=YzzJvlI206uGYotlrSpSdCsEh5jsWkGe3O3%2fK%2fY5KDA%3d&risl=&pid=ImgRaw&r=0" alt="">
-          <p class="gioiThieuDiaDiem1">Khám phá kỳ quan thiên nhiên lớn nhất thế giới tại Việt Nam - Hang Sơn Đoòng. Hãy chuẩn bị cho chuyến hành trình đáng nhớ nhất trong đời
-          </p>
-          <address class="vitri vitri1">Quảng Bình, Việt Nam</address>
-          <h4 class="loTrinh">Lộ trình: 6 ngày</h4>
-          <div class="anh-diaDiem1"></div>
-          <h5 class="price-diaDiem price-diaDiem1">72.000.000VND</h5>
-          <button class="button-diaDiem1"></button><h5 class="bookNow bookNow1">BOOK NOW</h5>
-        </a>
-      </td>
-
-    </tr>
-
-    <tr>
-      <td class="container-diaDiem">
-        <a href="" class="card-hoverCard diaDiem2">
-          <h2 id="text-diaDiem2">Đà Nẵng</h2>
-          <h3 class="tourHot tourHot2">TOUR HOT</h3>
-          <img class="ratingStar" width="120px" src="https://th.bing.com/th/id/R.206f79e9a84611b44999c2d396cbcad9?rik=NSMVbw201fY75g&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2f5-stars-transparent-background%2f5-stars-transparent-background-20.png&ehk=YzzJvlI206uGYotlrSpSdCsEh5jsWkGe3O3%2fK%2fY5KDA%3d&risl=&pid=ImgRaw&r=0" alt="">
-          <p class="gioiThieuDiaDiem1">Là một trong ba trung tâm du lịch lớn trên bản đồ du lịch Việt Nam, Đà Nẵng thành phố biển xinh đẹp hiền hòa. Một dấu ấn.
-          </p>
-          <address class="vitri vitri2">Đà Nẵng, Việt Nam</address>
-          <h4 class="loTrinh">Lộ trình: 6 ngày</h4>
-          <div class="anh-diaDiem2"></div>
-          <h5 class="price-diaDiem price-diaDiem2">12.000.000VND</h5>
-          <button class="button-diaDiem2"></button><h5 class="bookNow bookNow2">BOOK NOW</h5>
-        </a>
-      </td>
-    </tr>
-  <</table>>
-
 <style>
-
-</style>
-
+    .right-section-home {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.diaDiem-card-container-rSection {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+}
+.diaDiem-card-rSection {
+  position: relative;
+  list-style: none;
+  gap: 30px;
+  height: 100%;
+  width: 170px;
+  transition: .3s ease;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.diaDiem-card-rSection:before {
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+.diaDiem-card-background-rSection {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  background-size: 350px;
+  background-position: center;
+  filter: brightness(.9) saturate(1) contrast(1);
+  transform-origin: bottom;
+  transform: scale(1) translateZ(0);
+  transition: .3s ease;
+}
+.diaDiem-card-rSection:hover .diaDiem-card-background-rSection{
+  transform: scale(1.15) translateZ(0);
+  background-size: 260px;
+}
+.diaDiem-card-container-rSection:hover .card:not(:hover) {
+  transform: scale(.9);
+}
+.diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
+.diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
+  filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+.diaDiem-content-rSection {
+  top: 50%;
+  left: 0;
+  padding: 25px;
+  position: absolute;
+}
+.diaDiem-card-gioiThieu-rSection {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.diaDiem-card-heading {
+  color: #fff;
+  font-size: 25px;
+  line-height: 1;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
+</style>h
+<body>
+    <section class="right-section-home">
+        <div class="diaDiem-card-container-rSection">
+          <div class="diaDiem-card-rSection">
+            <div class="diaDiem-card-background-rSection" style="background-image: url(/image/2bt1aj9.webp);"></div>
+            <div class="diaDiem-content-rSection">
+              <div class="diaDiem-card-gioiThieu-rSection">oversize</div>
+              <h3 class="diaDiem-card-heading">No Plans For Today Tee</h3>
+            </div>
+          </div>
+          <div class="diaDiem-card-rSection">
+            <div class="diaDiem-card-background-rSection" style="background-image: url(/image/CauRong_DaNang.webp);"></div>
+            <div class="diaDiem-content-rSection">
+              <div class="diaDiem-card-gioiThieu-rSection">hoodie</div>
+              <h3 class="diaDiem-card-heading">Boneless Hoodie</h3>
+            </div>
+          </div>
+          <div class="diaDiem-card-rSection">
+            <div class="diaDiem-card-background-rSection" style="background-image: url(/image/hoang-dang-9KAKl4vuVYI-unsplash.jpg);"></div>
+            <div class="diaDiem-content-rSection">
+              <div class="diaDiem-card-gioiThieu-rSection">polo</div>
+              <h3 class="diaDiem-card-heading">Cream Polo Sweat</h3>
+            </div>
+          </div>
+        </div>
+      </section>
 </body>
-</html>
+</html> 
+  
