@@ -1,113 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-<style>
-    .right-section-home {
-  display: flex;
-  min-height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.diaDiem-card-container-rSection {
-  display: flex;
-  height: 400px;
-  width: 100%;
-  justify-content: center;
-}
-.diaDiem-card-rSection {
-  position: relative;
-  list-style: none;
-  gap: 30px;
-  height: 100%;
-  width: 170px;
-  transition: .3s ease;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-.diaDiem-card-rSection:before {
-  content: "";
-  display: block;
-  padding-bottom: 150%;
-  width: 100%;
-}
-.diaDiem-card-background-rSection {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 0;
-  border-radius: 20px;
-  background-size: 350px;
-  background-position: center;
-  filter: brightness(.9) saturate(1) contrast(1);
-  transform-origin: bottom;
-  transform: scale(1) translateZ(0);
-  transition: .3s ease;
-}
-.diaDiem-card-rSection:hover .diaDiem-card-background-rSection{
-  transform: scale(1.15) translateZ(0);
-  background-size: 260px;
-}
-.diaDiem-card-container-rSection:hover .card:not(:hover) {
-  transform: scale(.9);
-}
-.diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
-.diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
-  filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
-}
-.diaDiem-content-rSection {
-  top: 50%;
-  left: 0;
-  padding: 25px;
-  position: absolute;
-}
-.diaDiem-card-gioiThieu-rSection {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 5px;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-.diaDiem-card-heading {
-  color: #fff;
-  font-size: 25px;
-  line-height: 1;
-  text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
-}
-</style>h
 <body>
-    <section class="right-section-home">
-        <div class="diaDiem-card-container-rSection">
-          <div class="diaDiem-card-rSection">
-            <div class="diaDiem-card-background-rSection" style="background-image: url(/image/2bt1aj9.webp);"></div>
-            <div class="diaDiem-content-rSection">
-              <div class="diaDiem-card-gioiThieu-rSection">oversize</div>
-              <h3 class="diaDiem-card-heading">No Plans For Today Tee</h3>
-            </div>
-          </div>
-          <div class="diaDiem-card-rSection">
-            <div class="diaDiem-card-background-rSection" style="background-image: url(/image/CauRong_DaNang.webp);"></div>
-            <div class="diaDiem-content-rSection">
-              <div class="diaDiem-card-gioiThieu-rSection">hoodie</div>
-              <h3 class="diaDiem-card-heading">Boneless Hoodie</h3>
-            </div>
-          </div>
-          <div class="diaDiem-card-rSection">
-            <div class="diaDiem-card-background-rSection" style="background-image: url(/image/hoang-dang-9KAKl4vuVYI-unsplash.jpg);"></div>
-            <div class="diaDiem-content-rSection">
-              <div class="diaDiem-card-gioiThieu-rSection">polo</div>
-              <h3 class="diaDiem-card-heading">Cream Polo Sweat</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-</body>
-</html> 
+  <div class="search__container">
+    <label class="search__label">Tìm kiếm</label>
+    <input placeholder="Nhập địa điểm bạn muốn tới!!" class="search__bar" name="text" type="text" style="width: 95%;">
+    <p class="input__description">Hãy bắt đầu hành trình của bạn ngay hôm nay</p>
+  </div>
   
+</body>
+</html>
+
+ <style>
+  .search__container {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.search__container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(25px);
+  }
+
+.search__label {
+  display: block;
+  margin-left: 0.4em;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.input__description {
+  font-size: 0.6em;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.search__bar {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.6em;
+  padding-left: 0.9em;
+  border-radius: 20px;
+  background: #fff;
+  transition: background 300ms, color 300ms;
+}
+
+.search__bar:hover,.search__bar:focus {
+  background: rgba(246, 202, 217, 0.463);
+  color: #fff;
+}
+ </style>

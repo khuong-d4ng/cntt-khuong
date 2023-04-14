@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./mobile-responsive/mobile-style.css">
 
+
+
 </head>
 <body> 
 
@@ -30,8 +32,8 @@
         <li><a class="textHome" style="font-size: 30px;"href="">HOME</a></li>
         <li><a class="lienHe" href="">Liên hệ</a>
           <ul class="submenu">
-            <li><a class="fb" href=""><p>Facebook</p></a></li>
-            <li><a class="instagram" href=""><p>Instagram</p></a></li>
+            <li><a class="fb" href="https://www.facebook.com/cuutoi.khg"><p>Facebook</p></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/khg.help/"><p>Instagram</p></a></li>
             <li><a class="hotline" href=""><p>Hotline: 09.xxx.xxx</p></a></li>
           </ul>
         </li>
@@ -40,7 +42,7 @@
     </nav>
   </header>
 <!--LÀM RA XONG MỚI NHẬN RA LÀ CHỈ CÓ MOBILE MỚI NHÌN ĐC CÁI RESPONSIVE CÒN TRÊN PC THÌ KO CẦN THIẾT-->
-  <div class="mobile-container">
+<!-- <div class="mobile-container">
     <div id="mini-menu">
       <ul class="mini-menu">
         <li>
@@ -56,14 +58,58 @@
           <label class="label-lienHe" for="menu-b">Liên hệ</label>
           <input type="checkbox" id="menu-b">
           <ul class="lienHe-ul">
-            <li><a class="fb2" href=""><p>Facebook</p></a></li>
-            <li><a class="instagram2" href=""><p>Instagram</p></a></li>
+            <li><a class="fb2" href="https://www.facebook.com/cuutoi.khg"><p>Facebook</p></a></li>
+            <li><a class="instagram2" href="https://www.instagram.com/khg.help/"><p>Instagram</p></a></li>
             <li><a class="hotline2" href=""><p>Hotline: 09.xxx.xxx</p></a></li>
           </ul>
         </li>
       </ul>
     </div>
   </div>
+-->
+
+    <div class="gallery-container">
+      <div class="gallery">
+        <div class="container-anh-banner anh-giu-lailai">
+          <a class="banner-anh " href="#">
+            <img class="anh-namTrong-banner" src="/image/2bt1aj9.webp" alt="Ảnh 1">
+          </a>
+          <h3 class="banner-title">text</h3>
+        </div>
+        <div class="container-anh-banner anh-can-xoa">
+          <a class="banner-anh " href="#">
+            <img class="anh-namTrong-banner" src="/image/CauRong_DaNang.webp" alt="Ảnh 2">
+          </a>
+          <h3 class="banner-title">text</h3>
+        </div>
+        <div class="container-anh-banner anh-can-xoa">
+          <a class="banner-anh " href="#">
+            <img class="anh-namTrong-banner" src="/image/hoang-dang-9KAKl4vuVYI-unsplash.jpg" alt="Ảnh 3">
+          </a>
+          <h3 class="banner-title">text</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="search__container__containerCanGiua">
+      <div class="search__container">
+        <label class="search__label">Tìm kiếm</label>
+        <input placeholder="Nhập địa điểm bạn muốn tới!!" class="search__bar" name="text" type="text" style="width: 95%;">
+        <p class="input__description">Hãy bắt đầu hành trình của bạn ngay hôm nay</p>
+      </div>
+    </div>
+
+    <div class="container-heading-hotTour" style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 20rem;">
+      <p class="heading-hotTour-p" style="font-size: 24px; text-align: center; margin-top: 5px;">HÃY LÊN KẾ HOẠCH NGAY NÀO!</p>
+      <div class="container-heading-child-hotTour" style="display: flex; justify-content: center; align-items: center;">
+        <h2 class="heading-hotTour" style="font-size: 34px; text-align: center;">Where to next?</h2>
+      </div>
+    </div>
+    
+    <style>
+      
+    </style>
+
   <div class="chart-bigcontainer">
 
   <div class="left-home-tourDulich">
@@ -130,24 +176,63 @@
   </section>
 
   </div>
+
 <style>
   .chart-bigcontainer{
     position: relative;
-    top: 200px;
     display: flex;
     flex-wrap: wrap;
-    border: solid 3px blue;
     width: 100%;
     justify-content: space-around;
   }
   .right-container-home{
     
     flex-basis: 800px;
-    border: solid 3px red;
     height: 500px;
   }
 
 </style>
 
 </body>
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+  var anhCanXoaElements = document.querySelectorAll(".anh-can-xoa");
+  var divToResize = document.getElementsByClassName("anh-giu-lailai")[0];
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  function hideAnhCanXoaElements() {
+    for (var i = 0; i < anhCanXoaElements.length; i++) {
+      anhCanXoaElements[i].style.display = "none";
+    }
+    if (divToResize) {
+        divToResize.style.width = "100%";
+    }
+  }
+
+  function showAnhCanXoaElements() {
+    for (var i = 0; i < anhCanXoaElements.length; i++) {
+      anhCanXoaElements[i].style.display = "";
+    }
+    if (divToResize) {
+        divToResize.style.width = "33.33%";
+    }
+  }
+
+  function checkScreenWidth() {
+    screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (screenWidth < 500) {
+      hideAnhCanXoaElements();
+    } else {
+      showAnhCanXoaElements();
+    }
+  }
+
+  checkScreenWidth();
+
+  window.addEventListener("resize", function() {
+    checkScreenWidth();
+  });
+});
+</script>
+
 </html>

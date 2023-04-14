@@ -18,10 +18,17 @@ body{
   }
 }
 
-.menu-container{
+.menu-container {
+  position: absolute;
+  z-index: 1000;
+  top: 5vh; /* Đặt khoảng cách từ cạnh trên của viewport là 5% chiều cao của viewport */
+  left: 0;
+  right: 0;
   display: grid;
   justify-items: center;
+  align-items: center;
 }
+
 #menu{
   width: auto;
   height: 40px;
@@ -38,7 +45,7 @@ ul.menu-parent li{
 }
 #menu ul.menu-parent>li>a{
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 700;
   margin: 15px;
@@ -131,7 +138,7 @@ ul.submenu li a {
   line-height: 40px;
   text-indent: 20px;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 700;
   padding-right: 20px;
@@ -184,8 +191,8 @@ a.instagram:hover > p{
   font-size: 18px;
 }
 #menu ul.submenu > li > a.instagram:hover{
-border-bottom: 2px solid transparent;
-border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
 }
 
 a.hotline:hover > p{
@@ -236,6 +243,15 @@ a.hotline:hover > p{
 }
 /*(4) KẾT THÚC (4)*/
 
+
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+
+
 /*(2.1) ĐỊA ĐIỂM 1(2.1)*/
 .left-home-tourDulich{ /*CHỨA 2 CÁI TOUR HOT*/
   display: flex;
@@ -265,6 +281,77 @@ a.hotline:hover > p{
       margin: 10px;
     } 
   }
+}
+
+
+/*_________________THANH TÌM KIẾM________________________*/
+/*_________________THANH TÌM KIẾM________________________*/
+/*_________________THANH TÌM KIẾM________________________*/
+/*_________________THANH TÌM KIẾM________________________*/
+/*_________________THANH TÌM KIẾM________________________*/
+/*_________________THANH TÌM KIẾM________________________*/
+
+.search__container__containerCanGiua{
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Căn giữa ngang */
+  align-items: center; /* Căn giữa dọc */
+}
+.search__container {
+  width: 80%;
+  max-width: none ;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.search__container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(25px);
+  }
+
+.search__label {
+  display: block;
+  margin-left: 0.4em;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.input__description {
+  font-size: 0.6em;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.848);
+}
+
+.search__bar {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.6em;
+  padding-left: 0.9em;
+  border-radius: 20px;
+  background: #fff;
+  transition: background 300ms, color 300ms;
+}
+
+.search__bar:hover,.search__bar:focus {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 5px 0px rgba(250, 146, 194, 0.749);
+  color: #fff;
 }
 
 .container-diaDiem .card-hoverCard{
@@ -657,7 +744,14 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
   line-height: 1;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
 }
+
 /*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
+/*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
+/*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
+/*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
+/*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
+/*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
+
 @media screen and (max-width: 705px){
   .diaDiem-card-rSection{
     width: 190px;
@@ -704,3 +798,63 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
 }
 
 /*---------------------------------------------------*/
+
+/* Container chứa gallery */
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 705px){
+  .anh-namTrong-banner{
+    min-height: 350px;
+  }
+ 
+  
+}
+/* Gallery */
+.gallery {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+/* Thẻ <a> chứa ảnh */
+.gallery a {
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  width: 33.33%;
+  max-height: 100%;
+  overflow: hidden;
+  filter: brightness(0.8) contrast(1.2); /* Áp dụng hiệu ứng tối ảnh */
+  transition: filter 0.5s ease; /* Thêm hiệu ứng chuyển đổi cho filter */
+  position: relative; /* Thêm position relative */
+}
+/* Ảnh trong thẻ <a> */
+.gallery .anh-namTrong-banner {
+  width: 100%;
+  height: 110%;
+  max-height: 120vh;
+  object-fit: cover;
+}
+/* Hover hiệu ứng */
+.gallery a:hover {
+  filter: brightness(1) contrast(1); /* Bỏ hiệu ứng tối ảnh khi hover */
+}
+
+
+/* Thêm CSS cho container-anh-banner */
+.container-anh-banner {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 33.33%; /* Độ rộng 33.33% cho mỗi container */
+}
+
+.banner-title{
+  position: absolute;
+  bottom: 5%;
+
+  color: #fff;
+
+}
