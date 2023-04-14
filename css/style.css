@@ -723,7 +723,7 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
 }
 .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
 .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
-  filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+  filter: brightness(.5) saturate(.15) contrast(1.1) blur(5px);
 }
 .diaDiem-content-rSection {
   top: 50%;
@@ -855,7 +855,7 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
 .banner-title{
   position: absolute;
   bottom: 5%;
-
+  left: 5%;
   color: #fff;
 
 }
