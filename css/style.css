@@ -271,44 +271,7 @@ a.hotline:hover > p{
 /*(4) KẾT THÚC (4)*/
 
 
-/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
-/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
-/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
-/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
-/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
-/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
 
-
-/*(2.1) ĐỊA ĐIỂM 1(2.1)*/
-.left-home-tourDulich{ /*CHỨA 2 CÁI TOUR HOT*/
-  display: flex;
-  flex-direction: column;
-}
-.container-diaDiem{ /*CÁI CHỨA TOUR HOT*/
-  position: relative;
-  width: 480px;
-  margin-top: 10px;
-  padding: 0;
-}
-/*MÀN HÌNH NHỎ HƠN 1300PX THÌ CHUYỂN DIRECTION THÀNH ROW*/
-@media screen and (max-width: 1300px) {
-  .left-home-tourDulich{
-    display: flex;
-    flex-direction: row;
-  }
-  .container-diaDiem{
-    margin: 10px;
-  } /*THÀNH COLUM*/
-  @media screen and (max-width: 1000px) {
-    .left-home-tourDulich{
-      display: flex;
-      flex-direction: column;
-    }
-    .container-diaDiem{
-      margin: 10px;
-    } 
-  }
-}
 
 
 /*_________________THANH TÌM KIẾM________________________*/
@@ -391,8 +354,48 @@ a.hotline:hover > p{
 /*===============HOT TOUR TỪ ĐÂY===========================*/
 /*===============HOT TOUR TỪ ĐÂY===========================*/
 
-@media screen and (min-width: 500px) {
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
+/*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
 
+
+/*(2.1) ĐỊA ĐIỂM 1(2.1)*/
+
+.container-diaDiem{ /*CÁI CHỨA TOUR HOT*/
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0;
+}
+/*MÀN HÌNH NHỎ HƠN 1300PX THÌ CHUYỂN DIRECTION THÀNH ROW*/
+@media screen and (max-width: 1300px) {
+  .left-home-tourDulich{
+    display: flex;
+    flex-direction: row;
+  }
+  .container-diaDiem{
+    margin: 10px;
+  } /*THÀNH COLUM*/
+  @media screen and (max-width: 1000px) {
+    .left-home-tourDulich{
+      display: flex;
+      flex-direction: column;
+    }
+    .container-diaDiem{
+      margin: 10px;
+    } 
+  }
+}
+
+
+@media screen and (min-width: 500px) {
+.left-home-tourDulich{ /*CHỨA 2 CÁI TOUR HOT*/
+  display: flex;
+  flex-direction: column;
+}
 .container-diaDiem .card-hoverCard{
 width: 480px;
 height: 235px;
@@ -692,9 +695,14 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
   /*SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR*/
 
 @media screen and (max-width: 500px) { /*cai nay la mobile ne cha*/
+  .left-home-tourDulich{ /*CHỨA 2 CÁI TOUR HOT*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .container-diaDiem{
     margin: 0;
-
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -712,13 +720,13 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     margin-bottom: 50px;
     }
     
-    /*TIÊU ĐỀ CỦA TOUR*/
+    /*TIÊU ĐỀ CỦA TOUR Y LA CAI DIA DIEM KIEU HANG SON DONG Y*/
     .container-diaDiem .card-hoverCard h2{
     z-index: 99;
     position: absolute;
   
     color: rgb(247, 242, 242);
-    bottom: 40%;
+    bottom: 45%;
     transition: ease .9s;
     
     }
@@ -843,7 +851,7 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
       width: 455px;
       border-radius: 255px;
   
-      transform: translateY(-60%);
+      transform: translateY(-55%);
       opacity: .6;
       transition: ease .5s;
     }
@@ -1120,7 +1128,7 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
 
 /*==============================================*/
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   .right-section-home {
     display: flex;
     min-height: 100%;
