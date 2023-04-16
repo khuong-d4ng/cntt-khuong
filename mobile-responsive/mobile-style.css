@@ -21,9 +21,10 @@
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0)) 1;
 }
-    #menu ul.menu-parent>li>a{
-      transition: ease-in 0.45s; /* Thêm transition cho element a khi không hover */
-    }
+    
+#menu ul.menu-parent>li>a{
+      transition: ease-in 0.45s; /* Thêm transition cho element a khi không hover */  
+}
     .datVe:hover {
       transition: ease-in-out 0.3s;
       font-size: 25px !important;
@@ -43,8 +44,8 @@
       background-clip: text;
       border-bottom: 2px solid transparent;
       border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 4)) 1;
-    }
-  }
+}
+  
   /*ẩn ul để khi click vào checkbox thì mới hiện*/
   ul.mini-menu ul {
     display: none;
@@ -174,4 +175,3 @@ input[type="checkbox"]:checked + ul.datVe-ul {
 }
 }
 
-#menu .me

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@700&display=swap');
-
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 body{
   margin: 0;
   padding: 0;
@@ -13,7 +17,7 @@ body{
 
 @media screen and (max-width: 700px) {
   body {
-    background-size: 500px;
+    background-size: 700px;
     background-position-x: center;
     background-attachment: fixed;
   }
@@ -277,6 +281,7 @@ a.hotline:hover > p{
 
 /*(2.1) ĐỊA ĐIỂM 1(2.1)*/
 .left-home-tourDulich{ /*CHỨA 2 CÁI TOUR HOT*/
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -387,18 +392,23 @@ a.hotline:hover > p{
 /*===============HOT TOUR TỪ ĐÂY===========================*/
 /*===============HOT TOUR TỪ ĐÂY===========================*/
 
+@media screen and (min-width: 400px) {
 
 .container-diaDiem .card-hoverCard{
 width: 480px;
 height: 235px;
+border-radius: 25px;
+
 position: relative;
+
 background-color: transparent; /* đổi background thành transparent */
 overflow: hidden;
-border-radius: 25px;
+
 display: flex;
 justify-content: center;
 align-items: center;
-backdrop-filter: blur(40px); /* áp dụng hiệu ứng blur với độ mờ là 10px */
+
+backdrop-filter: blur(40px); /* áp dụng hiệu ứng blur với độ mờ là 40px */
 }
 
 /*TIÊU ĐỀ CỦA TOUR*/
@@ -468,9 +478,11 @@ z-index: 101;
 left: 370px;
 top: 145px;
 }
-
+.container-diaDiem .card-hoverCard:hover{
+  
+}
 /*CHỊU?*/
-.container-diaDiem .card-hoverCard > h5{
+.container-diaDiem .card-hoverCard > h5.price-diaDiem{
 position: absolute;
 right: 180px;
 }
@@ -508,6 +520,12 @@ address.vitri1{
 top: 190px;
 left: 190px;
 }
+/*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
+address.vitri2{
+  top: 190px;
+  right: 65px;
+}
+
 /*KHI HOVER VỊ TRÍ SẼ BIẾN MẤT*/
 .container-diaDiem .card-hoverCard:hover address.vitri{
 opacity: 0;
@@ -563,29 +581,35 @@ transition: .3s ease;
   transition: ease .7s;
 }
 
-/*CHỮ BOOKNOW*/
+/*------------------------------------
+              CHỮ BOOKNOW
+------------------------------------*/
 .container-diaDiem .card-hoverCard h5.bookNow{
 color: rgb(7, 59, 108);
-position: absolute;
-left: 385px;
-top: 192px;
 width: 70px;
 margin: 0;
-padding: 0px;
+padding: 2px 0px 0px 8px;
+
 opacity: 1;
 font-size: 11px;
 transition: ease .9s;
 }
-/*HIỆU ỨNG HOVER CỦA BOOK NOW*/
+/*------------------------------------
+HIỆU ỨNG HOVER CỦA BOOK NOW
+------------------------------------*/
 .container-diaDiem .card-hoverCard:hover h5.bookNow{
   scale: 1.3;
-  transform: translateX(-1.9%);
+  position: absolute;
+  left: 230px;
+  top: 230px;
   padding: 1px 4px 1px 4px;
   border-radius:  8px;
   color: #ffea00;
   box-shadow: 0px 0px 3px 3px rgba(221, 255, 0, 0.732);
 }
-/*ĐỔI MÀUHOVER CỦA CHỮ BOOKNOW Ở ĐỊA ĐIỂM 1*/
+/*------------------------------------
+ĐỔI MÀUHOVER CỦA CHỮ BOOKNOW Ở ĐỊA ĐIỂM 1
+------------------------------------*/
 .container-diaDiem .card-hoverCard:hover h5.bookNow1{
 background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
 }
@@ -595,101 +619,64 @@ background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
 }
 
 
-
+/*------------------------------------
+ẢNH CÁC ĐỊA ĐIỂM Ở PHẦN TOUR HOT
+--------------------------------------*/
+.container-diaDiem .card-hoverCard .anh-diaDiem-tourDulich{
+  position: relative;
+  right: 54px;;
+  width: 350px;
+  height: 210px;
+  border-radius: 20px;
+  background-size: cover;
+  transition: ease .4s;
+  filter: grayscale(.8);
+}
 
 /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
-.container-diaDiem .card-hoverCard .anh-diaDiem1{
-position: relative;
-right: 54px;;
-width: 350px;
-height: 210px;
-border-radius: 20px;
+.anh-diaDiem1{
 background-image: url(../image/2bt1aj9.webp);
-background-size: cover;
-transition: ease .4s;
-filter: grayscale(.8);
 }
+/*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
+.container-diaDiem .card-hoverCard .anh-diaDiem2{
+  background-image: url(../image/CauRong_DaNang.webp);
+}
+
+
 /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
-.container-diaDiem .card-hoverCard:hover .anh-diaDiem1{
+.container-diaDiem .card-hoverCard:hover .anh-diaDiem-tourDulich{
   filter: grayscale(0);
   transform: translateX(7.8%);
   border-radius: 30px;
   height: 220px;
   width: 430px;
   transition: ease .8s;
-}
-
-
-/*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
-.container-diaDiem .card-hoverCard:hover h2#text-diaDiem1{
-background-image: linear-gradient(140deg, #e5ff00, rgba(21, 255, 0, 0.8) 100%);
-background-clip: text;
--webkit-background-clip: text;
--moz-background-clip: text;
--o-background-clip: text;
-color: transparent;
-
-transition: ease .9s;
-top: 25px;
-right: 70px;
 }
 
 /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
 .container-diaDiem .diaDiem1:hover{
-box-shadow: 0px 0px 40px 2px rgb(0, 255, 225);
+  box-shadow: 0px 0px 40px 2px rgb(0, 255, 225);
 }
-
-
-
-
-
-
-
-
-/*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
-address.vitri2{
-  top: 190px;
-  right: 65px;
-}
-
-
-
-
-/*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
-.container-diaDiem .card-hoverCard .anh-diaDiem2{
-position: relative;
-right: 54px;;
-width: 350px;
-height: 210px;
-border-radius: 20px;
-background-image: url(../image/CauRong_DaNang.webp);
-background-size: cover;
-transition: ease .4s;
-filter: grayscale(.8);
-}
-/*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
-.container-diaDiem .card-hoverCard:hover .anh-diaDiem2{
-  filter: grayscale(0);
-  transform: translateX(7.8%);
-  border-radius: 30px;
-  height: 220px;
-  width: 430px;
-  transition: ease .8s;
-}
-
 
 /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
+.container-diaDiem .card-hoverCard:hover h2.text-diaDiem{
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  color: transparent;
+  
+  transition: ease .9s;
+  top: 25px;
+  right: 70px;
+}
+  
+/* CHỈNH RIÊNG MÀU CHO TỪNG CHỮ Ở CARD TOUR HOT*/
+.container-diaDiem .card-hoverCard:hover h2#text-diaDiem1{
+  background-image: linear-gradient(140deg, #e5ff00, rgba(21, 255, 0, 0.8) 100%);
+}
 .container-diaDiem .card-hoverCard:hover h2#text-diaDiem2{
-background-image: linear-gradient(140deg, #ffd900, rgb(255, 132, 0) 100%);
-background-clip: text;
--webkit-background-clip: text;
--moz-background-clip: text;
--o-background-clip: text;
-color: transparent;
-
-transition: ease .9s;
-top: 25px;
-right: 70px;
+  background-image: linear-gradient(140deg, #ffd900, rgb(255, 132, 0) 100%);
 }
 
 /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
@@ -697,7 +684,303 @@ right: 70px;
 box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
 }
 
+}
 
+  /*SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR*/
+/*===========================================================
+    SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR
+=============================================================*/
+  /*SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR*/
+
+@media screen and (max-width: 400px) {
+  .container-diaDiem{
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+  }
+  .container-diaDiem .card-hoverCard{
+    width: 90%;
+    height: 400px;
+    position: relative;
+    background-color: transparent; /* đổi background thành transparent */
+    overflow: hidden;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(40px); /* áp dụng hiệu ứng blur với độ mờ là 10px */
+    margin-bottom: 50px;
+    }
+    
+    /*TIÊU ĐỀ CỦA TOUR*/
+    .container-diaDiem .card-hoverCard h2{
+    z-index: 99;
+    position: absolute;
+  
+    color: rgb(247, 242, 242);
+    bottom: 40%;
+    transition: ease .9s;
+    
+    }
+    
+    
+    /*CHỮ TOUR HOT*/
+    h3.tourHot{
+    background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    
+    position: absolute;
+    z-index: 99;
+    top: 0%;
+    }
+    .container-diaDiem .card-hoverCard:hover .tourHot{
+    opacity: 0;
+    }
+    
+    /*ẢNH RATING 5 SAO*/
+    .ratingStar{
+    width: 80px;
+    position: absolute;
+    bottom: 18%;
+    }
+    .container-diaDiem .card-hoverCard:hover .ratingStar{
+    opacity: 0;
+    }
+    
+    /*PHẦN LỘ TRÌNH BÊN DƯỚI RATING STAR*/
+    .container-diaDiem .card-hoverCard h4.loTrinh{
+      font-size: 11px;
+      position: absolute;
+      bottom: 15%;
+      color: rgb(7, 59, 108);  
+    }
+    /*KHI HOVER VÀO CARD LỘ TRÌNH SẼ BIẾN MẤT*/
+    .container-diaDiem .card-hoverCard:hover h4.loTrinh{
+      opacity: 0;
+    }
+    
+    
+    /*GIÁ TIỀN*/
+    .container-diaDiem .card-hoverCard .price-diaDiem{
+    color: #070869;
+    z-index: 101;
+    top: 77%;
+    position: absolute;
+    }
+    
+    
+    /*PHẦN GIỚI THIỆU BÊN DƯỚI TIÊU ĐỀ*/
+    .container-diaDiem .card-hoverCard p {
+    z-index: 99;
+    position: absolute;
+    
+    width: 200px;
+    color: #fff;
+    opacity: 0;
+    font-size: 12px;
+    text-align: left;
+    letter-spacing: 1px;
+    transition: .6s ease;
+    }
+    
+    /*VỊ TRÍ CỦA TOUR DU LỊCH BÊN DƯỚI TIÊU ĐỀ*/
+    .container-diaDiem .card-hoverCard address.vitri{
+    z-index: 99;
+    position: absolute;
+    width: 200px;
+    color: #fff;
+    opacity: 0;
+    font-size: 12px;
+    text-align: left;
+    letter-spacing: 1px;
+    transition: .5s ease;
+    opacity: 1;
+    }
+    /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 1*/
+    address.vitri1{
+    bottom: 42%;
+    right: 12%;
+    }
+     /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
+     address.vitri2{
+      bottom: 42%;
+      right: 12%;
+    }
+    /*KHI HOVER VỊ TRÍ SẼ BIẾN MẤT*/
+    .container-diaDiem .card-hoverCard:hover address.vitri{
+    opacity: 0;
+    }
+    
+    /*PHẦN GIỚI THIỆU*/ /*KHI HOVER THẺ P(PHẦN GIỚI THIỆU) SẼ HIỆN RA*/
+    .container-diaDiem .card-hoverCard:hover p.gioiThieuDiaDiem1{
+      
+      bottom: 45%;
+      transition: ease .9s; 
+      opacity: 1;
+    }
+    
+    /*-------------------------------------------------------*/
+    .container-diaDiem .card-hoverCard button{
+    position: absolute;
+    top: 90%;
+  
+    height: 25px;
+    width: 80px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    opacity: 1;
+    transition: .5s ease;
+    }
+  
+    /*HIỆU ỨNG HOVER CỦA BUTTON*/
+    .container-diaDiem .card-hoverCard:hover button{
+      height: 455px;
+      width: 455px;
+      border-radius: 255px;
+  
+      transform: translateY(-60%);
+      opacity: .6;
+      transition: ease .5s;
+    }
+    .container-diaDiem .card-hoverCard button:active{
+      transform: translateY(5px);
+    }
+    
+    /*NÚT BUTTON BOOKNOW*/
+  button.button-diaDiem1{
+    
+    background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+   
+  }
+  
+    /*NÚT BUTTON BOOKNOW*/
+  button.button-diaDiem2{
+  
+      background-image: linear-gradient(163deg, #ff0cff, #eeff00c8 100%);
+  }
+      
+  
+      /*CHỮ BOOKNOW*/
+  .container-diaDiem .card-hoverCard h5.bookNow{
+    color: rgb(7, 59, 108);
+    width: 70px;
+    margin: 0;
+    padding: 0px;
+    opacity: 1;
+    font-size: 11px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+  
+  
+  
+  
+    
+    
+    /*HIỆU ỨNG HOVER CỦA BOOK NOW*/
+    .container-diaDiem .card-hoverCard:hover h5.bookNow{
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      
+    box-shadow: 0px 0px 20px 1px #e5ff00;
+      border-radius:  8px;
+  
+  
+     
+    }
+    /*ĐỔI MÀUHOVER CỦA CHỮ BOOKNOW Ở ĐỊA ĐIỂM 1*/
+    .container-diaDiem .card-hoverCard:hover h5.bookNow1{
+    background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+    }
+    /*ĐỔI MÀU HOVER CỦA BOOK NOW 2*/
+    .container-diaDiem .card-hoverCard:hover h5.bookNow2{
+      background-image: linear-gradient(163deg, #ff0000, #29fbff 100%);
+    }
+    
+    
+    
+    .container-diaDiem .card-hoverCard .anh-diaDiem-tourDulich {
+      position: relative;
+    bottom: 14%;
+    width: 90%;
+    height: 180px;
+    border-radius: 20px;
+  
+    background-size: cover;
+    transition: ease .4s;
+    filter: grayscale(.8);
+    }
+  
+    /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
+    .anh-diaDiem1{
+    background-image: url(../image/2bt1aj9.webp);
+    }
+    /*ẢNH ĐIA ĐIỂM 2 - HIỆN TẠI LÀ HOT TOUR*/
+   .anh-diaDiem2{
+    background-image: url(../image/CauRong_DaNang.webp);
+    }
+  
+  
+  
+    
+    /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
+    .container-diaDiem .card-hoverCard:hover .anh-diaDiem-tourDulich{
+      filter: grayscale(0);
+      transform: translateY(-7.8%);
+      border-radius: 30px;
+      height: 200px;
+      width: 92%;
+      transition: ease .8s;
+    }
+  
+    
+    /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
+    .container-diaDiem .card-hoverCard:hover h2#text-diaDiem1{
+    background-image: linear-gradient(140deg, #e5ff00, rgba(21, 255, 0, 0.8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    
+    transition: ease .9s;
+    transform: translateY(-120px);
+    }
+    
+    /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
+    .container-diaDiem .diaDiem1:hover{
+    box-shadow: 0px 0px 40px 2px rgb(0, 255, 225);
+    }
+
+    /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
+    .container-diaDiem .card-hoverCard:hover h2#text-diaDiem2{
+    background-image: linear-gradient(140deg, #ffd900, rgb(255, 132, 0) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    
+    transform: translateY(-120px);
+    transition: ease .9s;
+    }
+    
+    /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
+    .container-diaDiem .diaDiem2:hover{
+    box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
+    }
+    
+}
 
 
 /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
@@ -706,80 +989,82 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
 /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
 /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
 
-.right-section-home {
-  display: flex;
-  min-height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.diaDiem-card-container-rSection {
-  max-width: 700px;
-  display: flex;
-  height: 400px;
-  width: 100%;
-  justify-content: center;
-}
-.diaDiem-card-rSection {
-  position: relative;
-  list-style: none;
-  gap: 30px;
-  height: 100%;
-  width: 200px;
-  transition: .3s ease;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.diaDiem-card-rSection:before {
-  content: "";
-  display: block;
-  padding-bottom: 150%;
-  width: 100%;
-}
-.diaDiem-card-background-rSection {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 0;
-  border-radius: 20px;
-  background-size: 350px;
-  background-position: center;
-  filter: brightness(.9) saturate(1) contrast(1);
-  transform-origin: bottom;
-  transform: scale(1) translateZ(0);
-  transition: .3s ease;
-}
-.diaDiem-card-rSection:hover .diaDiem-card-background-rSection{
-  transform: scale(1.1) translateZ(0);
-  background-size: 260px;
-}
-.diaDiem-card-container-rSection:hover .card:not(:hover) {
-  transform: scale(.9);
-}
-.diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
-.diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
-  filter: brightness(.5) saturate(.15) contrast(1.1) blur(5px);
-}
-.diaDiem-content-rSection {
-  top: 50%;
-  left: 0;
-  padding: 25px;
-  position: absolute;
-}
-.diaDiem-card-gioiThieu-rSection {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 5px;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-.diaDiem-card-heading {
-  color: #fff;
-  font-size: 25px;
-  line-height: 1;
-  text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+@media screen and (min-width: 400px){
+  .right-section-home {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .diaDiem-card-container-rSection {
+    max-width: 700px;
+    display: flex;
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+  }
+  .diaDiem-card-rSection {
+    position: relative;
+    list-style: none;
+    gap: 30px;
+    height: 100%;
+    width: 200px;
+    transition: .3s ease;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .diaDiem-card-rSection:before {
+    content: "";
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+  }
+  .diaDiem-card-background-rSection {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    background-size: 350px;
+    background-position: center;
+    filter: brightness(.9) saturate(1) contrast(1);
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: .3s ease;
+  }
+  .diaDiem-card-rSection:hover .diaDiem-card-background-rSection{
+    transform: scale(1.1) translateZ(0);
+    background-size: 260px;
+  }
+  .diaDiem-card-container-rSection:hover .card:not(:hover) {
+    transform: scale(.9);
+  }
+  .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
+  .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
+    filter: brightness(.5) saturate(.15) contrast(1.1) blur(5px);
+  }
+  .diaDiem-content-rSection {
+    top: 50%;
+    left: 0;
+    padding: 25px;
+    position: absolute;
+  }
+  .diaDiem-card-gioiThieu-rSection {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .diaDiem-card-heading {
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+  }
 }
 
 /*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
@@ -833,6 +1118,83 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     font-size: 9px;
   }
 }
+
+/*==============================================*/
+
+@media screen and (max-width: 400px){
+  .right-section-home {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .diaDiem-card-container-rSection {
+    max-width: 300px;
+  }
+  .diaDiem-card-rSection {
+    position: relative;
+    list-style: none;
+   
+    height: 100%;
+    width: 200px;
+    transition: .3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .diaDiem-card-rSection:before {
+    content: "";
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+  }
+  .diaDiem-card-background-rSection {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    background-size: 350px;
+    background-position: center;
+    filter: brightness(.9) saturate(1) contrast(1);
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: .3s ease;
+  }
+  .diaDiem-card-rSection:hover .diaDiem-card-background-rSection{
+    transform: scale(1.1) translateZ(0);
+    background-size: 260px;
+  }
+  .diaDiem-card-container-rSection:hover .card:not(:hover) {
+    transform: scale(.9);
+  }
+  .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
+  .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
+    filter: brightness(.5) saturate(.15) contrast(1.1) blur(5px);
+  }
+  .diaDiem-content-rSection {
+    top: 50%;
+    left: 0;
+    padding: 25px;
+    position: absolute;
+  }
+  .diaDiem-card-gioiThieu-rSection {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .diaDiem-card-heading {
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+  }
+}
+
+
 
 /*---------------------------------------------------*/
 
