@@ -7,67 +7,346 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="search__container">
-    <label class="search__label">Tìm kiếm</label>
-    <input placeholder="Nhập địa điểm bạn muốn tới!!" class="search__bar" name="text" type="text" style="width: 95%;">
-    <p class="input__description">Hãy bắt đầu hành trình của bạn ngay hôm nay</p>
-  </div>
+  <div class="left-home-tourDulich">
+   
+    <div class="container-diaDiem">
+      <a href="" class="card-hoverCard diaDiem1">
+        <h2 id="text-diaDiem1">Hang Sơn Đoòng</h2>
+        <h3 class="tourHot tourHot1">TOUR HOT</h3>
+        <img class="ratingStar" width="120px" src="https://th.bing.com/th/id/R.206f79e9a84611b44999c2d396cbcad9?rik=NSMVbw201fY75g&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2f5-stars-transparent-background%2f5-stars-transparent-background-20.png&ehk=YzzJvlI206uGYotlrSpSdCsEh5jsWkGe3O3%2fK%2fY5KDA%3d&risl=&pid=ImgRaw&r=0" alt="">
+        <p class="gioiThieuDiaDiem1">Khám phá kỳ quan thiên nhiên lớn nhất thế giới tại Việt Nam - Hang Sơn Đoòng. Hãy chuẩn bị cho chuyến hành trình đáng nhớ nhất trong đời
+        </p>
+        <address class="vitri vitri1">Quảng Bình, Việt Nam</address>
+        <h4 class="loTrinh">Lộ trình: 6 ngày</h4>
+        <div class="anh-diaDiem1"></div>
+        <h5 class="price-diaDiem price-diaDiem1">72.000.000VND</h5>
+        <button class="button-diaDiem1"></button><h5 class="bookNow bookNow1">BOOK NOW</h5>
+      </a>
+    </div>
+
+
+
+    <div class="container-diaDiem">
+      <a href="" class="card-hoverCard diaDiem2">
+        <h2 id="text-diaDiem2">Đà Nẵng</h2>
+        <h3 class="tourHot tourHot2">TOUR HOT</h3>
+        <img class="ratingStar" width="120px" src="https://th.bing.com/th/id/R.206f79e9a84611b44999c2d396cbcad9?rik=NSMVbw201fY75g&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2f5-stars-transparent-background%2f5-stars-transparent-background-20.png&ehk=YzzJvlI206uGYotlrSpSdCsEh5jsWkGe3O3%2fK%2fY5KDA%3d&risl=&pid=ImgRaw&r=0" alt="">
+        <p class="gioiThieuDiaDiem1">Là một trong ba trung tâm du lịch lớn trên bản đồ du lịch Việt Nam, Đà Nẵng thành phố biển xinh đẹp hiền hòa. Một dấu ấn.
+        </p>
+        <address class="vitri vitri2">Đà Nẵng, Việt Nam</address>
+        <h4 class="loTrinh">Lộ trình: 6 ngày</h4>
+        <div class="anh-diaDiem2"></div>
+        <h5 class="price-diaDiem price-diaDiem2">12.000.000VND</h5>
+        <button class="button-diaDiem2"></button><h5 class="bookNow bookNow2">BOOK NOW</h5>
+      </a>
+    </div>
+</div>
   
 </body>
 </html>
 
  <style>
-  .search__container {
-  max-width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 15px;
-  border-radius: 20px;
+  .container-diaDiem .card-hoverCard{
+  width: 80%;
+  height: 400px;
   position: relative;
-}
-
-.search__container::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  filter: blur(25px);
+  background-color: transparent; /* đổi background thành transparent */
+  overflow: hidden;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(40px); /* áp dụng hiệu ứng blur với độ mờ là 10px */
+  background-color: rgba(248, 138, 138, 0.605);
   }
-
-.search__label {
-  display: block;
-  margin-left: 0.4em;
-  color: #000;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: bold;
-}
-
-.input__description {
-  font-size: 0.6em;
-  font-weight: bold;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.search__bar {
-  border: none;
-  outline: none;
-  width: 100%;
-  padding: 0.6em;
-  padding-left: 0.9em;
-  border-radius: 20px;
-  background: #fff;
-  transition: background 300ms, color 300ms;
-}
-
-.search__bar:hover,.search__bar:focus {
-  background: rgba(246, 202, 217, 0.463);
+  
+  /*TIÊU ĐỀ CỦA TOUR*/
+  .container-diaDiem .card-hoverCard h2{
+  z-index: 99;
+  position: absolute;
+  color: white;
+  bottom: 35%;
+  
+  transition: ease .9s;
+  }
+  
+  /*CHỮ TOUR HOT*/
+  h3.tourHot{
+  background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  color: transparent;
+  
+  position: absolute;
+  z-index: 99;
+  top: 0%;
+  }
+  .container-diaDiem .card-hoverCard:hover .tourHot{
+  opacity: 0;
+  }
+  
+  /*ẢNH RATING 5 SAO*/
+  .ratingStar{
+  width: 80px;
+  position: absolute;
+  bottom: 18%;
+  }
+  .container-diaDiem .card-hoverCard:hover .ratingStar{
+  opacity: 0;
+  }
+  
+  /*PHẦN LỘ TRÌNH BÊN DƯỚI RATING STAR*/
+  .container-diaDiem .card-hoverCard h4.loTrinh{
+    font-size: 11px;
+    position: absolute;
+    bottom: 15%;
+    color: rgb(7, 59, 108);  
+  }
+  /*KHI HOVER VÀO CARD LỘ TRÌNH SẼ BIẾN MẤT*/
+  .container-diaDiem .card-hoverCard:hover h4.loTrinh{
+    opacity: 0;
+  }
+  
+  
+  /*GIÁ TIỀN*/
+  .price-diaDiem{
+  color: #070869;
+  z-index: 101;
+  }
+  .price-diaDiem1{ /*CHỈNH RIÊNG VỊ TRÍ CỦA GIÁ TIỀN*/
+    left: 370px;
+    top: 145px;
+  }
+  /*GIÁ ĐỊA ĐIỂM 2 :((*/
+  .price-diaDiem2{
+  left: 370px;
+  top: 145px;
+  }
+  
+  /*CHỊU?*/
+  .container-diaDiem .card-hoverCard > h5{
+  position: absolute;
+  right: 180px;
+  }
+  
+  /*PHẦN GIỚI THIỆU BÊN DƯỚI TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard p {
+  z-index: 99;
+  position: absolute;
+  bottom: 30px;
+  right: 130px;
+  width: 200px;
   color: #fff;
-}
+  opacity: 0;
+  font-size: 12px;
+  text-align: left;
+  letter-spacing: 1px;
+  transition: .5s ease;
+  }
+  
+  /*VỊ TRÍ CỦA TOUR DU LỊCH BÊN DƯỚI TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard address.vitri{
+  z-index: 99;
+  position: absolute;
+  width: 200px;
+  color: #fff;
+  opacity: 0;
+  font-size: 12px;
+  text-align: left;
+  letter-spacing: 1px;
+  transition: .5s ease;
+  opacity: 1;
+  }
+  /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 1*/
+  address.vitri1{
+  bottom: 35%;
+  right: 15%;
+  }
+  /*KHI HOVER VỊ TRÍ SẼ BIẾN MẤT*/
+  .container-diaDiem .card-hoverCard:hover address.vitri{
+  opacity: 0;
+  }
+  
+  /*PHẦN GIỚI THIỆU*/ /*KHI HOVER THẺ P(PHẦN GIỚI THIỆU) SẼ HIỆN RA*/
+  .container-diaDiem .card-hoverCard:hover p.gioiThieuDiaDiem1{
+    
+    bottom: 45%;
+    transition: ease .9s; 
+    opacity: 1;
+  }
+  
+  /*NÚT BUTTON BOOKNOW*/
+  .container-diaDiem .card-hoverCard button.button-diaDiem1{
+  
+  height: 25px;
+  width: 100px;
+  background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  opacity: 1;
+  transition: .3s ease;
+  }
+  /*CHỮ BOOKNOW*/
+  .container-diaDiem .card-hoverCard h5.bookNow{
+  color: rgb(7, 59, 108);
+  
+  transform: translate(-50%, -50%);
+
+  width: 70px;
+  margin: 0;
+  padding: 0px;
+  opacity: 1;
+  font-size: 11px;
+  transition: ease .9s;
+  }
+  /*NÚT BUTTON BOOKNOW*/
+  .container-diaDiem .card-hoverCard button.button-diaDiem2{
+    position: absolute;
+    top: 90%;
+    
+    height: 25px;
+    width: 100px;
+    background-image: linear-gradient(163deg, #ff0cff, #eeff00c8 100%);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    opacity: 1;
+    transition: .3s ease;
+  }
+    
+  /*HIỆU ỨNG HOVER CỦA BUTTON*/
+  .container-diaDiem .card-hoverCard:hover button{
+    height: 250px;
+    width: 250px;
+    border-radius: 480px;
+    position: absolute;
+    
+    transform: translate(-2%, -50%);
+    opacity: .7;
+    transition: ease .7s;
+  }
+  
+  
+  /*HIỆU ỨNG HOVER CỦA BOOK NOW*/
+  .container-diaDiem .card-hoverCard:hover h5.bookNow{
+    scale: 1.3;
+    padding: 1px 4px 1px 4px;
+    border-radius:  8px;
+    color: #ffea00;
+    box-shadow: 0px 0px 3px 3px rgba(221, 255, 0, 0.732);
+  }
+  /*ĐỔI MÀUHOVER CỦA CHỮ BOOKNOW Ở ĐỊA ĐIỂM 1*/
+  .container-diaDiem .card-hoverCard:hover h5.bookNow1{
+  background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+  }
+  /*ĐỔI MÀU HOVER CỦA BOOK NOW 2*/
+  .container-diaDiem .card-hoverCard:hover h5.bookNow2{
+    background-image: linear-gradient(163deg, #ff0000, #29fbff 100%);
+  }
+  
+  
+  
+  
+  /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
+  .container-diaDiem .card-hoverCard .anh-diaDiem1{
+  position: relative;
+  bottom: 5%;
+  width: 90%;
+  height: 210px;
+  border-radius: 20px;
+  background-image: url(../image/2bt1aj9.webp);
+  background-size: cover;
+  transition: ease .4s;
+  filter: grayscale(.8);
+  }
+  /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
+  .container-diaDiem .card-hoverCard:hover .anh-diaDiem1{
+    filter: grayscale(0);
+    transform: translateY(-7.8%);
+    border-radius: 30px;
+    height: 250px;
+    width: 430px;
+    transition: ease .8s;
+  }
+  
+  
+  /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard:hover h2#text-diaDiem1{
+  background-image: linear-gradient(140deg, #e5ff00, rgba(21, 255, 0, 0.8) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  color: transparent;
+  
+  transition: ease .9s;
+  transform: translateY(-120px);
+  }
+  
+  /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
+  .container-diaDiem .diaDiem1:hover{
+  box-shadow: 0px 0px 40px 2px rgb(0, 255, 225);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
+  address.vitri2{
+    top: 190px;
+    right: 65px;
+  }
+  
+  
+  
+  
+  /*ẢNH ĐIA ĐIỂM 2 - HIỆN TẠI LÀ HOT TOUR*/
+  .container-diaDiem .card-hoverCard .anh-diaDiem2{
+  position: relative;
+  right: 54px;;
+  width: 350px;
+  height: 210px;
+  border-radius: 20px;
+  background-image: url(../image/CauRong_DaNang.webp);
+  background-size: cover;
+  transition: ease .4s;
+  filter: grayscale(.8);
+  }
+  /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
+  .container-diaDiem .card-hoverCard:hover .anh-diaDiem2{
+    filter: grayscale(0);
+    transform: translateX(7.8%);
+    border-radius: 30px;
+    height: 220px;
+    width: 430px;
+    transition: ease .8s;
+  }
+  
+  
+  /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard:hover h2#text-diaDiem2{
+  background-image: linear-gradient(140deg, #ffd900, rgb(255, 132, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  color: transparent;
+  
+  transition: ease .9s;
+  top: 25px;
+  right: 70px;
+  }
+  
+  /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
+  .container-diaDiem .diaDiem2:hover{
+  box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
+  }
+  
  </style>

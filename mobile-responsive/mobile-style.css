@@ -9,8 +9,7 @@
     display: block;
      
   }
-  .textHome{
-    font-size: 50px !important;
+  
 }
 #menu ul.menu-parent>li:nth-child(3)>a:hover {
   transition: ease-in-out 0.4s;
