@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", function() {
   
     function checkScreenWidth() {
       screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      if (screenWidth < 500) {
+      if (screenWidth < 550) {
         hideAnhCanXoaElements();
       } else {
         showAnhCanXoaElements();
@@ -36,3 +36,13 @@ window.addEventListener("DOMContentLoaded", function() {
       checkScreenWidth();
     });
   });
+
+/** ĐOẠN NÀY ĐỂ CUỘN XUỐNG PHẦN HOT TOUUR KHI CLICK NÀO NEW! */
+
+function smoothScroll(event) {
+  event.preventDefault();
+  const targetId = event.currentTarget.getAttribute("href");
+  document.querySelector(targetId).scrollIntoView({
+    behavior: "smooth"
+  });
+}

@@ -161,17 +161,6 @@ input[type="checkbox"]:checked + ul.datVe-ul {
   }
 
 
-@media screen and (max-width: 765px) {
-/*Ẩn đi 2 element thừa*/
-#menu .menu-parent>li:first-child,
-#menu .menu-parent>li:last-child {
-  display: none;
-}
 
-/* Căn giữa */
-#menu .menu-parent {
-  display: flex;
-  justify-content: center;
-}
-}
+
 

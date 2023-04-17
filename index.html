@@ -20,7 +20,11 @@
   <header class="menu-container">
     <nav id="menu">
       <ul class="menu-parent">
-        <li><a href="">News</a></li>
+        <li>
+          <a class="new-hotTour" href="#section-homePage--1" onclick="smoothScroll(event)">
+            News
+          </a>
+        </li>
         <li>
           <a class="datVe" href="">Đặt vé</a>
             <ul class="submenu">
@@ -58,7 +62,7 @@
         </div>
         <div class="container-anh-banner anh-can-xoa">
           <a class="banner-anh " href="#">
-            <img class="anh-namTrong-banner" src="./image/japan-street-2.jpg" alt="Ảnh 3">
+            <img class="anh-namTrong-banner" src="./image/japan-street-2-1.png" alt="Ảnh 3">
           </a>
           <h3 class="banner-title">Raining day</h3>
         </div>
@@ -85,6 +89,16 @@
     </style>
 
   <div class="chart-bigcontainer">
+<style>
+  .section-homePage{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 480px;
+  }
+</style>
+  <section class="section-homePage" id="section-homePage--1">
 
     <div class="left-home-tourDulich">
    
@@ -123,7 +137,9 @@
           </button>
         </a>
       </div>
-  </div>
+    </div>
+  </section>
+
 
   <section class="right-container-home">
     <section class="right-section-home">
@@ -164,7 +180,7 @@
     justify-content: space-around;
   }
   .right-container-home{
-    
+    width: 90%;
     flex-basis: 800px;
     height: 500px;
   }
