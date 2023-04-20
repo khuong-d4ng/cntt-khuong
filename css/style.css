@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@700&display=swap");
+* {
   margin: 0;
   padding: 0;
   border: 0;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   font-size: 16;
-  font-family: 'Montserrat', sans-serif;  
-  background-image: url(../image/saukhicat3.jpg);  
+  font-family: "Montserrat", sans-serif;
+
+  /*background-image: url(../image/saukhicat3.jpg);  
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
+  /*TEST BỎ BỎ BACKGROUNDBACKGROUND*/
 }
 
 @media screen and (max-width: 700px) {
@@ -22,6 +24,7 @@ body{
     background-attachment: fixed;
   }
 }
+/*
 @media screen and (max-width: 350px) {
   .temp__background {
     background-image: url(../image/responsive-background.jpg);  
@@ -30,6 +33,7 @@ body{
     background-attachment: fixed;
   }
 }
+*/
 
 .menu-container {
   position: absolute;
@@ -42,21 +46,22 @@ body{
   align-items: center;
 }
 
-#menu{
+#menu {
   width: auto;
   height: 40px;
   background-color: transparent;
   border-radius: 7px;
 }
-ul.menu-parent{ /* kỉ niệm ngồi đến 3h sáng nhận ra padding mặc định = 40 :))*/
+ul.menu-parent {
+  /* kỉ niệm ngồi đến 3h sáng nhận ra padding mặc định = 40 :))*/
   padding: 0;
   margin: 0;
 }
-ul.menu-parent li{
+ul.menu-parent li {
   list-style: none;
   float: left;
 }
-#menu ul.menu-parent>li>a{
+#menu ul.menu-parent > li > a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 16px;
@@ -64,11 +69,10 @@ ul.menu-parent li{
   margin: 15px;
   padding: 0px 5px 0px 5px;
   line-height: 39px;
-  
 }
 
 /*(1) TOÀN BỘ ĐỐNG NÀY CHỈ NHẰM TẠO HIỆU ỨNG HOVER CHO MENU*/
-#menu ul.menu-parent>li:first-child>a:hover {
+#menu ul.menu-parent > li:first-child > a:hover {
   transition: ease-in-out 0.3s;
   font-size: 18px;
   background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0));
@@ -91,17 +95,25 @@ ul.menu-parent li{
 .lienHe:hover {
   transition: ease-in-out 0.3s;
   font-size: 18px !important;
-  background-image: linear-gradient(to right, rgb(253, 253, 253), rgb(38, 255, 0));
+  background-image: linear-gradient(
+    to right,
+    rgb(253, 253, 253),
+    rgb(38, 255, 0)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 4)) 1;
 }
-#menu ul.menu-parent>li:nth-child(5)>a:hover {
+#menu ul.menu-parent > li:nth-child(5) > a:hover {
   transition: ease-in-out 0.3s;
   font-size: 18px;
-  background-image: linear-gradient(to right, rgb(68, 255, 0), rgb(255, 255, 255));
+  background-image: linear-gradient(
+    to right,
+    rgb(68, 255, 0),
+    rgb(255, 255, 255)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -110,21 +122,25 @@ ul.menu-parent li{
 }
 
 /*child(3) la nut HOME*/
-#menu ul.menu-parent>li:nth-child(3)>a:hover {
+#menu ul.menu-parent > li:nth-child(3) > a:hover {
   transition: ease-in-out 0.4s;
   font-size: 44px !important;
-  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 0, 0),
+    rgb(255, 255, 255)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0)) 1;
 }
-#menu ul.menu-parent>li>a{
+#menu ul.menu-parent > li > a {
   transition: ease-in 0.45s; /* Thêm transition cho element a khi không hover */
 }
 
-#menu ul.menu-parent>li>a:not(:hover){
+#menu ul.menu-parent > li > a:not(:hover) {
   font-size: 16px;
 }
 /*(1) KẾT THÚC (1)*/
@@ -159,14 +175,14 @@ ul.submenu li a {
 }
 
 /*(2) TẠO HIỆU ỨNG HOVER CHO SUBMENU CỦA ĐẶT VÉ*/
-#menu ul.submenu > li > a > p{
+#menu ul.submenu > li > a > p {
   padding: 0;
   margin: 0;
 }
-#menu ul.submenu > li > a{
+#menu ul.submenu > li > a {
   transition: ease-in 0.3s;
 }
-#menu ul.submenu > li > a:hover{
+#menu ul.submenu > li > a:hover {
   transition: ease-in-out 0.3s;
   font-size: 18px;
   background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0));
@@ -176,47 +192,50 @@ ul.submenu li a {
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
 }
-#menu ul.submenu > li > a:not(:hover){
+#menu ul.submenu > li > a:not(:hover) {
   font-size: 16px;
 }
 /*(2) KẾT THÚC (2)*/
 
 /*(3) TẠO HIỆU ỨNG HOVER CHO SUBMENU CỦA LIÊN HỆ*/
-a.fb:hover >p{
-  transition: ease-in 0.27s ;
-  background-image: linear-gradient(to right, rgb(0, 17, 255), rgb(0, 157, 255));
+a.fb:hover > p {
+  transition: ease-in 0.27s;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 17, 255),
+    rgb(0, 157, 255)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 18px;
 }
-#menu ul.submenu > li > a.fb:hover{
+#menu ul.submenu > li > a.fb:hover {
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 0, 255)) 1;
-
 }
-a.instagram:hover > p{
-  transition: ease-in 0.27s ;
+a.instagram:hover > p {
+  transition: ease-in 0.27s;
   background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(25, 29, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 18px;
 }
-#menu ul.submenu > li > a.instagram:hover{
+#menu ul.submenu > li > a.instagram:hover {
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
 }
 
-a.hotline:hover > p{
-  transition: ease-in 0.27s ;
+a.hotline:hover > p {
+  transition: ease-in 0.27s;
   background-image: linear-gradient(to right, rgb(19, 144, 0), rgb(0, 203, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 18px;
 }
-#menu ul.submenu > li > a.hotline:hover{
+#menu ul.submenu > li > a.hotline:hover {
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(0, 132, 4), rgb(0, 255, 0)) 1;
 }
@@ -226,27 +245,27 @@ a.hotline:hover > p{
 /*(4) TẠO HIỆU ỨNG ẨN ĐI CHO ELEMENT 1, 2*/
 @media screen and (max-width: 580px) {
   /*Ẩn đi 2 element thừa*/
-  #menu .menu-parent>li:first-child,
-  #menu .menu-parent>li:last-child {
+  #menu .menu-parent > li:first-child,
+  #menu .menu-parent > li:last-child {
     display: none;
   }
-  
+
   /* Căn giữa */
   #menu .menu-parent {
     display: flex;
     justify-content: center;
   }
 }
-@media screen and (max-width: 500px){ 
-  .textHome{
+@media screen and (max-width: 500px) {
+  .textHome {
     font-size: 45px !important;
   }
 }
-@media screen and (max-width: 455px){ 
-  .datVe{
+@media screen and (max-width: 455px) {
+  .datVe {
     font-size: 13px !important;
   }
-  .lienHe{
+  .lienHe {
     font-size: 13px !important;
   }
 }
@@ -260,7 +279,7 @@ a.hotline:hover > p{
   #menu .menu-parent > *:nth-child(5) {
     display: none;
   }
-  
+
   /* Căn giữa */
   #menu .menu-parent {
     display: flex;
@@ -270,10 +289,6 @@ a.hotline:hover > p{
 
 /*(4) KẾT THÚC (4)*/
 
-
-
-
-
 /*_________________THANH TÌM KIẾM________________________*/
 /*_________________THANH TÌM KIẾM________________________*/
 /*_________________THANH TÌM KIẾM________________________*/
@@ -281,8 +296,8 @@ a.hotline:hover > p{
 /*_________________THANH TÌM KIẾM________________________*/
 /*_________________THANH TÌM KIẾM________________________*/
 
-.search__container__containerCanGiua{
-  margin-top: 3%;
+.search__container__containerCanGiua {
+  margin-top: 10%;
   width: 100%;
   display: flex;
   justify-content: center; /* Căn giữa ngang */
@@ -290,11 +305,13 @@ a.hotline:hover > p{
 }
 .search__container {
   width: 80%;
-  max-width: none ;
+  max-width: none;
   display: flex;
   flex-direction: column;
   gap: 6px;
   /*background: rgba(255, 255, 255, 0.3);*/
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.2);
+
   padding: 15px;
   border-radius: 20px;
   position: relative;
@@ -309,10 +326,10 @@ a.hotline:hover > p{
   left: 0;
   z-index: -1;
   border-radius: 20px;
-  background-image: url(/image/japan-nature-1-1.jpg);
+  background-image: url(../image/japan-nature-1-1.jpg);
   background-size: cover;
-  opacity: .5;
-  }
+  opacity: 0.5;
+}
 
 .search__label {
   display: block;
@@ -341,13 +358,13 @@ a.hotline:hover > p{
   transition: background 300ms, color 300ms;
 }
 
-.search__bar:hover,.search__bar:focus {
+.search__bar:hover,
+.search__bar:focus {
   background: rgba(255, 255, 255, 0);
   box-shadow: 0px 0px 5px 0px rgba(250, 146, 194, 0.749);
   color: #fff;
 }
 
-
 /*===============HOT TOUR TỪ ĐÂY===========================*/
 /*===============HOT TOUR TỪ ĐÂY===========================*/
 /*===============HOT TOUR TỪ ĐÂY===========================*/
@@ -360,11 +377,11 @@ a.hotline:hover > p{
 /*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
 /*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
 /*__________________ẢNH ĐỊA ĐIỂM HOTTOUR__________________________*/
-
 
 /*(2.1) ĐỊA ĐIỂM 1(2.1)*/
 
-.container-diaDiem{ /*CÁI CHỨA TOUR HOT*/
+.container-diaDiem {
+  /*CÁI CHỨA TOUR HOT*/
   position: relative;
   width: 100%;
   margin-top: 10px;
@@ -372,343 +389,345 @@ a.hotline:hover > p{
 }
 /*MÀN HÌNH NHỎ HƠN 1300PX THÌ CHUYỂN DIRECTION THÀNH ROW*/
 @media screen and (max-width: 1300px) {
-  .left-home-tourDulich{
+  .left-home-tourDulich {
     display: flex;
     flex-direction: row;
   }
-  .container-diaDiem{
+  .container-diaDiem {
     margin: 10px;
   } /*THÀNH COLUM*/
   @media screen and (max-width: 1000px) {
-    .left-home-tourDulich{
+    .left-home-tourDulich {
       display: flex;
       flex-direction: column;
     }
-    .container-diaDiem{
+    .container-diaDiem {
       margin: 10px;
-    } 
+    }
   }
 }
 
 @media screen and (min-width: 550px) {
-.left-home-tourDulich{ /*CHỨA 2 CÁI TOUR HOT*/
-  display: flex;
-  flex-direction: column;
-}
-.container-diaDiem .card-hoverCard{
-width: 480px;
-height: 235px;
-border-radius: 25px;
+  .left-home-tourDulich {
+    /*CHỨA 2 CÁI TOUR HOT*/
+    display: flex;
+    flex-direction: column;
+  }
+  .container-diaDiem .card-hoverCard {
+    width: 480px;
+    height: 235px;
+    border-radius: 25px;
 
-position: relative;
+    position: relative;
 
-background-color: transparent; /* đổi background thành transparent */
-overflow: hidden;
+    box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-backdrop-filter: blur(40px); /* áp dụng hiệu ứng blur với độ mờ là 40px */
-}
+  /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
+  .container-diaDiem .diaDiem1:hover {
+    box-shadow: 0px 0px 40px 2px rgb(0, 255, 225);
+  }
+  /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
+  .container-diaDiem .diaDiem2:hover {
+    box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
+  }
+  /*TIÊU ĐỀ CỦA TOUR*/
+  .container-diaDiem .card-hoverCard h2 {
+    z-index: 99;
+    position: absolute;
+    color: white;
+    right: 140px;
+    top: 140px;
 
-/*TIÊU ĐỀ CỦA TOUR*/
-.container-diaDiem .card-hoverCard h2{
-z-index: 99;
-position: absolute;
-color: white;
-right: 140px;
-top: 140px;
+    transition: ease 0.9s;
+  }
 
-transition: ease .9s;
-}
+  /*CHỮ TOUR HOT*/
+  h3.tourHot {
+    background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
 
-/*CHỮ TOUR HOT*/
-h3.tourHot{
-background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
-background-clip: text;
--webkit-background-clip: text;
--moz-background-clip: text;
--o-background-clip: text;
-color: transparent;
+    position: absolute;
+    z-index: 99;
+    left: 370px;
+    top: 30px;
+  }
+  .container-diaDiem .card-hoverCard:hover .tourHot {
+    opacity: 0;
+  }
 
-position: absolute;
-z-index: 99;
-left: 370px;
-top: 30px;
-}
-.container-diaDiem .card-hoverCard:hover .tourHot{
-opacity: 0;
-}
+  /*ẢNH RATING 5 SAO*/
+  .ratingStar {
+    width: 80px;
+    position: absolute;
+    left: 380px;
+    top: 75px;
+  }
+  .container-diaDiem .card-hoverCard:hover .ratingStar {
+    opacity: 0;
+  }
 
-/*ẢNH RATING 5 SAO*/
-.ratingStar{
-width: 80px;
-position: absolute;
-left: 380px;
-top: 75px;
-}
-.container-diaDiem .card-hoverCard:hover .ratingStar{
-opacity: 0;
-}
+  /*PHẦN LỘ TRÌNH BÊN DƯỚI RATING STAR*/
+  .container-diaDiem .card-hoverCard h4.loTrinh {
+    font-size: 11px;
+    position: absolute;
+    left: 375px;
+    color: rgb(7, 59, 108);
+  }
+  /*KHI HOVER VÀO CARD LỘ TRÌNH SẼ BIẾN MẤT*/
+  .container-diaDiem .card-hoverCard:hover h4.loTrinh {
+    opacity: 0;
+  }
 
-/*PHẦN LỘ TRÌNH BÊN DƯỚI RATING STAR*/
-.container-diaDiem .card-hoverCard h4.loTrinh{
-  font-size: 11px;
-  position: absolute;
-  left: 375px;
-  color: rgb(7, 59, 108);  
-}
-/*KHI HOVER VÀO CARD LỘ TRÌNH SẼ BIẾN MẤT*/
-.container-diaDiem .card-hoverCard:hover h4.loTrinh{
-  opacity: 0;
-}
+  /*GIÁ TIỀN*/
+  .price-diaDiem {
+    color: #070869;
+    z-index: 101;
+  }
+  .price-diaDiem1 {
+    /*CHỈNH RIÊNG VỊ TRÍ CỦA GIÁ TIỀN*/
+    left: 370px;
+    top: 145px;
+  }
+  /*GIÁ ĐỊA ĐIỂM 2 :((*/
+  .price-diaDiem2 {
+    left: 370px;
+    top: 145px;
+  }
 
+  /*CHỊU?*/
+  .container-diaDiem .card-hoverCard > h5.price-diaDiem {
+    position: absolute;
+    right: 180px;
+  }
 
-/*GIÁ TIỀN*/
-.price-diaDiem{
-color: #070869;
-z-index: 101;
-}
-.price-diaDiem1{ /*CHỈNH RIÊNG VỊ TRÍ CỦA GIÁ TIỀN*/
-  left: 370px;
-  top: 145px;
-}
-/*GIÁ ĐỊA ĐIỂM 2 :((*/
-.price-diaDiem2{
-left: 370px;
-top: 145px;
-}
-.container-diaDiem .card-hoverCard:hover{
-  
-}
-/*CHỊU?*/
-.container-diaDiem .card-hoverCard > h5.price-diaDiem{
-position: absolute;
-right: 180px;
-}
+  /*PHẦN GIỚI THIỆU BÊN DƯỚI TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard p {
+    z-index: 99;
+    position: absolute;
+    bottom: 30px;
+    right: 130px;
+    width: 200px;
+    color: #fff;
+    opacity: 0;
+    font-size: 12px;
+    text-align: left;
+    letter-spacing: 1px;
+    transition: 0.5s ease;
+  }
 
-/*PHẦN GIỚI THIỆU BÊN DƯỚI TIÊU ĐỀ*/
-.container-diaDiem .card-hoverCard p {
-z-index: 99;
-position: absolute;
-bottom: 30px;
-right: 130px;
-width: 200px;
-color: #fff;
-opacity: 0;
-font-size: 12px;
-text-align: left;
-letter-spacing: 1px;
-transition: .5s ease;
-}
+  /*VỊ TRÍ CỦA TOUR DU LỊCH BÊN DƯỚI TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard address.vitri {
+    z-index: 99;
+    position: absolute;
+    width: 200px;
+    color: #fff;
+    opacity: 0;
+    font-size: 12px;
+    text-align: left;
+    letter-spacing: 1px;
+    transition: 0.5s ease;
+    opacity: 1;
+  }
+  /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
+  address.vitri1 {
+    top: 190px;
+    left: 190px;
+  }
+  /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
+  address.vitri2 {
+    top: 190px;
+    right: 65px;
+  }
 
-/*VỊ TRÍ CỦA TOUR DU LỊCH BÊN DƯỚI TIÊU ĐỀ*/
-.container-diaDiem .card-hoverCard address.vitri{
-z-index: 99;
-position: absolute;
-width: 200px;
-color: #fff;
-opacity: 0;
-font-size: 12px;
-text-align: left;
-letter-spacing: 1px;
-transition: .5s ease;
-opacity: 1;
-}
-/*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
-address.vitri1{
-top: 190px;
-left: 190px;
-}
-/*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
-address.vitri2{
-  top: 190px;
-  right: 65px;
-}
+  /*KHI HOVER VỊ TRÍ SẼ BIẾN MẤT*/
+  .container-diaDiem .card-hoverCard:hover address.vitri {
+    opacity: 0;
+  }
 
-/*KHI HOVER VỊ TRÍ SẼ BIẾN MẤT*/
-.container-diaDiem .card-hoverCard:hover address.vitri{
-opacity: 0;
-}
+  /*PHẦN GIỚI THIỆU*/ /*KHI HOVER THẺ P(PHẦN GIỚI THIỆU) SẼ HIỆN RA*/
+  .container-diaDiem .card-hoverCard:hover p.gioiThieuDiaDiem1 {
+    right: 70px;
+    top: 65px;
+    transition: ease 0.9s;
+    opacity: 1;
+  }
 
-/*PHẦN GIỚI THIỆU*/ /*KHI HOVER THẺ P(PHẦN GIỚI THIỆU) SẼ HIỆN RA*/
-.container-diaDiem .card-hoverCard:hover p.gioiThieuDiaDiem1{
-  right: 70px;
-  top: 65px;
-  transition: ease .9s; 
-  opacity: 1;
-}
+  /*NÚT BUTTON BOOKNOW*/
+  .container-diaDiem .card-hoverCard button.button-diaDiem1 {
+    position: absolute;
+    left: 370px;
+    top: 185px;
+    height: 25px;
+    width: 100px;
+    background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s ease;
+  }
+  /*NÚT BUTTON BOOKNOW*/
+  .container-diaDiem .card-hoverCard button.button-diaDiem2 {
+    position: absolute;
+    left: 370px;
+    top: 185px;
+    height: 25px;
+    width: 100px;
+    background-image: linear-gradient(163deg, #ff0cff, #eeff00c8 100%);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s ease;
+  }
 
-/*NÚT BUTTON BOOKNOW*/
-.container-diaDiem .card-hoverCard button.button-diaDiem1{
-position: absolute;
-left: 370px;
-top: 185px;
-height: 25px;
-width: 100px;
-background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
-border: none;
-border-radius: 25px;
-cursor: pointer;
-opacity: 1;
-transition: .3s ease;
-}  
-/*NÚT BUTTON BOOKNOW*/
-.container-diaDiem .card-hoverCard button.button-diaDiem2{
-  position: absolute;
-  left: 370px;
-  top: 185px;
-  height: 25px;
-  width: 100px;
-  background-image: linear-gradient(163deg, #ff0cff, #eeff00c8 100%);
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  opacity: 1;
-  transition: .3s ease;
-}  
-  
-/*HIỆU ỨNG HOVER CỦA BUTTON*/
-.container-diaDiem .card-hoverCard:hover button{
-  height: 450px;
-  width: 450px;
-  border-radius: 480px;
-  position: absolute;
-  left: 370px;
-  top: 185px;
-  transform: translate(-50%, -50%);
-  opacity: .7;
-  transition: ease .7s;
-}
+  /*HIỆU ỨNG HOVER CỦA BUTTON*/
+  .container-diaDiem .card-hoverCard:hover button {
+    height: 450px;
+    width: 450px;
+    border-radius: 480px;
+    position: absolute;
+    left: 370px;
+    top: 185px;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    transition: ease 0.7s;
+  }
 
-/*------------------------------------
+  /*------------------------------------
               CHỮ BOOKNOW
 ------------------------------------*/
-.container-diaDiem .card-hoverCard h5.bookNow{
-color: rgb(7, 59, 108);
-width: 70px;
-margin: 0;
-padding: 2px 0px 0px 8px;
+  .container-diaDiem .card-hoverCard h5.bookNow {
+    color: rgb(7, 59, 108);
+    width: 70px;
+    margin: 0;
+    padding: 2px 0px 0px 8px;
 
-opacity: 1;
-font-size: 11px;
-transition: ease .9s;
-}
-/*------------------------------------
+    opacity: 1;
+    font-size: 11px;
+    transition: ease 0.9s;
+  }
+  /*------------------------------------
 HIỆU ỨNG HOVER CỦA BOOK NOW
 ------------------------------------*/
-.container-diaDiem .card-hoverCard:hover h5.bookNow{
-  scale: 1.3;
-  position: absolute;
-  left: 230px;
-  top: 230px;
-  padding: 1px 4px 1px 4px;
-  border-radius:  8px;
-  color: #ffea00;
-  box-shadow: 0px 0px 3px 3px rgba(221, 255, 0, 0.732);
-}
-/*------------------------------------
+  .container-diaDiem .card-hoverCard:hover h5.bookNow {
+    scale: 1.3;
+    position: absolute;
+    left: 230px;
+    top: 230px;
+    padding: 1px 4px 1px 4px;
+    border-radius: 8px;
+    color: #ffea00;
+    box-shadow: 0px 0px 3px 3px rgba(221, 255, 0, 0.732);
+  }
+  /*------------------------------------
 ĐỔI MÀUHOVER CỦA CHỮ BOOKNOW Ở ĐỊA ĐIỂM 1
 ------------------------------------*/
-.container-diaDiem .card-hoverCard:hover h5.bookNow1{
-background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
-}
-/*ĐỔI MÀU HOVER CỦA BOOK NOW 2*/
-.container-diaDiem .card-hoverCard:hover h5.bookNow2{
-  background-image: linear-gradient(163deg, #ff0000, #29fbff 100%);
-}
+  .container-diaDiem .card-hoverCard:hover h5.bookNow1 {
+    background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
+  }
+  /*ĐỔI MÀU HOVER CỦA BOOK NOW 2*/
+  .container-diaDiem .card-hoverCard:hover h5.bookNow2 {
+    background-image: linear-gradient(163deg, #ff0000, #29fbff 100%);
+  }
 
-
-/*------------------------------------
+  /*------------------------------------
 ẢNH CÁC ĐỊA ĐIỂM Ở PHẦN TOUR HOT
 --------------------------------------*/
-.container-diaDiem .card-hoverCard .anh-diaDiem-tourDulich{
-  position: relative;
-  right: 54px;;
-  width: 350px;
-  height: 210px;
-  border-radius: 20px;
-  background-size: cover;
-  transition: ease .4s;
-  filter: grayscale(.8);
+  .container-diaDiem .card-hoverCard .anh-diaDiem-tourDulich {
+    position: relative;
+    right: 54px;
+    width: 350px;
+    height: 210px;
+    border-radius: 20px;
+    background-size: cover;
+    transition: ease 0.4s;
+    filter: grayscale(0.8);
+  }
+
+  /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
+  .anh-diaDiem1 {
+    background-image: url(../image/2bt1aj9.webp);
+  }
+  /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
+  .container-diaDiem .card-hoverCard .anh-diaDiem2 {
+    background-image: url(../image/CauRong_DaNang.webp);
+  }
+
+  /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
+  .container-diaDiem .card-hoverCard:hover .anh-diaDiem-tourDulich {
+    filter: grayscale(0);
+    transform: translateX(7.8%);
+    border-radius: 30px;
+    height: 220px;
+    width: 430px;
+    transition: ease 0.8s;
+  }
+
+  /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard:hover h2.text-diaDiem {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+
+    transition: ease 0.9s;
+    top: 25px;
+    right: 70px;
+  }
+
+  /* CHỈNH RIÊNG MÀU CHO TỪNG CHỮ Ở CARD TOUR HOT*/
+  .container-diaDiem .card-hoverCard:hover h2#text-diaDiem1 {
+    background-image: linear-gradient(
+      140deg,
+      #e5ff00,
+      rgba(21, 255, 0, 0.8) 100%
+    );
+  }
+  .container-diaDiem .card-hoverCard:hover h2#text-diaDiem2 {
+    background-image: linear-gradient(140deg, #ffd900, rgb(255, 132, 0) 100%);
+  }
 }
 
-/*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
-.anh-diaDiem1{
-background-image: url(../image/2bt1aj9.webp);
-}
-/*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
-.container-diaDiem .card-hoverCard .anh-diaDiem2{
-  background-image: url(../image/CauRong_DaNang.webp);
-}
-
-
-/*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
-.container-diaDiem .card-hoverCard:hover .anh-diaDiem-tourDulich{
-  filter: grayscale(0);
-  transform: translateX(7.8%);
-  border-radius: 30px;
-  height: 220px;
-  width: 430px;
-  transition: ease .8s;
-}
-
-/*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
-.container-diaDiem .diaDiem1:hover{
-  box-shadow: 0px 0px 40px 2px rgb(0, 255, 225);
-}
-
-/*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
-.container-diaDiem .card-hoverCard:hover h2.text-diaDiem{
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  color: transparent;
-  
-  transition: ease .9s;
-  top: 25px;
-  right: 70px;
-}
-  
-/* CHỈNH RIÊNG MÀU CHO TỪNG CHỮ Ở CARD TOUR HOT*/
-.container-diaDiem .card-hoverCard:hover h2#text-diaDiem1{
-  background-image: linear-gradient(140deg, #e5ff00, rgba(21, 255, 0, 0.8) 100%);
-}
-.container-diaDiem .card-hoverCard:hover h2#text-diaDiem2{
-  background-image: linear-gradient(140deg, #ffd900, rgb(255, 132, 0) 100%);
-}
-
-/*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
-.container-diaDiem .diaDiem2:hover{
-box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
-}
-
-}
-
-  /*SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR*/
+/*SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR*/
 /*===========================================================
     SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR
 =============================================================*/
-  /*SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR*/
-@media screen and (max-width: 550px) { /*cai nay la mobile ne cha*/
-  .left-home-tourDulich{ /*CHỨA 2 CÁI TOUR HOT*/
+/*SIÊU CẤP RESPONSIVE CHO MOBILE PHẦN CARD HOT TOUR*/
+@media screen and (max-width: 550px) {
+  /*cai nay la mobile ne cha*/
+  .left-home-tourDulich {
+    /*CHỨA 2 CÁI TOUR HOT*/
     width: 100%;
     display: flex;
     flex-direction: column;
   }
-  .container-diaDiem{
+  .container-diaDiem {
     margin: 0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  .container-diaDiem .card-hoverCard{
+  .container-diaDiem .card-hoverCard {
     width: 90%;
     height: 400px;
     position: relative;
-    background-color: transparent; /* đổi background thành transparent */
+    /*
+    background-color: transparent;
+    */
+    box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.2);
+
     overflow: hidden;
     border-radius: 25px;
     display: flex;
@@ -716,85 +735,81 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     align-items: center;
     backdrop-filter: blur(40px); /* áp dụng hiệu ứng blur với độ mờ là 10px */
     margin-bottom: 50px;
-    }
-    
-    /*TIÊU ĐỀ CỦA TOUR Y LA CAI DIA DIEM KIEU HANG SON DONG Y*/
-    .container-diaDiem .card-hoverCard h2{
+  }
+
+  /*TIÊU ĐỀ CỦA TOUR Y LA CAI DIA DIEM KIEU HANG SON DONG Y*/
+  .container-diaDiem .card-hoverCard h2 {
     z-index: 99;
     position: absolute;
-  
+
     color: rgb(247, 242, 242);
     bottom: 45%;
-    transition: ease .9s;
-    
-    }
-    
-    
-    /*CHỮ TOUR HOT*/
-    h3.tourHot{
+    transition: ease 0.9s;
+  }
+
+  /*CHỮ TOUR HOT*/
+  h3.tourHot {
     background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -o-background-clip: text;
     color: transparent;
-    
+
     position: absolute;
     z-index: 99;
     top: 2.5%;
-    }
-    .container-diaDiem .card-hoverCard:hover .tourHot{
+  }
+  .container-diaDiem .card-hoverCard:hover .tourHot {
     opacity: 0;
-    }
-    
-    /*ẢNH RATING 5 SAO*/
-    .ratingStar{
+  }
+
+  /*ẢNH RATING 5 SAO*/
+  .ratingStar {
     width: 80px;
     position: absolute;
     bottom: 18%;
-    }
-    .container-diaDiem .card-hoverCard:hover .ratingStar{
+  }
+  .container-diaDiem .card-hoverCard:hover .ratingStar {
     opacity: 0;
-    }
-    
-    /*PHẦN LỘ TRÌNH BÊN DƯỚI RATING STAR*/
-    .container-diaDiem .card-hoverCard h4.loTrinh{
-      font-size: 11px;
-      position: absolute;
-      bottom: 15%;
-      color: rgb(7, 59, 108);  
-    }
-    /*KHI HOVER VÀO CARD LỘ TRÌNH SẼ BIẾN MẤT*/
-    .container-diaDiem .card-hoverCard:hover h4.loTrinh{
-      opacity: 0;
-    }
-    
-    
-    /*GIÁ TIỀN*/
-    .container-diaDiem .card-hoverCard .price-diaDiem{
+  }
+
+  /*PHẦN LỘ TRÌNH BÊN DƯỚI RATING STAR*/
+  .container-diaDiem .card-hoverCard h4.loTrinh {
+    font-size: 11px;
+    position: absolute;
+    bottom: 15%;
+    color: rgb(7, 59, 108);
+  }
+  /*KHI HOVER VÀO CARD LỘ TRÌNH SẼ BIẾN MẤT*/
+  .container-diaDiem .card-hoverCard:hover h4.loTrinh {
+    opacity: 0;
+  }
+
+  /*GIÁ TIỀN*/
+  .container-diaDiem .card-hoverCard .price-diaDiem {
     color: #070869;
     z-index: 101;
     top: 77%;
     position: absolute;
-    }
-    
-    
-    /*PHẦN GIỚI THIỆU BÊN DƯỚI TIÊU ĐỀ*/
-    .container-diaDiem .card-hoverCard p {
+  }
+
+  /*PHẦN GIỚI THIỆU BÊN DƯỚI TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard p {
     z-index: 99;
     position: absolute;
-    
+
     width: 200px;
     color: #fff;
     opacity: 0;
     font-size: 12px;
     text-align: left;
     letter-spacing: 1px;
-    transition: .6s ease;
-    }
-    
-    /*VỊ TRÍ CỦA TOUR DU LỊCH BÊN DƯỚI TIÊU ĐỀ*/
-    .container-diaDiem .card-hoverCard address.vitri{
+    transition: 0.6s ease;
+  }
+
+  /*VỊ TRÍ CỦA TOUR DU LỊCH BÊN DƯỚI TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard address.vitri {
     z-index: 99;
     position: absolute;
     width: 200px;
@@ -803,76 +818,71 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     font-size: 12px;
     text-align: left;
     letter-spacing: 1px;
-    transition: .5s ease;
+    transition: 0.5s ease;
     opacity: 1;
-    }
-    /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 1*/
-    address.vitri1{
+  }
+  /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 1*/
+  address.vitri1 {
     bottom: 42%;
     right: 12%;
-    }
-     /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
-     address.vitri2{
-      bottom: 42%;
-      right: 12%;
-    }
-    /*KHI HOVER VỊ TRÍ SẼ BIẾN MẤT*/
-    .container-diaDiem .card-hoverCard:hover address.vitri{
+  }
+  /*CHỈNH RIÊNG VỊ TRÍ CỦA DÒNG CHỮ VỊ TRÍ 2*/
+  address.vitri2 {
+    bottom: 42%;
+    right: 12%;
+  }
+  /*KHI HOVER VỊ TRÍ SẼ BIẾN MẤT*/
+  .container-diaDiem .card-hoverCard:hover address.vitri {
     opacity: 0;
-    }
-    
-    /*PHẦN GIỚI THIỆU*/ /*KHI HOVER THẺ P(PHẦN GIỚI THIỆU) SẼ HIỆN RA*/
-    .container-diaDiem .card-hoverCard:hover p.gioiThieuDiaDiem1{
-      
-      bottom: 45%;
-      transition: ease .9s; 
-      opacity: 1;
-    }
-    
-    /*-------------------------------------------------------*/
-    .container-diaDiem .card-hoverCard button{
+  }
+
+  /*PHẦN GIỚI THIỆU*/ /*KHI HOVER THẺ P(PHẦN GIỚI THIỆU) SẼ HIỆN RA*/
+  .container-diaDiem .card-hoverCard:hover p.gioiThieuDiaDiem1 {
+    bottom: 45%;
+    transition: ease 0.9s;
+    opacity: 1;
+  }
+
+  /*-------------------------------------------------------*/
+  .container-diaDiem .card-hoverCard button {
     position: absolute;
     top: 90%;
-  
+
     height: 25px;
     width: 80px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     opacity: 1;
-    transition: .5s ease;
-    }
-  
-    /*HIỆU ỨNG HOVER CỦA BUTTON*/
-    .container-diaDiem .card-hoverCard:hover button{
-      height: 455px;
-      width: 455px;
-      border-radius: 255px;
-  
-      transform: translateY(-55%);
-      opacity: .6;
-      transition: ease .5s;
-    }
-    .container-diaDiem .card-hoverCard button:active{
-      transform: translateY(5px);
-    }
-    
-    /*NÚT BUTTON BOOKNOW*/
-  button.button-diaDiem1{
-    
+    transition: 0.5s ease;
+  }
+
+  /*HIỆU ỨNG HOVER CỦA BUTTON*/
+  .container-diaDiem .card-hoverCard:hover button {
+    height: 455px;
+    width: 455px;
+    border-radius: 255px;
+
+    transform: translateY(-55%);
+    opacity: 0.6;
+    transition: ease 0.5s;
+  }
+  .container-diaDiem .card-hoverCard button:active {
+    transform: translateY(5px);
+  }
+
+  /*NÚT BUTTON BOOKNOW*/
+  button.button-diaDiem1 {
     background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
-   
   }
-  
-    /*NÚT BUTTON BOOKNOW*/
-  button.button-diaDiem2{
-  
-      background-image: linear-gradient(163deg, #ff0cff, #eeff00c8 100%);
+
+  /*NÚT BUTTON BOOKNOW*/
+  button.button-diaDiem2 {
+    background-image: linear-gradient(163deg, #ff0cff, #eeff00c8 100%);
   }
-      
-  
-      /*CHỮ BOOKNOW*/
-  .container-diaDiem .card-hoverCard h5.bookNow{
+
+  /*CHỮ BOOKNOW*/
+  .container-diaDiem .card-hoverCard h5.bookNow {
     color: rgb(7, 59, 108);
     width: 70px;
     margin: 0;
@@ -883,118 +893,106 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    }
-  
-  
-  
-  
-    
-    
-    /*HIỆU ỨNG HOVER CỦA BOOK NOW*/
-    .container-diaDiem .card-hoverCard:hover h5.bookNow{
-      position: absolute;
+  }
+
+  /*HIỆU ỨNG HOVER CỦA BOOK NOW*/
+  .container-diaDiem .card-hoverCard:hover h5.bookNow {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-      
+
     box-shadow: 0px 0px 20px 1px #e5ff00;
-      border-radius:  8px;
-  
-  
-     
-    }
-    /*ĐỔI MÀUHOVER CỦA CHỮ BOOKNOW Ở ĐỊA ĐIỂM 1*/
-    .container-diaDiem .card-hoverCard:hover h5.bookNow1{
+    border-radius: 8px;
+  }
+  /*ĐỔI MÀUHOVER CỦA CHỮ BOOKNOW Ở ĐỊA ĐIỂM 1*/
+  .container-diaDiem .card-hoverCard:hover h5.bookNow1 {
     background-image: linear-gradient(163deg, #00a7da, #00ff77c8 100%);
-    }
-    /*ĐỔI MÀU HOVER CỦA BOOK NOW 2*/
-    .container-diaDiem .card-hoverCard:hover h5.bookNow2{
-      background-image: linear-gradient(163deg, #ff0000, #29fbff 100%);
-    }
-    
-    
-    
-    .container-diaDiem .card-hoverCard .anh-diaDiem-tourDulich {
-      position: relative;
+  }
+  /*ĐỔI MÀU HOVER CỦA BOOK NOW 2*/
+  .container-diaDiem .card-hoverCard:hover h5.bookNow2 {
+    background-image: linear-gradient(163deg, #ff0000, #29fbff 100%);
+  }
+
+  .container-diaDiem .card-hoverCard .anh-diaDiem-tourDulich {
+    position: relative;
     bottom: 14%;
     width: 90%;
     height: 180px;
     border-radius: 20px;
-  
+
     background-size: cover;
-    transition: ease .4s;
-    filter: grayscale(.8);
-    }
-  
-    /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
-    .anh-diaDiem1{
+    transition: ease 0.4s;
+    filter: grayscale(0.8);
+  }
+
+  /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
+  .anh-diaDiem1 {
     background-image: url(../image/2bt1aj9.webp);
-    }
-    /*ẢNH ĐIA ĐIỂM 2 - HIỆN TẠI LÀ HOT TOUR*/
-   .anh-diaDiem2{
+  }
+  /*ẢNH ĐIA ĐIỂM 2 - HIỆN TẠI LÀ HOT TOUR*/
+  .anh-diaDiem2 {
     background-image: url(../image/CauRong_DaNang.webp);
-    }
-  
-  
-  
-    
-    /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
-    .container-diaDiem .card-hoverCard:hover .anh-diaDiem-tourDulich{
-      filter: grayscale(0);
-      transform: translateY(-7.8%);
-      border-radius: 30px;
-      height: 200px;
-      width: 92%;
-      transition: ease .8s;
-    }
-  
-    
-    /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
-    .container-diaDiem .card-hoverCard:hover h2#text-diaDiem1{
-    background-image: linear-gradient(140deg, #e5ff00, rgba(21, 255, 0, 0.8) 100%);
+  }
+
+  /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
+  .container-diaDiem .card-hoverCard:hover .anh-diaDiem-tourDulich {
+    filter: grayscale(0);
+    transform: translateY(-7.8%);
+    border-radius: 30px;
+    height: 200px;
+    width: 92%;
+    transition: ease 0.8s;
+  }
+
+  /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard:hover h2#text-diaDiem1 {
+    background-image: linear-gradient(
+      140deg,
+      #e5ff00,
+      rgba(21, 255, 0, 0.8) 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -o-background-clip: text;
     color: transparent;
-    
-    transition: ease .9s;
-    transform: translateY(-120px);
-    }
-    
-    /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
-    .container-diaDiem .diaDiem1:hover{
-    box-shadow: 0px 0px 40px 2px rgb(0, 255, 225);
-    }
 
-    /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
-    .container-diaDiem .card-hoverCard:hover h2#text-diaDiem2{
+    transition: ease 0.9s;
+    transform: translateY(-120px);
+  }
+
+  /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
+  .container-diaDiem .diaDiem1:hover {
+    box-shadow: 0px 0px 40px 2px rgb(0, 255, 225);
+  }
+
+  /*KHI HOVER VÀO CARD SẼ THAY ĐỔI MÀU CHỮ VÀ VỊ TRÍ CỦA TIÊU ĐỀ*/
+  .container-diaDiem .card-hoverCard:hover h2#text-diaDiem2 {
     background-image: linear-gradient(140deg, #ffd900, rgb(255, 132, 0) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -o-background-clip: text;
     color: transparent;
-    
+
     transform: translateY(-120px);
-    transition: ease .9s;
-    }
-    
-    /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
-    .container-diaDiem .diaDiem2:hover{
+    transition: ease 0.9s;
+  }
+
+  /*TẠO BOX-SHADOW CHO TOÀN BỘ CARD HOT TOUR*/
+  .container-diaDiem .diaDiem2:hover {
     box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
-    }
-    
+  }
 }
 
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
+/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
 
-/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
-/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
-/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
-/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
-/*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*//*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
-
-@media screen and (min-width: 400px){
+@media screen and (min-width: 400px) {
   .right-section-home {
     display: flex;
     min-height: 100%;
@@ -1014,11 +1012,11 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     gap: 30px;
     height: 100%;
     width: 200px;
-    transition: .3s ease;
+    transition: 0.3s ease;
     margin-left: 15px;
     margin-right: 15px;
   }
-  
+
   .diaDiem-card-rSection:before {
     content: "";
     display: block;
@@ -1034,21 +1032,27 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     border-radius: 20px;
     background-size: 350px;
     background-position: center;
-    filter: brightness(.9) saturate(1) contrast(1);
+    filter: brightness(0.9) saturate(1) contrast(1);
     transform-origin: bottom;
     transform: scale(1) translateZ(0);
-    transition: .3s ease;
+    transition: 0.3s ease;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 1),
+      -1px -1px 6px rgba(255, 255, 255, 0.4);
   }
-  .diaDiem-card-rSection:hover .diaDiem-card-background-rSection{
+  .diaDiem-card-rSection:hover .diaDiem-card-background-rSection {
     transform: scale(1.1) translateZ(0);
     background-size: 260px;
   }
   .diaDiem-card-container-rSection:hover .card:not(:hover) {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
-  .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
-  .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
-    filter: brightness(.5) saturate(.15) contrast(1.1) blur(5px);
+  .diaDiem-card-container-rSection:hover
+    > .diaDiem-card-rSection:not(:hover)
+    .diaDiem-card-background-rSection,
+  .diaDiem-card-container-rSection:hover
+    > .diaDiem-card-rSection:not(:hover)
+    .diaDiem-card-gioiThieu-rSection {
+    filter: brightness(0.5) saturate(0.15) contrast(1.1) blur(5px);
   }
   .diaDiem-content-rSection {
     top: 50%;
@@ -1068,7 +1072,7 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     color: #fff;
     font-size: 25px;
     line-height: 1;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -1079,53 +1083,53 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
 /*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
 /*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
 
-@media screen and (max-width: 705px){
-  .diaDiem-card-rSection{
+@media screen and (max-width: 705px) {
+  .diaDiem-card-rSection {
     width: 190px;
   }
-  .diaDiem-card-heading{
+  .diaDiem-card-heading {
     font-size: 18px;
   }
-  .diaDiem-card-gioiThieu-rSection{
+  .diaDiem-card-gioiThieu-rSection {
     font-size: 9px;
   }
 }
-@media screen and (max-width: 655px){
-  .diaDiem-card-rSection{
+@media screen and (max-width: 655px) {
+  .diaDiem-card-rSection {
     width: 160px;
   }
-  .diaDiem-card-heading{
+  .diaDiem-card-heading {
     font-size: 18px;
   }
-  .diaDiem-card-gioiThieu-rSection{
+  .diaDiem-card-gioiThieu-rSection {
     font-size: 9px;
   }
-  .diaDiem-content-rSection{
+  .diaDiem-content-rSection {
     padding: 10px;
   }
 }
-@media screen and (max-width: 555px){
-  .diaDiem-card-rSection{
+@media screen and (max-width: 555px) {
+  .diaDiem-card-rSection {
     width: 145px;
   }
-  .diaDiem-card-heading{
+  .diaDiem-card-heading {
     font-size: 16px;
   }
-  .diaDiem-card-gioiThieu-rSection{
+  .diaDiem-card-gioiThieu-rSection {
     font-size: 9px;
   }
-  .diaDiem-content-rSection{
+  .diaDiem-content-rSection {
     padding: 10px;
   }
 }
-@media screen and (max-width: 515px){
-  .diaDiem-card-rSection{
+@media screen and (max-width: 515px) {
+  .diaDiem-card-rSection {
     width: 130px;
   }
-  .diaDiem-card-heading{
+  .diaDiem-card-heading {
     font-size: 18px;
   }
-  .diaDiem-card-gioiThieu-rSection{
+  .diaDiem-card-gioiThieu-rSection {
     font-size: 9px;
   }
 }
@@ -1153,7 +1157,6 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     }
   }
 
-
   .diaDiem-card-container-rSection {
     max-width: 300px;
     min-width: 100%;
@@ -1165,13 +1168,13 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
   .diaDiem-card-rSection {
     position: relative;
     list-style: none;
-   
+
     height: 100%;
     width: 200px;
-    transition: .3s ease;
+    transition: 0.3s ease;
     margin-bottom: 15px;
   }
-  
+
   .diaDiem-card-rSection:before {
     content: "";
     display: block;
@@ -1187,21 +1190,28 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     border-radius: 20px;
     background-size: 350px;
     background-position: center;
-    filter: brightness(.9) saturate(1) contrast(1);
+    filter: brightness(0.9) saturate(1) contrast(1);
     transform-origin: bottom;
     transform: scale(1) translateZ(0);
-    transition: .3s ease;
+    transition: 0.3s ease;
+
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 1),
+      -1px -1px 6px rgba(255, 255, 255, 0.4);
   }
-  .diaDiem-card-rSection:hover .diaDiem-card-background-rSection{
+  .diaDiem-card-rSection:hover .diaDiem-card-background-rSection {
     transform: scale(1.1) translateZ(0);
     background-size: 260px;
   }
   .diaDiem-card-container-rSection:hover .card:not(:hover) {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
-  .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-background-rSection,
-  .diaDiem-card-container-rSection:hover > .diaDiem-card-rSection:not(:hover) .diaDiem-card-gioiThieu-rSection {
-    filter: brightness(.5) saturate(.15) contrast(1.1) blur(5px);
+  .diaDiem-card-container-rSection:hover
+    > .diaDiem-card-rSection:not(:hover)
+    .diaDiem-card-background-rSection,
+  .diaDiem-card-container-rSection:hover
+    > .diaDiem-card-rSection:not(:hover)
+    .diaDiem-card-gioiThieu-rSection {
+    filter: brightness(0.5) saturate(0.15) contrast(1.1) blur(5px);
   }
   .diaDiem-content-rSection {
     top: 50%;
@@ -1221,11 +1231,9 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
     color: #fff;
     font-size: 25px;
     line-height: 1;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
   }
 }
-
-
 
 /*---------------------------------------------------*/
 
@@ -1236,8 +1244,8 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
   height: auto;
   overflow: hidden;
 }
-@media screen and (max-width: 705px){
-  .anh-namTrong-banner{
+@media screen and (max-width: 705px) {
+  .anh-namTrong-banner {
     min-height: 350px;
   }
 }
@@ -1271,7 +1279,6 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
   filter: brightness(1) contrast(1); /* Bỏ hiệu ứng tối ảnh khi hover */
 }
 
-
 /* Thêm CSS cho container-anh-banner */
 .container-anh-banner {
   position: relative;
@@ -1280,10 +1287,9 @@ box-shadow: 0px 0px 40px 2px rgba(255, 29, 221, 0.749);
   width: 33.33%; /* Độ rộng 33.33% cho mỗi container */
 }
 
-.banner-title{
+.banner-title {
   position: absolute;
   bottom: 5%;
   left: 5%;
   color: #fff;
-
 }
