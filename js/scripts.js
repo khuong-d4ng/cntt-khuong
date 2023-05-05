@@ -52,3 +52,4 @@ function smoothScroll(event) {
     behavior: "smooth",
   });
 }
+

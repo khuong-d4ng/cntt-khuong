@@ -1,55 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Example Scroll</title>
-    <style>
-        /* CSS của trang web */
-        /* Đây là ví dụ, bạn có thể sửa đổi CSS theo ý muốn của bạn */
-        body {
-            height: 2000px; /* Để có đủ chiều cao để cuộn */
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            padding: 20px;
-        }
-        .section {
-            height: 400px;
-            margin-bottom: 20px;
-            background-color: lightgray;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-        }
-        .scroll-link {
-            cursor: pointer;
-            color: blue;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body><a class="scroll-link" href="#section3">Scroll to Section 3</a>
-    <div class="container">
-        <div class="section" id="section1">
-            Section 1
-        </div>
-        <div class="section" id="section2">
-            Section 2
-        </div>
-        <div class="section" id="section3">
-            Section 3 
-        </div>
-        
-    </div>
-</body>
-</html>
-<script>
-  // Sử dụng JavaScript để điều khiển cuộn trang web
-  document.querySelector('.scroll-link').addEventListener('click', function (event) {
-      event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-      const section3 = document.querySelector('#section3');
-      section3.scrollIntoView({ behavior: 'smooth' }); // Cuộn đến phần tử có id = "section3" với hiệu ứng mượt mà
-  });
-</script>
+<div class="adventure-time-title">
+  <h1>Make Your Own</h1>
+  <h1>Adventure Time</h1>
+</div>
+
+<style>
+  .adventure-time-title {
+  background-color: #f6b352;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.adventure-time-title h1:first-child {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.adventure-time-title h1:last-child {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+</style>
