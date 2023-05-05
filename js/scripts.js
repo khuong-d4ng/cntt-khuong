@@ -53,3 +53,35 @@ function smoothScroll(event) {
   });
 }
 
+
+
+/* ĐIỀU KIỆN CHO QUẢ RESPONSIVE ĐỈNH CON MẸ NÓ CAO: TRÊN 500PX THÌ HIỂN THỊ rSECTION HOME BÌNH THƯỜNG(BẢN DESKTOP) 
+DƯỚI < 500PX THÌ HIỂN THỊ BẢN SLIDER HAHAHAH NGONNNNNNNNNNNNN*/
+window.addEventListener("DOMContentLoaded", function () {
+  var rightSectionHome = document.querySelector(".right-container-home");
+  var rSectionSlider = document.querySelector(".rSection-slider");
+
+  function hideRightSectionHome() {
+    rightSectionHome.style.display = "none";
+    rSectionSlider.style.display = "block";
+  }
+
+  function showRightSectionHome() {
+    rightSectionHome.style.display = "block";
+    rSectionSlider.style.display = "none";
+  }
+
+  if (window.innerWidth < 500) {
+    hideRightSectionHome();
+  } else {
+    showRightSectionHome();
+  }
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 500) {
+      hideRightSectionHome();
+    } else {
+      showRightSectionHome();
+    }
+  });
+});

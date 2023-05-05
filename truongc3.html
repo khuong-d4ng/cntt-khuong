@@ -1,28 +1,102 @@
-<div class="adventure-time-title">
-  <h1>Make Your Own</h1>
-  <h1>Adventure Time</h1>
-</div>
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
 
-<style>
-  .adventure-time-title {
-  background-color: #f6b352;
-  color: #fff;
-  font-family: 'Helvetica Neue', sans-serif;
-  text-align: center;
-  padding: 2rem 0;
-}
+  
+  </head>
+  <body>
 
-.adventure-time-title h1:first-child {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
-}
+    <div class="rSection-slider">
+      <div class="image__item-rSection-slider">
+        <div class="image-rSection-slider">
+          <img src="./image/tokyo-tower-1.jpg" alt="">
+        </div>
+      </div>
 
-.adventure-time-title h1:last-child {
-  font-size: 5rem;
-  font-weight: bold;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-}
+      <div class="image__item-rSection-slider">
+        <div class="image-rSection-slider">
+          <img src="./image/smol-town-beach2(2).jpg" alt="">
+        </div>
+      </div>
 
-</style>
+      <div class="image__item-rSection-slider">
+        <div class="image-rSection-slider">
+          <img src="./image/barcelona.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  <style>
+    .rSection-slider{
+      width: 80%;
+    }
+    .image-rSection-slider{
+      height: 500px;
+      margin-bottom: 20px;
+    }
+    .image-rSection-slider img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .image-title{
+      font-size: 20px;
+    }
+    .image__item-rSection-slider{
+      margin: 0 3px;
+    }
+  </style>
+  
+    
+
+ <script
+   type="text/javascript"
+   src="https://code.jquery.com/jquery-1.11.0.min.js"
+ ></script>
+ <script
+   type="text/javascript"
+   src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+ ></script>
+ <script
+   type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+ ></script>
+
+  <script type="text/javascript">
+    $('.image-slider').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ],
+  arrows: false,
+});
+  </script>
+
+  </body>
+</html>

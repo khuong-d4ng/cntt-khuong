@@ -1067,7 +1067,7 @@ HIỆU ỨNG HOVER CỦA BOOK NOW
 /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
 /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/ /*TỪ ĐÂY LÀ PHẦN RIGHT CONTENT*/
 
-@media screen and (min-width: 400px) {
+
   .right-section-home {
     display: flex;
     min-height: 100%;
@@ -1149,7 +1149,7 @@ HIỆU ỨNG HOVER CỦA BOOK NOW
     line-height: 1;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
   }
-}
+
 
 /*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
 /*-------------RESPPONSIVE CUA RIGHT SECTION HOME PAAGE----------------------*/
@@ -1526,7 +1526,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 @media screen and (max-width: 600px) {
   .video__homePage--container{
     position: relative;
-    bottom: 80%;
+    bottom: 0;
   }
   .top__title--h1--title {
     font-size: 30px;
@@ -1548,3 +1548,4 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
     font-size: 10px;
   }
   }
+
