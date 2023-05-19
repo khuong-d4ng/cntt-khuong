@@ -5,19 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <meta name="author" content="Pham Dang Khuong" />
+    
 
     <script src="./js/scripts.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./mobile-responsive/mobile-style.css" />
 
+    <!--import font-awsome-->
+    <script
+      src="https://kit.fontawesome.com/2a4863cf64.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!--CÁI NÀY LÀ LINK CSS CỦA SLICK SLIDER-->
-    <link 
+    <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-
+    
+    <meta name="author" content="Pham Dang Khuong" />
   </head>
   <body>
     <header class="menu-container">
@@ -133,26 +140,23 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 20rem;
       "
     >
-      <p
-        class="heading-hotTour-p"
-        style="font-size: 24px; text-align: center; margin-top: 5px"
-      >
+      <p class="heading-hotTour--p" style="text-align: center; margin-top: 5px">
         HÃY LÊN KẾ HOẠCH NGAY NÀO!
       </p>
       <div
         class="container-heading-child-hotTour"
         style="display: flex; justify-content: center; align-items: center"
       >
-        <h2 class="heading-hotTour" style="font-size: 34px; text-align: center">
+        <h2
+          class="heading-hotTour--h2"
+          style="font-size: 34px; text-align: center"
+        >
           Where to next?
         </h2>
       </div>
     </div>
-
-    <style></style>
 
     <div class="chart-bigcontainer">
       <style>
@@ -262,51 +266,96 @@
 
       <!--Cái này sẽ xuất hiện thay thế cái righ section homePage desktop,mệt quá ai cứu phát, 4h sáng và t vẫn 
       đang ngồi làm cái chết tiệt này SOS-->
-      
-        <div class="rSection-slider">
-          <div class="image__item-rSection-slider">
-            <div class="image-rSection-slider">
-              <img src="./image/tokyo-tower-1.jpg" alt="">
-            </div>
-          </div>
 
-          <div class="image__item-rSection-slider">
-            <div class="image-rSection-slider">
-              <img src="./image/smol-town-beach2(2).jpg" alt="">
-            </div>
+      <div id="rSection-slider">
+        <div class="image__item-rSection-slider">
+          <div class="image-rSection-slider">
+            <img src="./image/tokyo-tower-1.jpg" alt="" />
+            <h3 class="heading__rSection-slider">Tokyo</h3>
+            <p class="decription__rSection-slider">
+              Tokyo: <br />
+              Vibrant, <br />
+              Futuristic
+            </p>
           </div>
-
-          <div class="image__item-rSection-slider">
-            <div class="image-rSection-slider">
-              <img src="./image/barcelona.jpg" alt="">
-            </div>
-          </div>
-    
         </div>
-      
+
+        <div class="image__item-rSection-slider">
+          <div class="image-rSection-slider">
+            <img src="./image/smol-town-beach2(2).jpg" alt="" />
+            <h3 class="heading__rSection-slider">Italy</h3>
+            <p class="decription__rSection-slider">
+              Italy: <br />
+              Coastal<br />Cities
+            </p>
+          </div>
+        </div>
+
+        <div class="image__item-rSection-slider">
+          <div class="image-rSection-slider">
+            <img src="./image/barcelona.jpg" alt="" />
+            <h3 class="heading__rSection-slider">Barcelona</h3>
+            <p class="decription__rSection-slider">
+              Barcelona:<br />artistic,<br />historic
+            </p>
+          </div>
+        </div>
+      </div>
+
       <style>
-        .rSection-slider{
+        #rSection-slider {
           width: 80%;
         }
-        .image-rSection-slider{
+        .image-rSection-slider {
           height: 500px;
           margin-bottom: 20px;
         }
-        .image-rSection-slider img{
+        .image-rSection-slider img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          border-radius: 5px;
+          border-radius: 15px;
+
+          /*hehehe cho nay` lam cho anh toi' di nek cha*/
+          transition: ease 1s;
+          filter: brightness(0.7) contrast(1.05);
         }
-        .image-title{
+        .image-rSection-slider img:hover {
+          /*hover vao` no' dep. ra ne`*/
+          transition: ease 1s;
+          filter: brightness(1);
+        }
+
+        .image-title {
           font-size: 20px;
         }
-        .image__item-rSection-slider{
+        .image__item-rSection-slider {
           margin: 0 3px;
         }
         /*-----BÌNH THƯỜNG (DESKTOP) THÌ ẨN MỤC NÀY ĐI, CHỈ KHI DÙNG TỚI MOBILE THÌ MỚI HIỆN NÓ RA!*/
- 
 
+        .heading__rSection-slider {
+          position: absolute;
+          bottom: 23%;
+          padding-left: 25px;
+
+          color: #fff;
+          font-size: 25px;
+          line-height: 1;
+          text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+        }
+        .decription__rSection-slider {
+          position: absolute;
+          bottom: 30%;
+          padding-left: 25px;
+
+          color: #fff;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 5px;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+        }
       </style>
     </div>
 
@@ -318,8 +367,9 @@
       <div class="video__homePage--title">
         <a href="#"
           ><h1 class="video__homePagr--h1--title">
-            <span class="top__title--h1--title">MAKE YOUR OWN </span> <br/>
-            <span class="bot__title--h1-title"
+            <span class="top__title--h1--title">MAKE YOUR OWN </span> <br />
+            <span
+              class="bot__title--h1-title"
               style="
                 border-bottom: solid 2px rgb(0, 119, 255);
                 background: linear-gradient(
@@ -337,13 +387,20 @@
             >
           </h1></a
         >
-        <a href="#"><p class="video__homePage--description">Join with us! let make a beutiful adventure</p></a>
+        <a href="#"
+          ><p class="video__homePage--description">
+            Join with us! let make a beutiful adventure
+          </p></a
+        >
       </div>
       <!-- =============================================================================================== -->
       <div class="video__homePage--bottom__text">
         <p class="video__homePage--bottom__text--p">
-         <span class="video__homePage--bottom__text--p--dong1"> Create Your Own Adventure! </span> <br/> Embark on a Tailored Journey and Explore
-          Like Never Before!
+          <span class="video__homePage--bottom__text--p--dong1">
+            Create Your Own Adventure!
+          </span>
+          <br />
+          Embark on a Tailored Journey and Explore Like Never Before!
         </p>
       </div>
       <div class="video__homePage--overlay"></div>
@@ -364,55 +421,182 @@
       }
     </style>
 
+    <!--PHẦN ALL NEW CỦA WEB, NẰM NGAY DƯỚI VIDEO ADVENTURE-->
+    <!--PHẦN ALL NEW CỦA WEB, NẰM NGAY DƯỚI VIDEO ADVENTURE-->
+    <!--PHẦN ALL NEW CỦA WEB, NẰM NGAY DƯỚI VIDEO ADVENTURE-->
 
+<!-- THÊM SECTION, CHƯA FIX SECTION 2. LỖI TỈ LỆ %-->
 
+    <!--ĐÂY LÀ TITLE ALL-NEW-->
+    <div class="stories__heading-container">
+      <div class="stories__heading-left">
+        <div class="heading__top-left">
+          Tin mới về du lịch và những câu chuyện xoay quanh du lịch!
+        </div>
+        <div class="heading__bottom-left">
+        <span class="heading__bottom-left-fisrt">Cùng khám phá</span> <br />
+          những "<span class="heading__bottom-left-sec"
+            style="
+              background: linear-gradient(
+                173deg,
+                rgb(7, 230, 255),
+                rgba(0, 255, 102, 0.679)
+              );
+              -webkit-background-clip: text;
+              -moz-background-clip: text;
+              background-clip: text;
+              color: transparent;
+            "
+            >Câu chuyện về du lịch</span
+          >"
+        </div>
+      </div>
+      <div class="stories__heading-right">
+        <div class="button__container">
+          <button class="stories__button">View all Stories</button>
+          <button class="news__button">View all News</button>
+        </div>
+      </div>
+    </div>
 
+    <div class="stories-container">
+      <div class="left__stories__card-container">
+        <div class="left__stories-card">
+          <img src="/image/stories-beach.jpg" alt="story image" />
+          <div class="left__stories-card-overlay">
+            <!--Overlay dùng để làm tối ảnh đi-->
+          </div>
 
+          <div class="left__stories-card-text">
+            <a href="#"> Bờ biển</a>
+            <p>Cùng khám phá những bờ biển và câu chuyện đằng sau nó</p>
+          </div>
 
+        </div>
+      </div>
+      <div class="right__stories__card-container">
+        <div id="stories-slider">
+          <div class="stories__image-item">
+            <a class="stories-image" href="#">
+              <img src="image/stories-slider5.jpg" alt="" />
+            </a>
+            <div class="stories__slider-decription">
+              <p class="stories__theloai--slider-decription">Khu vui choi</p>
+              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <address class="stories__diaDiem--slider-decription">
+                Be boi
+              </address>
+              <p class="postTime--slider-decription">15/5/2023</p>
+              <p class="decription--slider-decription">
+                texttexttext<br />texttexttext<br />texttexttext
+              </p>
+            </div>
+          </div>
 
+          <div class="stories__image-item">
+            <a class="stories-image" href="#">
+              <img src="image/stories-slider4.jpg" alt="" />
+            </a>
+            <div class="stories__slider-decription">
+              <p class="stories__theloai--slider-decription">Khu vui choi</p>
+              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <address class="stories__diaDiem--slider-decription">
+                Be boi
+              </address>
+              <p class="postTime--slider-decription">15/5/2023</p>
+              <p class="decription--slider-decription">
+                texttexttext<br />texttexttext<br />texttexttext
+              </p>
+            </div>
+          </div>
 
-<!--IMPORT CÁI THƯ VIỆN SLICK VÀO TRỜI ƠI, MỆT QUÁ, CÁI NÀY ĐỂ PHỤC VỤ CÁI RESPONSIVE CỦA RSECTION, CỤ THỂ LÀ:
+          <div class="stories__image-item">
+            <a class="stories-image" href="#">
+              <img src="image/stories-slider6.jpg" alt="" />
+            </a>
+            <div class="stories__slider-decription">
+              <p class="stories__theloai--slider-decription">Khu vui choi</p>
+              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <address class="stories__diaDiem--slider-decription">
+                Be boi
+              </address>
+              <p class="postTime--slider-decription">15/5/2023</p>
+              <p class="decription--slider-decription">
+                texttexttext<br />texttexttext<br />texttexttext
+              </p>
+            </div>
+          </div>
+
+          <div class="stories__image-item">
+            <a class="stories-image" href="#">
+              <img src="image/stories-slider3.jpg" alt="" />
+            </a>
+            <div class="stories__slider-decription">
+              <p class="stories__theloai--slider-decription">Khu vui choi</p>
+              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <address class="stories__diaDiem--slider-decription">
+                Be boi
+              </address>
+              <p class="postTime--slider-decription">15/5/2023</p>
+              <p class="decription--slider-decription">
+                texttexttext<br />texttexttext<br />texttexttext
+              </p>
+            </div>
+          </div>
+
+          <div class="stories__image-item">
+            <a class="stories-image" href="#">
+              <img src="image/stories-slider2.jpg" alt="" />
+            </a>
+            <div class="stories__slider-decription">
+              <p class="stories__theloai--slider-decription">Khu vui choi</p>
+              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <address class="stories__diaDiem--slider-decription">
+                Be boi
+              </address>
+              <p class="postTime--slider-decription">15/5/2023</p>
+              <p class="decription--slider-decription">
+                texttexttext<br />texttexttext<br />texttexttext
+              </p>
+            </div>
+          </div>
+
+          <div class="stories__image-item">
+            <a class="stories-image" href="#">
+              <img src="image/stories-slider1.jpg" alt="" />
+            </a>
+            <div class="stories__slider-decription">
+              <p class="stories__theloai--slider-decription">Khu vui choi</p>
+              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <address class="stories__diaDiem--slider-decription">
+                Be boi
+              </address>
+              <p class="postTime--slider-decription">15/5/2023</p>
+              <p class="decription--slider-decription">
+                texttexttext<br />texttexttext<br />texttexttext
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--IMPORT CÁI THƯ VIỆN SLICK VÀO TRỜI ƠI, MỆT QUÁ, CÁI NÀY ĐỂ PHỤC VỤ CÁI RESPONSIVE CỦA RSECTION, CỤ THỂ LÀ:
 KHI MÀ XEM WEB TRÊN MOBILE THÌ NÓ SẼ CHUYỂN THÀNH CÁI SLIDER ;(((( -->
-<script
-   type="text/javascript"
-   src="https://code.jquery.com/jquery-1.11.0.min.js"
- ></script>
- <script
-   type="text/javascript"
-   src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
- ></script>
- <script
-   type="text/javascript"
-   src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
- ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
 
-  <script type="text/javascript">
-    $('.rSection-slider').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 1,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
-  ],
-  arrows: false,
-});
-  </script>
+    <script src="./js/scripts.js"></script>
+
   </body>
 </html>

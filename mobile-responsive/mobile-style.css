@@ -13,7 +13,7 @@
 }
 #menu ul.menu-parent>li:nth-child(3)>a:hover {
   transition: ease-in-out 0.4s;
-  font-size: 54px !important;
+  font-size: 44px !important;
   background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
