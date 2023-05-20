@@ -133,29 +133,14 @@
       </div>
     </div>
 
-    <div
-      class="container-heading-hotTour"
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      "
-    >
-      <p class="heading-hotTour--p" style="text-align: center; margin-top: 5px">
-        HÃY LÊN KẾ HOẠCH NGAY NÀO!
+    <div class="heading__title__hotTour-container">
+      <h4>
+        Lên kế hoạch du lịch ngay nào!
+      </h4>
+      <p>
+        Chọn địa điểm tiếp theo<br>trong<br>
+        <span>chuyến hành trình của bạn</span>
       </p>
-      <div
-        class="container-heading-child-hotTour"
-        style="display: flex; justify-content: center; align-items: center"
-      >
-        <h2
-          class="heading-hotTour--h2"
-          style="font-size: 34px; text-align: center"
-        >
-          Where to next?
-        </h2>
-      </div>
     </div>
 
     <div class="chart-bigcontainer">
@@ -266,6 +251,68 @@
 
       <!--Cái này sẽ xuất hiện thay thế cái righ section homePage desktop,mệt quá ai cứu phát, 4h sáng và t vẫn 
       đang ngồi làm cái chết tiệt này SOS-->
+
+      <div class="heading__title__rSection-slider-container">
+        <h4>
+          Những địa điểm có thể bạn muốn thử
+        </h4>
+        <p>
+          Những "<span>địa điểm tuyệt vời</span>"<br>mà
+           bạn không muốn bỏ lỡ!
+        </p>
+      </div>
+
+      <style>
+        .heading__title__rSection-slider-container{
+
+          display: none !important;
+
+          width: 85%;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+        .heading__title__rSection-slider-container > h4{
+          text-transform: uppercase;
+          opacity: .8;
+          color: rgba(75, 75, 75, 1);
+          letter-spacing: 0.005em;
+          font-size: .75em;
+   
+        }
+        .heading__title__rSection-slider-container > p{
+          margin-top: 15px;
+          font-size: 1.5em;
+          font-weight: 700;
+        }
+        .heading__title__rSection-slider-container > p > span{
+          background: linear-gradient(
+                173deg,
+                rgb(27, 223, 245),
+                rgba(4, 246, 4, 0.995)
+              );
+              -webkit-background-clip: text;
+              -moz-background-clip: text;
+              background-clip: text;
+              color: transparent;
+        }
+        @media screen and (max-width: 500px) {
+          .heading__title__rSection-slider-container{
+            display: block !important;
+          }
+        }
+        @media screen and (max-width: 400px) {
+          .heading__title__rSection-slider-container > h4{
+            font-size: 0.5em
+          }
+          .heading__title__rSection-slider-container > p{
+            font-size: 1.25em;
+          }
+        }
+      </style>
 
       <div id="rSection-slider">
         <div class="image__item-rSection-slider">
@@ -434,8 +481,7 @@
           Tin mới về du lịch và những câu chuyện xoay quanh du lịch!
         </div>
         <div class="heading__bottom-left">
-        <span class="heading__bottom-left-fisrt">Cùng khám phá</span> <br />
-          những "<span class="heading__bottom-left-sec"
+        <span class="heading__bottom-left-fisrt">Cùng khám phá<br/>những</span> "<span class="heading__bottom-left-sec"
             style="
               background: linear-gradient(
                 173deg,
@@ -468,7 +514,7 @@
           </div>
 
           <div class="left__stories-card-text">
-            <a href="#"> Bờ biển</a>
+            <a class="lead__stories-card-text__title" href="#"> Bờ biển</a>
             <p>Cùng khám phá những bờ biển và câu chuyện đằng sau nó</p>
           </div>
 
@@ -482,30 +528,31 @@
             </a>
             <div class="stories__slider-decription">
               <p class="stories__theloai--slider-decription">Khu vui choi</p>
-              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <h3 class="stories__image__slider-title">Disneyland</h3>
               <address class="stories__diaDiem--slider-decription">
-                Be boi
+                Tokyo - Nhật bản
               </address>
               <p class="postTime--slider-decription">15/5/2023</p>
               <p class="decription--slider-decription">
-                texttexttext<br />texttexttext<br />texttexttext
+                Bắt đầu những cuộc phưu lưu không tưởng tại Disney Land cùng
+                với những nhân vật yêu thích<br/>
               </p>
             </div>
           </div>
 
           <div class="stories__image-item">
             <a class="stories-image" href="#">
-              <img src="image/stories-slider4.jpg" alt="" />
+              <img src="image/magic-kingdom-pard-US.jpg" alt="" />
             </a>
             <div class="stories__slider-decription">
-              <p class="stories__theloai--slider-decription">Khu vui choi</p>
-              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <p class="stories__theloai--slider-decription">Cong vien</p>
+              <h3 class="stories__image__slider-title">Kingdom Park</h3>
               <address class="stories__diaDiem--slider-decription">
-                Be boi
+                  Florida - Hoa Kỳ
               </address>
               <p class="postTime--slider-decription">15/5/2023</p>
               <p class="decription--slider-decription">
-                texttexttext<br />texttexttext<br />texttexttext
+                Công viên giải trí hoàn hảo cho các gia đình vào mùa lễ hội!
               </p>
             </div>
           </div>
@@ -515,27 +562,10 @@
               <img src="image/stories-slider6.jpg" alt="" />
             </a>
             <div class="stories__slider-decription">
-              <p class="stories__theloai--slider-decription">Khu vui choi</p>
-              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <p class="stories__theloai--slider-decription">Khu vực lặn biển</p>
+              <h3 class="stories__image__slider-title">Sindalah - NEOM</h3>
               <address class="stories__diaDiem--slider-decription">
-                Be boi
-              </address>
-              <p class="postTime--slider-decription">15/5/2023</p>
-              <p class="decription--slider-decription">
-                texttexttext<br />texttexttext<br />texttexttext
-              </p>
-            </div>
-          </div>
-
-          <div class="stories__image-item">
-            <a class="stories-image" href="#">
-              <img src="image/stories-slider3.jpg" alt="" />
-            </a>
-            <div class="stories__slider-decription">
-              <p class="stories__theloai--slider-decription">Khu vui choi</p>
-              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
-              <address class="stories__diaDiem--slider-decription">
-                Be boi
+                Biển Đỏ - Saudi Arabia
               </address>
               <p class="postTime--slider-decription">15/5/2023</p>
               <p class="decription--slider-decription">
@@ -549,14 +579,31 @@
               <img src="image/stories-slider2.jpg" alt="" />
             </a>
             <div class="stories__slider-decription">
-              <p class="stories__theloai--slider-decription">Khu vui choi</p>
-              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <p class="stories__theloai--slider-decription">Cánh đồng hoa</p>
+              <h3 class="stories__image__slider-title">Antelope Valley</h3>
               <address class="stories__diaDiem--slider-decription">
-                Be boi
+                California - Hoa Kỳ
               </address>
               <p class="postTime--slider-decription">15/5/2023</p>
               <p class="decription--slider-decription">
-                texttexttext<br />texttexttext<br />texttexttext
+                demo-text demo-text demo-texttext
+              </p>
+            </div>
+          </div>
+
+          <div class="stories__image-item">
+            <a class="stories-image" href="#">
+              <img src="image/istanbul-thonhiki-gladiatower.jpg" alt="" />
+            </a>
+            <div class="stories__slider-decription">
+              <p class="stories__theloai--slider-decription">Thành phố đẹp</p>
+              <h3 class="stories__image__slider-title">Glata Tower</h3>
+              <address class="stories__diaDiem--slider-decription">
+                Istanbul - Thổ Nhĩ Kỳ
+              </address>
+              <p class="postTime--slider-decription">15/5/2023</p>
+              <p class="decription--slider-decription">
+                demo-text demo-text demo-texttext
               </p>
             </div>
           </div>
@@ -566,14 +613,14 @@
               <img src="image/stories-slider1.jpg" alt="" />
             </a>
             <div class="stories__slider-decription">
-              <p class="stories__theloai--slider-decription">Khu vui choi</p>
-              <h3 class="stories__image__slider-title">DAY LA TITLE6</h3>
+              <p class="stories__theloai--slider-decription">Hòn đảo nhỏ</p>
+              <h3 class="stories__image__slider-title">Procida</h3>
               <address class="stories__diaDiem--slider-decription">
-                Be boi
+                Procida, NA - Italya
               </address>
               <p class="postTime--slider-decription">15/5/2023</p>
               <p class="decription--slider-decription">
-                texttexttext<br />texttexttext<br />texttexttext
+                demo-text demo-text demo-texttext
               </p>
             </div>
           </div>

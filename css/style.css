@@ -454,39 +454,69 @@ a.hotline:hover > p {
   box-shadow: 0px 0px 5px 0px rgba(250, 146, 194, 0.749);
   color: #fff;
 }
-
-/*HEADING CỦA HOTTOUR- DÒNG CHỮ WHERE TO NEXT*/
-/*HEADING CỦA HOTTOUR- DÒNG CHỮ WHERE TO NEXT*/
-/*HEADING CỦA HOTTOUR- DÒNG CHỮ WHERE TO NEXT*/
-.container-heading-hotTour {
-  height: 20rem;
+@media screen and (max-width: 400px) {
+  .search__container{
+    display: none;
+  }
 }
-@media screen and (max-width: 1000px) {
-  .container-heading-hotTour {
-    height: 16rem;
+/*HEADING CỦA HOTTOUR- DÒNG CHỮ WHERE TO NEXT*/
+/*HEADING CỦA HOTTOUR- DÒNG CHỮ WHERE TO NEXT*/
+/*HEADING CỦA HOTTOUR- DÒNG CHỮ WHERE TO NEXT*/
+
+.heading__title__hotTour-container{
+  width: 85%;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          margin: 0 auto;
+          margin-bottom: 100px;
+          margin-top: 30px;
+}
+.heading__title__hotTour-container > h4{
+  text-transform: uppercase;
+  color: rgba(75, 75, 75, 1);
+  letter-spacing: 0.005em;
+  font-size: .8em;
+  font-weight: 600;
+}
+.heading__title__hotTour-container > p{
+  margin-top: 15px;
+  font-size: 2.7em;
+  font-weight: 700;
+}
+.heading__title__hotTour-container > p > span{
+  background: linear-gradient(
+        173deg,
+        rgb(27, 223, 245),
+        rgba(4, 246, 4, 0.995)
+      );
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+}
+
+@media screen and (max-width: 1270px) {
+  .heading__title__hotTour-container > h4{
+    font-size: .75em;
+  }
+  .heading__title__hotTour-container > p{
+    font-size: 2.35em;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .heading__title__hotTour-container > p {
+    font-size: 2em;
   }
 }
 @media screen and (max-width: 600px) {
-  .container-heading-hotTour {
-    height: 7rem;
-    margin-top: 10%;
+  .heading__title__hotTour-container > p {
+    font-size: 1.6em;
   }
-}
-/* DÒNG CHỮ "LÊN KẾ HOẠCH NGAY*/
-.container-heading-hotTour > .heading-hotTour--p {
-  font-size: 24px;
-}
-@media screen and (max-width: 550px) {
-  .container-heading-hotTour > .heading-hotTour--p {
-    font-size: 18px;
-  }
-}
-.container-heading-hotTour .heading-hotTour--h2 {
-  font-size: 34px;
-}
-@media screen and (max-width: 550px) {
-  .container-heading-hotTour .heading-hotTour--h2 {
-    font-size: 21px;
+  .heading__title__hotTour-container{
+    margin-bottom: 70px;
   }
 }
 /*===============HOT TOUR TỪ ĐÂY===========================*/
@@ -1794,7 +1824,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 .left__stories-card-text{
   position: absolute;
   top: 50%;
-  left: 32%;
+  left: 35%;
   transform: translate(-50%,-50%);
 }
 .left__stories-card-text a{
@@ -1803,6 +1833,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   font-weight: 700;
   text-decoration: none;
 }
+
 .left__stories-card-text a:hover{
   text-decoration: underline;
 }
@@ -1812,7 +1843,21 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   opacity: .8;
 }
 
-
+.stories__slider-decription{
+  margin-left: 5px;
+}
+.stories__diaDiem--slider-decription{
+  margin-top: 5px;
+  margin-left: 25px;
+}
+.postTime--slider-decription{
+  margin-left: 33px;
+}
+.decription--slider-decription{
+  margin-left: 5px;
+  margin-top: 10px;
+  opacity: .75;
+}
 /*------------------------------------------------------
                STORIES SLIDER TU DAY 
 ------------------------------------------------------*/
@@ -1898,7 +1943,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
                                           RESPONSIVE PHẦN ALL NEW 
 -----------------------------------------------------*/
 
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1290px) {
   .stories__heading-container {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -1967,6 +2012,9 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   .button__container button{
     transform: scale(.8);
   }
+  .heading__bottom-left-sec{
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1977,7 +2025,10 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
     white-space: nowrap;
     font-size: .9em;
   }
-  .stories__diaDiem--slider-decription,
+  .stories__diaDiem--slider-decription{
+    font-size: .6em;
+    margin-left: 5px;
+  }
   .postTime--slider-decription, 
   .decription--slider-decription{
     display: none;
@@ -1999,5 +2050,11 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   .left__stories-card-text p{
     font-size: 1em;
     font-weight: 100;
+  }
+}
+@media screen and (max-width: 450px) {
+  .heading__bottom-left-fisrt,
+  .heading__bottom-left-sec{
+    font-size: .9em;
   }
 }

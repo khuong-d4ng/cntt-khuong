@@ -58,7 +58,7 @@ DƯỚI < 500PX THÌ HIỂN THỊ BẢN SLIDER HAHAHAH NGONNNNNNNNNNNNN*/
 
 $("#rSection-slider").slick({
   centerMode: true,
-  centerPadding: "60px",
+  centerPadding: "30px",
   slidesToShow: 1,
   responsive: [
     {
@@ -82,6 +82,9 @@ $("#rSection-slider").slick({
   ],
   arrows: false,
 });
+
+
+
 
 $(document).ready(function () {
 
@@ -168,3 +171,5 @@ window.addEventListener("DOMContentLoaded", function () {
     updateLayout();
   });
 });
+
+
