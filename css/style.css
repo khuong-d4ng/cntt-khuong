@@ -1842,7 +1842,9 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   font-size: 1.7em;
   opacity: .8;
 }
-
+.stories__image__slider-title{
+  font-weight: bold;
+}
 .stories__slider-decription{
   margin-left: 5px;
 }
