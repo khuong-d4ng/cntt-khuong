@@ -97,6 +97,7 @@ $(document).ready(function () {
       slideScrollNumber = 1;
     }
     $("#stories-slider").slick({
+      lazyLoad: 'ondemand',
       infinite: true,
         slidesToShow: slideScrollNumber,
         slidesToScroll: slideToShowNumber,
@@ -131,6 +132,7 @@ $(document).ready(function () {
     }
 
     $("#stories-slider").slick({
+      lazyLoad: 'ondemand',
       infinite: true,
       slidesToShow: slideToShowNumber,
       slidesToScroll: slideScrollNumber,
