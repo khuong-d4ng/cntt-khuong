@@ -174,4 +174,5 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
+//cuộn
+window.addEventListener('scroll', myScrollHandler, { passive: true });
