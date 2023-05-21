@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500;800&display=swap?v=1.0");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500;800&display=swap");
 
 * {
   margin: 0;
@@ -41,7 +41,7 @@ body {
 }
 */
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700?v=1.0");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 
 .search__header {
   position: absolute;
@@ -416,7 +416,7 @@ a.hotline:hover > p {
   left: 0;
   z-index: -1;
   border-radius: 20px;
-  background-image: url(../image-webp/japan-nature-1-1-min.webp?v=1.0);
+  background-image: url(../image/japan-nature-1-1.jpg);
   background-size: cover;
   opacity: 0.5;
 }
@@ -811,11 +811,11 @@ HIỆU ỨNG HOVER CỦA BOOK NOW
 
   /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
   .anh-diaDiem1 {
-    background-image: url(../image/2bt1aj9.webp?v=1.0);
+    background-image: url(../image/2bt1aj9.webp);
   }
   /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
   .container-diaDiem .card-hoverCard .anh-diaDiem2 {
-    background-image: url(../image/CauRong_DaNang.webp?v=1.0);
+    background-image: url(../image/CauRong_DaNang.webp);
   }
 
   /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
@@ -1093,11 +1093,11 @@ HIỆU ỨNG HOVER CỦA BOOK NOW
 
   /*ẢNH ĐIA ĐIỂM 1 - HIỆN TẠI LÀ HOT TOUR*/
   .anh-diaDiem1 {
-    background-image: url(../image/2bt1aj9.webp?v=1.0);
+    background-image: url(../image/2bt1aj9.webp);
   }
   /*ẢNH ĐIA ĐIỂM 2 - HIỆN TẠI LÀ HOT TOUR*/
   .anh-diaDiem2 {
-    background-image: url(../image/CauRong_DaNang.webp?v=1.0);
+    background-image: url(../image/CauRong_DaNang.webp);
   }
 
   /*KHI HOVER VÀO CARD ẢNH ĐỊA ĐIỂM SẼ ĐƯỢC PHÓNG TO*/
@@ -1789,7 +1789,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 }
 
 .left__stories-card img {
-  width: 100% ;
+  width: 100%;
   height: 100%;
   border-radius: 24px;
   object-fit: cover;
@@ -1842,9 +1842,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   font-size: 1.7em;
   opacity: .8;
 }
-.stories__image__slider-title{
-  font-weight: bold;
-}
+
 .stories__slider-decription{
   margin-left: 5px;
 }
