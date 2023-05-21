@@ -416,7 +416,7 @@ a.hotline:hover > p {
   left: 0;
   z-index: -1;
   border-radius: 20px;
-  background-image: url(../image/japan-nature-1-1.jpg);
+  background-image: url(../image-webp/japan-nature-1-1-min.webp);
   background-size: cover;
   opacity: 0.5;
 }
