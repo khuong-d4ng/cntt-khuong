@@ -1,3 +1,49 @@
+var parentItems = document.querySelectorAll("#menu .menu-parent > li");
+var dropdownItems = document.querySelectorAll("#menu .submenu > li");
+
+// Hover vào phần tử cha
+parentItems.forEach(function (item) {
+  var parentLink = item.querySelector("a");
+
+  item.addEventListener("mouseenter", function () {
+    if (!parentLink.classList.contains("textHome")) {
+      parentLink.style.fontSize = "18px";
+      parentLink.style.backgroundImage =
+        "linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0))";
+      parentLink.style.webkitBackgroundClip = "text";
+      parentLink.style.webkitTextFillColor = "transparent";
+      parentLink.style.backgroundClip = "text";
+    }
+  });
+
+  item.addEventListener("mouseleave", function () {
+    if (
+      !item.classList.contains("active") &&
+      !parentLink.classList.contains("textHome")
+    ) {
+      parentLink.style.fontSize = "16px";
+      parentLink.style.backgroundImage = "none";
+      parentLink.style.webkitBackgroundClip = "initial";
+      parentLink.style.webkitTextFillColor = "initial";
+      parentLink.style.backgroundClip = "initial";
+    }
+  });
+
+  // Hover vào phần tử con
+  var submenu = item.querySelector(".submenu");
+  if (submenu) {
+    submenu.addEventListener("mouseleave", function () {
+      if (!parentLink.classList.contains("textHome")) {
+        parentLink.style.fontSize = "16px";
+        parentLink.style.backgroundImage = "none";
+        parentLink.style.webkitBackgroundClip = "initial";
+        parentLink.style.webkitTextFillColor = "initial";
+        parentLink.style.backgroundClip = "initial";
+      }
+    });
+  }
+});
+
 window.addEventListener("DOMContentLoaded", function () {
   var anhCanXoaElements = document.querySelectorAll(".anh-can-xoa");
   var divToResize = document.getElementsByClassName("anh-giu-lailai")[0];
@@ -83,29 +129,25 @@ $("#rSection-slider").slick({
   arrows: false,
 });
 
-
-
-
 $(document).ready(function () {
-
   var windowWidth = $(window).width();
   var slideToShowNumber = 2;
-    var slideScrollNumber = 2;
+  var slideScrollNumber = 2;
 
-    if (windowWidth < 600) {
-      slideToShowNumber = 1;
-      slideScrollNumber = 1;
-    }
-    $("#stories-slider").slick({
-      lazyLoad: 'ondemand',
-      infinite: true,
-        slidesToShow: slideScrollNumber,
-        slidesToScroll: slideToShowNumber,
-      prevArrow:
-        "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-      nextArrow:
-        "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
-    });
+  if (windowWidth < 600) {
+    slideToShowNumber = 1;
+    slideScrollNumber = 1;
+  }
+  $("#stories-slider").slick({
+    lazyLoad: "ondemand",
+    infinite: true,
+    slidesToShow: slideScrollNumber,
+    slidesToScroll: slideToShowNumber,
+    prevArrow:
+      "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+    nextArrow:
+      "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+  });
   updateSlider();
 
   $(window).on("resize", function () {
@@ -132,7 +174,7 @@ $(document).ready(function () {
     }
 
     $("#stories-slider").slick({
-      lazyLoad: 'ondemand',
+      lazyLoad: "ondemand",
       infinite: true,
       slidesToShow: slideToShowNumber,
       slidesToScroll: slideScrollNumber,
@@ -149,7 +191,6 @@ $(document).ready(function () {
     updateSlider();
   });
 });
-
 
 window.addEventListener("DOMContentLoaded", function () {
   var rightContainerHome = document.querySelector(".right-container-home");
@@ -175,31 +216,4 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 //cuộn
-window.addEventListener('scroll', myScrollHandler, { passive: true });
-function wp_dereg_script_comment_reply(){wp_deregister_script( 'comment-reply' );}
-add_action('init','wp_dereg_script_comment_reply');
-
-//Function checks if a given script is already loaded
-function isScriptLoaded(src){
-  return document.querySelector('script[src="' + src + '"]') ? true : false;
-}
-
-//When a reply link is clicked, check if reply-script is loaded. If not, load it and emulate the click
-$('.comment-reply-link').click(function(){ 
-  if(!(isScriptLoaded("/wp-includes/js/comment-reply.min.js"))){
-      var script = document.createElement('script');
-      script.src = "/wp-includes/js/comment-reply.min.js"; 
-  script.onload = emRepClick($(this).attr('data-commentid'));        
-      document.head.appendChild(script);
-  } 
-});
-//Function waits 50 ms before it emulates a click on the relevant reply link now that the reply script is loaded
-function emRepClick(comId) {
-sleep(50).then(() => {
-document.querySelectorAll('[data-commentid="'+comId+'"]')[0].dispatchEvent(new Event('click'));
-});
-}
-//Function does nothing, for a given amount of time
-function sleep (time) {
-return new Promise((resolve) => setTimeout(resolve, time));
-}
+window.addEventListener("scroll", myScrollHandler, { passive: true });

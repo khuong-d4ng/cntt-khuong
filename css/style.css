@@ -145,9 +145,8 @@ ul.menu-parent li {
   padding: 0px 5px 0px 5px;
   line-height: 39px;
 }
-
 /*(1) TOÀN BỘ ĐỐNG NÀY CHỈ NHẰM TẠO HIỆU ỨNG HOVER CHO MENU*/
-#menu ul.menu-parent > li:first-child > a:hover {
+#menu ul.menu-parent > li:hover > a {
   transition: ease-in-out 0.3s;
   font-size: 18px;
   background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0));
@@ -166,34 +165,6 @@ ul.menu-parent li {
   background-clip: text;
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(to right, rgb(255, 183, 0), rgb(255, 0, 0)) 1;
-}
-.lienHe:hover {
-  transition: ease-in-out 0.3s;
-  font-size: 18px !important;
-  background-image: linear-gradient(
-    to right,
-    rgb(253, 253, 253),
-    rgb(38, 255, 0)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 4)) 1;
-}
-#menu ul.menu-parent > li:nth-child(5) > a:hover {
-  transition: ease-in-out 0.3s;
-  font-size: 18px;
-  background-image: linear-gradient(
-    to right,
-    rgb(68, 255, 0),
-    rgb(255, 255, 255)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, rgb(43, 255, 0), rgb(255, 255, 255)) 1;
 }
 
 /*child(3) la nut HOME*/
@@ -221,7 +192,7 @@ ul.menu-parent li {
 /*(1) KẾT THÚC (1)*/
 
 ul.submenu {
-  width: 230px;
+  width: 180px;
   min-height: auto;
   background-color: transparent;
   position: absolute;
@@ -455,7 +426,7 @@ a.hotline:hover > p {
   color: #fff;
 }
 @media screen and (max-width: 400px) {
-  .search__container{
+  .search__container {
     display: none;
   }
 }
@@ -463,45 +434,45 @@ a.hotline:hover > p {
 /*HEADING CỦA HOTTOUR- DÒNG CHỮ WHERE TO NEXT*/
 /*HEADING CỦA HOTTOUR- DÒNG CHỮ WHERE TO NEXT*/
 
-.heading__title__hotTour-container{
+.heading__title__hotTour-container {
   width: 85%;
-          height: 100px;
-          display: flex;
-          flex-direction: column;
-          align-items: start;
-          margin: 0 auto;
-          margin-bottom: 100px;
-          margin-top: 30px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 30px;
 }
-.heading__title__hotTour-container > h4{
+.heading__title__hotTour-container > h4 {
   text-transform: uppercase;
   color: rgba(75, 75, 75, 1);
   letter-spacing: 0.005em;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 600;
 }
-.heading__title__hotTour-container > p{
+.heading__title__hotTour-container > p {
   margin-top: 15px;
   font-size: 2.7em;
   font-weight: 700;
 }
-.heading__title__hotTour-container > p > span{
+.heading__title__hotTour-container > p > span {
   background: linear-gradient(
-        173deg,
-        rgb(27, 223, 245),
-        rgba(4, 246, 4, 0.995)
-      );
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      background-clip: text;
-      color: transparent;
+    173deg,
+    rgb(27, 223, 245),
+    rgba(4, 246, 4, 0.995)
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @media screen and (max-width: 1270px) {
-  .heading__title__hotTour-container > h4{
-    font-size: .75em;
+  .heading__title__hotTour-container > h4 {
+    font-size: 0.75em;
   }
-  .heading__title__hotTour-container > p{
+  .heading__title__hotTour-container > p {
     font-size: 2.35em;
   }
 }
@@ -515,7 +486,7 @@ a.hotline:hover > p {
   .heading__title__hotTour-container > p {
     font-size: 1.6em;
   }
-  .heading__title__hotTour-container{
+  .heading__title__hotTour-container {
     margin-bottom: 70px;
   }
 }
@@ -1823,50 +1794,50 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 
   transition: ease 1s;
 }
-.left__stories__card-container:hover .left__stories-card-overlay{
+.left__stories__card-container:hover .left__stories-card-overlay {
   transition: ease 1s;
   opacity: 0;
 }
 
 /* TEXT CUA PHAN CONTAINER ALL NEW BEN TRAI'*/
-.left__stories-card-text{
+.left__stories-card-text {
   position: absolute;
   top: 50%;
   left: 35%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.left__stories-card-text a{
+.left__stories-card-text a {
   color: white;
   font-size: 2em;
   font-weight: 700;
   text-decoration: none;
 }
 
-.left__stories-card-text a:hover{
+.left__stories-card-text a:hover {
   text-decoration: underline;
 }
-.left__stories-card-text p{
+.left__stories-card-text p {
   color: white;
   font-size: 1.7em;
-  opacity: .8;
+  opacity: 0.8;
 }
-.stories__image__slider-title{
+.stories__image__slider-title {
   font-weight: bold;
 }
-.stories__slider-decription{
+.stories__slider-decription {
   margin-left: 5px;
 }
-.stories__diaDiem--slider-decription{
+.stories__diaDiem--slider-decription {
   margin-top: 5px;
   margin-left: 25px;
 }
-.postTime--slider-decription{
+.postTime--slider-decription {
   margin-left: 33px;
 }
-.decription--slider-decription{
+.decription--slider-decription {
   margin-left: 5px;
   margin-top: 10px;
-  opacity: .75;
+  opacity: 0.75;
 }
 /*------------------------------------------------------
                STORIES SLIDER TU DAY 
@@ -1970,15 +1941,12 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 
   .heading__bottom-left {
     font-size: 2.35em;
-
   }
-
 }
 
 @media screen and (max-width: 1165px) {
   .heading__bottom-left {
     font-size: 2.25em;
-
   }
 }
 @media screen and (max-width: 1135px) {
@@ -1986,7 +1954,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   DÒNG TITLE, TUY NHIÊN KHÁ TRÙNG HỢP LÀ Ở CÁI 135PX THÌ 
   CÁI BUTTON CŨNG BỊ XÊ DỊCH, TIỆN THỂ CHUYỂN NÓ THÀNH COLUMN 
   VÀ DỊCH VỀ TẬN CNGF BÊN PHẢI*/
-  .button__container{
+  .button__container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1994,80 +1962,78 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   }
   .heading__bottom-left {
     font-size: 2.25em;
-
   }
 }
 @media screen and (max-width: 1120px) {
   .heading__bottom-left {
     font-size: 2.15em;
-
   }
 }
 @media screen and (max-width: 1081px) {
   .heading__bottom-left {
     font-size: 2em;
-
   }
-  
-  .left__stories-card-text a{
+
+  .left__stories-card-text a {
     font-size: 1.7em;
   }
-  .left__stories-card-text p{
+  .left__stories-card-text p {
     font-size: 1.3em;
   }
 }
 @media screen and (max-width: 1010px) {
   .heading__bottom-left {
     font-size: 1.9em;
-
   }
 
-  .button__container button{
-    transform: scale(.8);
+  .button__container button {
+    transform: scale(0.8);
   }
-  .heading__bottom-left-sec{
+  .heading__bottom-left-sec {
     white-space: nowrap;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .heading__top-left{
-    font-size: .6em;
+  .heading__top-left {
+    font-size: 0.6em;
   }
-  .heading__bottom-left-fisrt, .heading__bottom-left-sec{
+  .heading__bottom-left-fisrt,
+  .heading__bottom-left-sec {
     white-space: nowrap;
-    font-size: .9em;
+    font-size: 0.9em;
   }
-  .stories__diaDiem--slider-decription{
-    font-size: .6em;
+  .stories__diaDiem--slider-decription {
+    font-size: 0.6em;
     margin-left: 5px;
   }
-  .postTime--slider-decription, 
-  .decription--slider-decription{
+  .postTime--slider-decription,
+  .decription--slider-decription {
     display: none;
   }
-  .stories__button, .news__button{
+  .stories__button,
+  .news__button {
     top: 430px;
   }
-  .left__stories__card-container{
+  .left__stories__card-container {
     height: 70%;
   }
-  .button__container button{
+  .button__container button {
     margin: 0;
   }
 
-  .left__stories-card-text{
+  .left__stories-card-text {
     left: 40%;
     top: 25%;
   }
-  .left__stories-card-text p{
+  .left__stories-card-text p {
     font-size: 1em;
     font-weight: 100;
   }
 }
 @media screen and (max-width: 450px) {
   .heading__bottom-left-fisrt,
-  .heading__bottom-left-sec{
-    font-size: .9em;
+  .heading__bottom-left-sec {
+    font-size: 0.9em;
   }
 }
