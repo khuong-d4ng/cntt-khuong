@@ -443,6 +443,7 @@ a.hotline:hover > p {
   margin: 0 auto;
   margin-bottom: 100px;
   margin-top: 30px;
+  padding-top: 50px;
 }
 .heading__title__hotTour-container > h4 {
   text-transform: uppercase;
@@ -1468,11 +1469,16 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 
 .banner-title {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 5%;
   color: #fff;
+  font-size: 1.5em;
 }
-
+@media screen and (max-width: 500px) {
+  .banner-title {
+    bottom: 3%;
+  }
+}
 /*-------------------------------------------------------------
           VIDEO NAM O BEN DUOI HOT TOUR VA GALLERY              
 ---------------------------------------------------------------*/
