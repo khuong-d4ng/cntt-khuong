@@ -1401,7 +1401,7 @@ HIỆU ỨNG HOVER CỦA BOOK NOW
   margin: 0;
   padding: 0;
   flex-shrink: 0;
-  width: 33.33%;
+  width: 33.33% !important;
   max-height: 100%;
   overflow: hidden;
   /*thay the = overlay*/
@@ -1425,21 +1425,21 @@ HIỆU ỨNG HOVER CỦA BOOK NOW
   width: 100%;
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.812) 60%,
+    rgb(0, 0, 0) 60%,
     rgba(255, 255, 255, 0)
   );
   opacity: 0.45;
-  transition: ease-in-out 1s;
+  transition: ease-in-out .5s;
   z-index: 100;
 }
 /*----------------------------------------------------------------
 TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯỚI
 ------------------------------------------------------------------*/
 .overlay__banner-title:hover {
-  animation: fade__out--overlay 0.8s steps(99) forwards;
+  animation: fade__out--overlay 0.4s steps(99) forwards;
 }
 .overlay__banner-title:not(:hover) {
-  animation: fade__in--overlay 0.8s steps(99) forwards;
+  animation: fade__in--overlay 0.4s steps(99) forwards;
 }
 @keyframes fade__out--overlay {
   from {

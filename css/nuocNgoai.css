@@ -1,0 +1,230 @@
+.gioiThieu__Euro-container {
+    height: fit-content;
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  .gioiThieu__Euro-left {
+    width: 45%;
+    flex: 45%;
+  }
+  .slider-container-Euro-left {
+    width: 100%;
+    height: fit-content;
+  }
+  .gioiThieu__Euro-left img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+  #slider-top-Euro-left,
+#slider-bot-Euro-left {
+  margin: 0 auto;
+}
+  #slider-top-Euro-left{
+    width: 100%;
+    height: 450px;
+  }
+  #slider-top-Euro-left img{
+    object-fit: cover;
+    border-radius: 24px;
+    height: 450px;
+    width: 100%;
+    pointer-events: none;
+  }
+  #slider-bot-Euro-left{
+    margin-top: 30px;
+    width: 90%;
+    height: 120px;
+    overflow: hidden;
+  }
+  #slider-bot-Euro-left img{
+    margin: 0 10px;
+    border-radius: 5px;
+    height: 100px;
+    width: 80%;
+    pointer-events: none;
+
+  }
+  .gioiThieu__Euro-right-top {
+    padding: 20px;
+  }
+  h1#Euro-image-title {
+    font-size: 90px;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 78, 243, 0.834), rgb(173, 9, 255)
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .gioiThieu__Euro-right-bot {
+    padding: 20px;
+  }
+    
+    .hidden-content {
+      height: 300px;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    }
+    .show {
+      height: auto;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+    #readless-btn {
+      margin-top: 20px;
+      display: none;
+    }
+    #readless-btn,
+    #readmore-btn {
+      font-size: 24px;
+      font-weight: 700;
+      background: linear-gradient(120deg, rgba(255, 78, 243, 0.834), rgb(173, 9, 255));
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .readmore__content {
+      font-size: 16px;
+      color: #555555;
+    }
+  .benDuoi__title-gioiThieu__Euro {
+    font-size: 24px;
+    margin-bottom: 50px;
+    color: rgb(75, 75, 75) !important;
+  }
+  .gioiThieu__Euro-right-bot {
+    position: relative;
+  }
+  .fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+  }
+  .gioiThieu__Euro-right {
+    width: 35%;
+    flex: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  p.title__Euro-right {
+    text-align: center;
+    letter-spacing: 0.055em;
+    height: 8%;
+    color: rgba(75, 75, 75, 1);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .gioiThieu__Euro-right > p.follow-us-Euro-right {
+    margin-top: 15px;
+    letter-spacing: 0.055em;
+    height: 8%;
+    color: rgba(75, 75, 75, 1);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  .media__img-Euro-right {
+    height: 350px;
+    width: 80%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .media__img-Euro-right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  .gioiThieu__Euro-right ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  .gioiThieu__Euro-right li {
+    position: relative;
+    padding: 0 35px;
+  }
+  .gioiThieu__Euro-right i {
+    transition: all 0.3s;
+    transform: scale(1.5);
+  }
+  .gioiThieu__Euro-right li:hover i {
+    transform: scale(2.7);
+    transition: all 0.3s;
+  }
+  .gioiThieu__Euro-right li:hover .fab.fa-facebook {
+    color: #1877f2; /* Màu Facebook */
+  }
+  
+  .gioiThieu__Euro-right li:hover .fab.fa-youtube {
+    color: #ff0000; /* Màu YouTube */
+  }
+  
+  .gioiThieu__Euro-right li:hover .fab.fa-instagram {
+    color: #e4405f; /* Màu Instagram */
+  }
+  
+  .gioiThieu__Euro-right li:hover .fab.fa-twitter {
+    color: #1da1f2; /* Màu Twitter */
+  }
+
+  @media screen and (max-width: 1024px) {
+    .gioiThieu__Euro-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .gioiThieu__Euro-left{
+      width: 90%;
+    }
+    .slider-container-Euro-left{
+      width: 100%;
+    }
+    #slider-top-Euro-left{
+      height: 300px;
+    }
+    #slider-top-Euro-left img{
+      height: 300px;
+    }
+    #slider-bot-Euro-left{
+      height: 80px;
+      width: 100%;
+    }
+    #slider-bot-Euro-left img{
+      width: 80%;
+      height: 60px;
+     
+    }
+    .gioiThieu__Euro-right{
+      width: 100%;
+    }
+    .hidden-content{
+      width: 100%;
+    }
+    .benDuoi__title-gioiThieu__Euro{
+      font-size: 18px;
+      width: 100%;
+    }
+    @media screen and (max-width: 800px) {
+      h1#Euro-image-title{
+        font-size: 64px;
+      }
+    }
+  }

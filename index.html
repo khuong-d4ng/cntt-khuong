@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>YourAdventure</title>
+    <link rel="icon" href="./image/logo-favicon.png" type="image/x-icon" />
 
     <script src="./js/scripts.js"></script>
     <link rel="stylesheet" href="./css/footer.css" />
@@ -24,7 +25,6 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 
-    <link rel="icon" href="./image/logo-favicon.png" type="image/x-icon" />
     <meta
       name="description"
       content="Tận hưởng trải nghiệm du lịch tuyệt vời với trang web chuyên về du lịch và lữ hành. Đặt vé du lịch online dễ dàng theo tour với sự đa dạng và linh hoạt."
@@ -564,32 +564,7 @@
 
 
     <script>
-      const emailInput = document.getElementById("email-input");
-      const userLabel = document.querySelector(".user-label");
-
-      emailInput.addEventListener("input", function () {
-        if (this.value !== "") {
-          this.classList.add("input-filled");
-          userLabel.classList.add("label-filled");
-        } else {
-          this.classList.remove("input-filled");
-          userLabel.classList.remove("label-filled");
-        }
-      });
-      const emailInputFocus = document.getElementById("email-input");
-      const userLabelFocus = document.querySelector(".user-label");
-      const defaultLabelText = "Hãy cho chúng tôi biết đánh giá của bạn!";
-      const newLabelText = "Hãy nhập email để gửi đánh giá";
-
-      emailInputFocus.addEventListener("focus", function () {
-        userLabelFocus.textContent = newLabelText;
-      });
-
-      emailInputFocus.addEventListener("blur", function () {
-        if (this.value === "") {
-          userLabelFocus.textContent = defaultLabelText;
-        }
-      });
+      
     </script>
     <!-- Script của FontAwesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>

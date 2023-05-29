@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>YA - Trong Nước</title>
+    <link rel="icon" href="./image/logo-favicon.png" type="image/x-icon" />
 
     <script src="./js/scripts.js"></script>
 
@@ -167,7 +168,13 @@
         <h4>cùng tạo bản đồ du lịch của riêng bạn!</h4>
         <p>
           Hãy cùng tạo cho mình<br />
-          <span>chuyến hành trình đáng nhớ!</span>
+          <span style="background: linear-gradient(
+            120deg, rgb(255, 251, 15), rgb(255, 9, 9)
+          );
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+          color: transparent;">chuyến hành trình đáng nhớ!</span>
         </p>
       </div>
 
@@ -181,7 +188,13 @@
         <h4>một số địa điểm tại việt nam bạn có thể muốn ghé qua!</h4>
         <p>
           Đừng bỏ lỡ! <br />những
-           <span>địa điểm du lịch nổi bật ở Việt Nam</span>
+           <span style="background: linear-gradient(
+            120deg, rgb(255, 251, 15), rgb(255, 9, 9)
+          );
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+          color: transparent;">địa điểm du lịch nổi bật ở Việt Nam</span>
         </p>
       </div>
 
@@ -251,12 +264,14 @@
   object-fit: cover;
   pointer-events: none;
 }
-.slider__trongNuoc-container .title {
+.slider__trongNuoc-title {
   color: #fff;
   position: absolute;
-  font-size: 18px;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 24px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
 }
 .slider__trongNuoc-button {
   width: 50%;

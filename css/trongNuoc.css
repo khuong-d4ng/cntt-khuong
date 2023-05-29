@@ -292,7 +292,15 @@ p.title__VN-right {
     }
   }
 }
-
+.heading__title-trongNuoc > p > span{
+  background: linear-gradient(
+    120deg, rgb(255, 251, 15), rgb(255, 9, 9)
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 /*ban do chon tour*/
 /*ban do chon tour*/
 /*ban do chon tour*/
