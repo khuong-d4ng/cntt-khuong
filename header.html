@@ -1,187 +1,311 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Trang web của bạn</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="icon" href="./image/logo-favicon.png" type="image/png" />
-    <style>
-      footer {
-        background-color: transparent;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./mobile-responsive/mobile-style.css" />
+<style>
+  .menu-container {
+    position: absolute;
+    z-index: 1000;
+    top: 5vh; /* Đặt khoảng cách từ cạnh trên của viewport là 5% chiều cao của viewport */
+    left: 0;
+    right: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
 
-      .footer-left {
-        width: 40%;
-        display: flex;
-      }
+  #menu {
+    width: auto;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 7px;
+  }
+  ul.menu-parent {
+    /* kỉ niệm ngồi đến 3h sáng nhận ra padding mặc định = 40 :))*/
+    padding: 0;
+    margin: 0;
+  }
+  ul.menu-parent li {
+    list-style: none;
+    float: left;
+  }
+  #menu ul.menu-parent > li > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 15px;
+    padding: 0px 5px 0px 5px;
+    line-height: 39px;
+  }
+  /*(1) TOÀN BỘ ĐỐNG NÀY CHỈ NHẰM TẠO HIỆU ỨNG HOVER CHO MENU*/
+  #menu ul.menu-parent > li:hover > a {
+    transition: ease-in-out 0.3s;
+    font-size: 18px;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 0, 0),
+      rgb(255, 187, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
+  }
+  .datVe:hover {
+    transition: ease-in-out 0.3s;
+    font-size: 18px !important;
+    background-image: linear-gradient(
+      to right,
+      rgb(253, 211, 0),
+      rgb(254, 0, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(255, 183, 0), rgb(255, 0, 0)) 1;
+  }
 
-      .footer-left-1 {
-        margin-bottom: 10px;
-      }
+  /*child(3) la nut HOME*/
+  #menu ul.menu-parent > li:nth-child(3) > a:hover {
+    transition: ease-in-out 0.4s;
+    font-size: 44px !important;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 0, 0),
+      rgb(255, 255, 255)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0))
+      1;
+  }
+  #menu ul.menu-parent > li > a {
+    transition: ease-in 0.45s; /* Thêm transition cho element a khi không hover */
+  }
 
-      .logo {
-        width: 250px; /* Điều chỉnh kích thước logo */
-      }
+  #menu ul.menu-parent > li > a:not(:hover) {
+    font-size: 16px;
+  }
+  /*(1) KẾT THÚC (1)*/
 
-      .footer-left-2 {
-        display: flex;
-        flex-direction: column;
-      }
+  ul.submenu {
+    width: 180px;
+    min-height: auto;
+    background-color: transparent;
+    position: absolute;
+    display: none;
+    padding-left: 0px;
+  }
 
-      .title {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
+  ul.menu-parent > li:hover > ul.submenu {
+    display: block;
+  }
 
-      .description {
-        font-size: 14px;
-      }
+  ul.submenu li {
+    list-style: none;
+  }
 
-      .social-media {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        justify-content: flex-end;
-      }
+  ul.submenu li a {
+    display: block;
+    line-height: 40px;
+    text-indent: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 700;
+    padding-right: 20px;
+    line-height: 39px;
+  }
 
-      .social-media li {
-        margin-right: 10px;
-      }
+  /*(2) TẠO HIỆU ỨNG HOVER CHO SUBMENU CỦA ĐẶT VÉ*/
+  #menu ul.submenu > li > a > p {
+    padding: 0;
+    margin: 0;
+  }
+  #menu ul.submenu > li > a {
+    transition: ease-in 0.3s;
+  }
+  #menu ul.submenu > li > a:hover {
+    transition: ease-in-out 0.3s;
+    font-size: 18px;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 0, 0),
+      rgb(255, 187, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 187, 0)) 1;
+  }
+  #menu ul.submenu > li > a:not(:hover) {
+    font-size: 16px;
+  }
+  /*(2) KẾT THÚC (2)*/
 
-      .social-media a {
-        color: #333;
-        text-decoration: none;
-      }
+  /*(3) TẠO HIỆU ỨNG HOVER CHO SUBMENU CỦA LIÊN HỆ*/
+  a.fb:hover > p {
+    transition: ease-in 0.27s;
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 17, 255),
+      rgb(0, 157, 255)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 18px;
+  }
+  #menu ul.submenu > li > a.fb:hover {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 0, 255)) 1;
+  }
+  a.instagram:hover > p {
+    transition: ease-in 0.27s;
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 0, 0),
+      rgb(25, 29, 255)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 18px;
+  }
+  #menu ul.submenu > li > a.instagram:hover {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 42, 255), rgb(255, 4, 0)) 1;
+  }
 
-      .footer-middle {
-        width: 40%;
-      }
+  a.hotline:hover > p {
+    transition: ease-in 0.27s;
+    background-image: linear-gradient(
+      to right,
+      rgb(19, 144, 0),
+      rgb(0, 203, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 18px;
+  }
+  #menu ul.submenu > li > a.hotline:hover {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 132, 4), rgb(0, 255, 0)) 1;
+  }
 
-      .links {
-        list-style-type: none;
-        padding: 0;
-      }
+  /*(3) KẾT THÚC (3)*/
 
-      .links li {
-        margin-bottom: 10px;
-      }
+  /*(4) TẠO HIỆU ỨNG ẨN ĐI CHO ELEMENT 1, 2*/
+  @media screen and (max-width: 580px) {
+    /*Ẩn đi 2 element thừa*/
+    #menu .menu-parent > li:first-child,
+    #menu .menu-parent > li:last-child {
+      display: none;
+    }
 
-      .links a {
-        color: #333;
-        text-decoration: none;
-      }
+    /* Căn giữa */
+    #menu .menu-parent {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .textHome {
+      font-size: 40px !important;
+    }
+  }
+  @media screen and (max-width: 455px) {
+    .datVe {
+      font-size: 13px !important;
+    }
+    .lienHe {
+      font-size: 13px !important;
+    }
+  }
+  /*LÀM CHO 4 ELEMENT THỪA ẨN ĐI KHI MÀN QUÁ NHỎ*/
+  @media screen and (max-width: 380px) {
+    /*Ẩn đi 4 element thừa khi màn qúa nhỏ hehe*/
+    #menu .menu-parent > *:not(:nth-child(3)),
+    #menu .menu-parent > *:nth-child(1),
+    #menu .menu-parent > *:nth-child(2),
+    #menu .menu-parent > *:nth-child(4),
+    #menu .menu-parent > *:nth-child(5) {
+      display: none;
+    }
 
-      .footer-right {
-        width: 20%;
-      }
+    /* Căn giữa */
+    #menu .menu-parent {
+      display: flex;
+      justify-content: center;
+    }
+  }
+</style>
+<header class="menu-container">
+  <div class="search__header">
+    <div>
+      <input type="text" placeholder="Search . . ." required />
+    </div>
+  </div>
 
-      .email-form {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .email-form label {
-        margin-bottom: 5px;
-      }
-
-      .email-form input {
-        margin-bottom: 10px;
-        padding: 5px;
-      }
-
-      .email-form button {
-        padding: 5px 10px;
-      }
-
-      /* Responsive styles */
-      @media (max-width: 500px) {
-        footer {
-          display: flex;
-          flex-direction: column;
-        }
-        .footer-left {
-          width: 100%;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .footer-left-1 {
-          display: none;
-        }
-
-        .footer-left-2 {
-          align-items: flex-start;
-        }
-
-        .social-media {
-          justify-content: flex-start;
-        }
-
-        .footer-middle,
-        .footer-right {
-          width: 100%;
-          margin-top: 20px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Nội dung trang web -->
-
-    <footer>
-      <div class="footer-left">
-        <div class="footer-left-1">
-          <img src="./image/logo/transport.png" alt="Logo" class="logo" />
-        </div>
-        <div class="footer-left-2">
-          <h2 class="title">Tiêu đề</h2>
-          <p class="description">Mô tả</p>
-          <ul class="social-media">
-            <li>
-              <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="https://instagram.com"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-middle">
-        <ul class="links">
-          <li><a href="#">Liên kết 1</a></li>
-          <li><a href="#">Liên kết 2</a></li>
-          <li><a href="#">Liên kết 3</a></li>
-          <li><a href="#">Liên kết 4</a></li>
-          <li><a href="#">Liên kết 5</a></li>
+  <nav id="menu">
+    <ul class="menu-parent">
+      <li>
+        <a
+          class="new-hotTour"
+          href="#section-homePage--1"
+          onclick="smoothScroll(event)"
+        >
+          News
+        </a>
+      </li>
+      <li>
+        <a class="datVe" href="">Stories</a>
+        <ul class="submenu">
+          <li><a href="">Stories 1</a></li>
+          <li><a href="">Stories 2</a></li>
+          <li><a href="">Stories 3</a></li>
         </ul>
-      </div>
-      <div class="footer-right">
-        <form class="email-form">
-          <label for="email-input">Hãy để lại đánh giá của bạn:</label>
-          <input
-            type="email"
-            id="email-input"
-            placeholder="Nhập địa chỉ email"
-          />
-          <button type="submit">Gửi</button>
-        </form>
-      </div>
-    </footer>
+      </li>
+      <li>
+        <a class="textHome" style="font-size: 30px" href="">HOME</a>
+      </li>
+      <li>
+        <a class="datVe" href="">Đặt vé</a>
+        <ul class="submenu">
+          <li><a href="trongNuoc.html">Trong nước</a></li>
+          <li><a href="">Nước ngoài</a></li>
+          <li><a href="">Tuor Du lịch</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">About</a>
+        <ul class="submenu">
+          <li>
+            <a class="fb" href="https://www.facebook.com/cuutoi.khg"
+              ><p>Facebook</p></a
+            >
+          </li>
+          <li>
+            <a class="instagram" href="https://www.instagram.com/khg.help/"
+              ><p>Instagram</p></a
+            >
+          </li>
+          <li>
+            <a class="hotline" href=""><p>Hotline</p></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Script của FontAwesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-  </body>
-</html>
+<script>
+  
+
+</script>
+<script src="./js/scripts.js"></script>

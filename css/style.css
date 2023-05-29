@@ -2043,3 +2043,121 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
     font-size: 0.9em;
   }
 }
+
+/*những địa điểm tuyệt vời*/
+/*những địa điểm tuyệt vời*/
+/*những địa điểm tuyệt vời*/
+/*những địa điểm tuyệt vời*/
+/*những địa điểm tuyệt vời*/
+
+.heading__title__rSection-slider-container{
+
+  display: none !important;
+
+  width: 85%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.heading__title__rSection-slider-container > h4{
+  text-transform: uppercase;
+  opacity: .8;
+  color: rgba(75, 75, 75, 1);
+  letter-spacing: 0.005em;
+  font-size: .75em;
+
+}
+.heading__title__rSection-slider-container > p{
+  margin-top: 15px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.heading__title__rSection-slider-container > p > span{
+  background: linear-gradient(
+        173deg,
+        rgb(27, 223, 245),
+        rgba(4, 246, 4, 0.995)
+      );
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+}
+@media screen and (max-width: 500px) {
+  .heading__title__rSection-slider-container{
+    display: block !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .heading__title__rSection-slider-container > h4{
+    font-size: 0.5em
+  }
+  .heading__title__rSection-slider-container > p{
+    font-size: 1.25em;
+  }
+}
+
+/*slider rsection hiện ra khi màn hình nhỏ*/
+/*slider rsection hiện ra khi màn hình nhỏ*/
+/*slider rsection hiện ra khi màn hình nhỏ*/
+/*slider rsection hiện ra khi màn hình nhỏ*/
+/*slider rsection hiện ra khi màn hình nhỏ*/
+/*slider rsection hiện ra khi màn hình nhỏ*/
+
+#rSection-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+.image-rSection-slider {
+  height: 500px;
+  margin-bottom: 20px;
+}
+.image-rSection-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  pointer-events: none;
+  /*hehehe cho nay` lam cho anh toi' di nek cha*/
+  transition: ease 1s;
+  filter: brightness(0.7) contrast(1.05);
+}
+.image-rSection-slider img:hover {
+  /*hover vao` no' dep. ra ne`*/
+  transition: ease 1s;
+  filter: brightness(1);
+}
+
+.image-title {
+  font-size: 20px;
+}
+.image__item-rSection-slider {
+  margin: 0 3px;
+}
+/*-----BÌNH THƯỜNG (DESKTOP) THÌ ẨN MỤC NÀY ĐI, CHỈ KHI DÙNG TỚI MOBILE THÌ MỚI HIỆN NÓ RA!*/
+
+.heading__rSection-slider {
+  position: absolute;
+  bottom: 23%;
+  padding-left: 25px;
+
+  color: #fff;
+  font-size: 25px;
+  line-height: 1;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+.decription__rSection-slider {
+  position: absolute;
+  bottom: 30%;
+  padding-left: 25px;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}

@@ -30,6 +30,7 @@ function includeHTML() {
   }
 }
 
+
 var parentItems = document.querySelectorAll("#menu .menu-parent > li");
 var dropdownItems = document.querySelectorAll("#menu .submenu > li");
 
@@ -64,8 +65,22 @@ parentItems.forEach(function (item) {
   // Hover vào phần tử con
   var submenu = item.querySelector(".submenu");
   if (submenu) {
-    submenu.addEventListener("mouseleave", function () {
+    submenu.addEventListener("mouseenter", function () {
       if (!parentLink.classList.contains("textHome")) {
+        parentLink.style.fontSize = "18px";
+        parentLink.style.backgroundImage =
+          "linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0))";
+        parentLink.style.webkitBackgroundClip = "text";
+        parentLink.style.webkitTextFillColor = "transparent";
+        parentLink.style.backgroundClip = "text";
+      }
+    });
+
+    submenu.addEventListener("mouseleave", function () {
+      if (
+        !item.classList.contains("active") &&
+        !parentLink.classList.contains("textHome")
+      ) {
         parentLink.style.fontSize = "16px";
         parentLink.style.backgroundImage = "none";
         parentLink.style.webkitBackgroundClip = "initial";
@@ -75,7 +90,7 @@ parentItems.forEach(function (item) {
     });
   }
 });
-
+  
 window.addEventListener("DOMContentLoaded", function () {
   var anhCanXoaElements = document.querySelectorAll(".anh-can-xoa");
   var divToResize = document.getElementsByClassName("anh-giu-lailai")[0];

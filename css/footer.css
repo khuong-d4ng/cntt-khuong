@@ -25,15 +25,11 @@
 }
 
 .main-Business__name {
-  background: linear-gradient(
-                173deg,
-                rgb(7, 205, 255),
-                rgb(0, 255, 102)
-              );
-              -webkit-background-clip: text;
-              -moz-background-clip: text;
-              background-clip: text;
-              color: transparent;
+  background: linear-gradient(173deg, rgb(7, 205, 255), rgb(0, 255, 102));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: 55px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -42,7 +38,7 @@
 .description {
   font-size: 14px;
 }
-.follow-us__footer{
+.follow-us__footer {
   margin-top: 20px;
   letter-spacing: 0.055em;
   height: 8%;
@@ -77,7 +73,7 @@
   list-style-type: none;
   padding: 0;
 }
-.footer__links::after{
+.footer__links::after {
   content: ""; /* Thêm nội dung giả vào phần tử */
   position: absolute;
   position: absolute;
@@ -88,7 +84,7 @@
   background-color: #333; /* Đặt màu sắc của thanh ngăn */
 }
 @media screen and (max-width: 600px) {
-  .footer__links::after{
+  .footer__links::after {
     display: none;
   }
 }
@@ -100,13 +96,12 @@
   color: #333;
   text-decoration: none;
   position: relative;
-    display: inline-block;
-    color: #000;
-    padding-bottom: 5px;
+  display: inline-block;
+  color: #000;
+  padding-bottom: 5px;
 }
-.footer__links li a:hover{
+.footer__links li a:hover {
   color: #24a2fc;
- 
 }
 .footer__links li a::after {
   content: "";
@@ -255,11 +250,11 @@ input:valid ~ label,
     right: 0;
   }
   @media screen and (max-width: 850px) {
-    .footer-left-1{
+    .footer-left-1 {
       display: none;
     }
   }
-  .footer-left-1 .logo{
+  .footer-left-1 .logo {
     width: 350px;
   }
 
@@ -277,14 +272,13 @@ input:valid ~ label,
     margin-top: 20px;
   }
 }
-@media screen and (max-width:500px) {
-  .main-Business__name{
+@media screen and (max-width: 500px) {
+  .main-Business__name {
     font-size: 2.5rem;
   }
-  .input{
+  .input {
     width: 18rem;
   }
-  
 }
 .footer-bot-container {
   text-align: center;
@@ -297,25 +291,23 @@ input:valid ~ label,
   color: #999;
 }
 
-
-.social-media svg{
+.social-media svg {
   width: 30px;
   height: 30px;
   padding-left: 15px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.social-media svg:hover{
+.social-media svg:hover {
   transform: scale(1.2);
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.social-media svg.fa-facebook:hover{
-color: #1877f2;
-transition: all .3s;
+.social-media svg.fa-facebook:hover {
+  color: #1877f2;
+  transition: all 0.3s;
 }
-.social-media svg.fa-instagram:hover{
-  color:rgb(251, 39, 184);
+.social-media svg.fa-instagram:hover {
+  color: rgb(251, 39, 184);
 }
-.social-media svg.fa-youtube:hover{
-  color: #FF0000;
+.social-media svg.fa-youtube:hover {
+  color: #ff0000;
 }
-
