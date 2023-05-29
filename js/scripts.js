@@ -1,95 +1,35 @@
 function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /* vong lap de lay het element trong html can` include */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("include-html");
+  var elements = document.querySelectorAll('[include-html]');
+  elements.forEach(function (element) {
+    var file = element.getAttribute('include-html');
     if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
+      var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
           if (this.status == 200) {
-            elmnt.innerHTML = this.responseText;
+            element.innerHTML = this.responseText;
+            // chỉ chạy js sau khi html được include hoàn chỉnh, tránh kiểu include vào xong ko dùng đc js :) 
+            var scripts = element.getElementsByTagName('script');
+            for (var i = 0; i < scripts.length; i++) {
+              eval(scripts[i].text);
+            }
           }
           if (this.status == 404) {
-            elmnt.innerHTML = "Page not found.";
+            element.innerHTML = 'Page not found.';
           }
-          /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("include-html");
+          element.removeAttribute('include-html');
           includeHTML();
         }
       };
-      xhttp.open("GET", file, true);
+      xhttp.open('GET', file, true);
       xhttp.send();
-      /* Exit the function: */
       return;
     }
-  }
+  });
 }
 
 
-var parentItems = document.querySelectorAll("#menu .menu-parent > li");
-var dropdownItems = document.querySelectorAll("#menu .submenu > li");
 
-// Hover vào phần tử cha
-parentItems.forEach(function (item) {
-  var parentLink = item.querySelector("a");
-
-  item.addEventListener("mouseenter", function () {
-    if (!parentLink.classList.contains("textHome")) {
-      parentLink.style.fontSize = "18px";
-      parentLink.style.backgroundImage =
-        "linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0))";
-      parentLink.style.webkitBackgroundClip = "text";
-      parentLink.style.webkitTextFillColor = "transparent";
-      parentLink.style.backgroundClip = "text";
-    }
-  });
-
-  item.addEventListener("mouseleave", function () {
-    if (
-      !item.classList.contains("active") &&
-      !parentLink.classList.contains("textHome")
-    ) {
-      parentLink.style.fontSize = "16px";
-      parentLink.style.backgroundImage = "none";
-      parentLink.style.webkitBackgroundClip = "initial";
-      parentLink.style.webkitTextFillColor = "initial";
-      parentLink.style.backgroundClip = "initial";
-    }
-  });
-
-  // Hover vào phần tử con
-  var submenu = item.querySelector(".submenu");
-  if (submenu) {
-    submenu.addEventListener("mouseenter", function () {
-      if (!parentLink.classList.contains("textHome")) {
-        parentLink.style.fontSize = "18px";
-        parentLink.style.backgroundImage =
-          "linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0))";
-        parentLink.style.webkitBackgroundClip = "text";
-        parentLink.style.webkitTextFillColor = "transparent";
-        parentLink.style.backgroundClip = "text";
-      }
-    });
-
-    submenu.addEventListener("mouseleave", function () {
-      if (
-        !item.classList.contains("active") &&
-        !parentLink.classList.contains("textHome")
-      ) {
-        parentLink.style.fontSize = "16px";
-        parentLink.style.backgroundImage = "none";
-        parentLink.style.webkitBackgroundClip = "initial";
-        parentLink.style.webkitTextFillColor = "initial";
-        parentLink.style.backgroundClip = "initial";
-      }
-    });
-  }
-});
   
 window.addEventListener("DOMContentLoaded", function () {
   var anhCanXoaElements = document.querySelectorAll(".anh-can-xoa");

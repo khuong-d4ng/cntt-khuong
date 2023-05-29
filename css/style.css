@@ -1866,7 +1866,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 .stories__image-item {
   margin: 0 10px;
 }
-.slick-prev {
+#stories-slider > .slick-prev {
   position: absolute;
   top: 40%;
   left: -15px;
@@ -1879,7 +1879,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   opacity: 0.5;
   transition: all 0.5s;
 }
-.slick-prev:hover {
+#stories-slider > .slick-prev:hover {
   height: 43px;
   width: 43px;
   left: -20px;
@@ -1888,16 +1888,16 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   transition: all 0.5s;
   opacity: 0.8;
 }
-.fa-angle-left {
+#stories-slider > .fa-angle-left {
   transition: all 0.3s;
 }
-.slick-prev:hover .fa-angle-left {
+#stories-slider > .slick-prev:hover .fa-angle-left {
   transition: all 0.3s;
   color: white;
   transform: scale(1.4);
 }
 
-.slick-next {
+#stories-slider > .slick-next {
   position: absolute;
   top: 40%;
   right: -15px;
@@ -1910,7 +1910,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   opacity: 0.5;
   transition: all 0.5s;
 }
-.slick-next:hover {
+#stories-slider > .slick-next:hover {
   height: 43px;
   width: 43px;
   right: -20px;
@@ -1919,10 +1919,10 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   transition: all 0.5s;
   opacity: 0.8;
 }
-.fa-angle-right {
+#stories-slider > .fa-angle-right {
   transition: all 0.3s;
 }
-.slick-next:hover .fa-angle-right {
+#stories-slider > .slick-next:hover .fa-angle-right {
   transition: all 0.3s;
   color: white;
   transform: scale(1.4);
