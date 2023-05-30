@@ -1,36 +1,33 @@
 function includeHTML() {
-  var elements = document.querySelectorAll('[include-html]');
+  var elements = document.querySelectorAll("[include-html]");
   elements.forEach(function (element) {
-    var file = element.getAttribute('include-html');
+    var file = element.getAttribute("include-html");
     if (file) {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
           if (this.status == 200) {
             element.innerHTML = this.responseText;
-            // chỉ chạy js sau khi html được include hoàn chỉnh, tránh kiểu include vào xong ko dùng đc js :) 
-            var scripts = element.getElementsByTagName('script');
+            // chỉ chạy js sau khi html được include hoàn chỉnh, tránh kiểu include vào xong ko dùng đc js :)
+            var scripts = element.getElementsByTagName("script");
             for (var i = 0; i < scripts.length; i++) {
               eval(scripts[i].text);
             }
           }
           if (this.status == 404) {
-            element.innerHTML = 'Page not found.';
+            element.innerHTML = "Page not found.";
           }
-          element.removeAttribute('include-html');
+          element.removeAttribute("include-html");
           includeHTML();
         }
       };
-      xhttp.open('GET', file, true);
+      xhttp.open("GET", file, true);
       xhttp.send();
       return;
     }
   });
 }
 
-
-
-  
 window.addEventListener("DOMContentLoaded", function () {
   var anhCanXoaElements = document.querySelectorAll(".anh-can-xoa");
   var divToResize = document.getElementsByClassName("anh-giu-lailai")[0];

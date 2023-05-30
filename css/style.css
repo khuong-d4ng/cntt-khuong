@@ -1429,7 +1429,7 @@ HIỆU ỨNG HOVER CỦA BOOK NOW
     rgba(255, 255, 255, 0)
   );
   opacity: 0.45;
-  transition: ease-in-out .5s;
+  transition: ease-in-out 0.5s;
   z-index: 100;
 }
 /*----------------------------------------------------------------
@@ -2050,8 +2050,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 /*những địa điểm tuyệt vời*/
 /*những địa điểm tuyệt vời*/
 
-.heading__title__rSection-slider-container{
-
+.heading__title__rSection-slider-container {
   display: none !important;
 
   width: 85%;
@@ -2062,40 +2061,39 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.heading__title__rSection-slider-container > h4{
+.heading__title__rSection-slider-container > h4 {
   text-transform: uppercase;
-  opacity: .8;
+  opacity: 0.8;
   color: rgba(75, 75, 75, 1);
   letter-spacing: 0.005em;
-  font-size: .75em;
-
+  font-size: 0.75em;
 }
-.heading__title__rSection-slider-container > p{
+.heading__title__rSection-slider-container > p {
   margin-top: 15px;
   font-size: 1.5em;
   font-weight: 700;
 }
-.heading__title__rSection-slider-container > p > span{
+.heading__title__rSection-slider-container > p > span {
   background: linear-gradient(
-        173deg,
-        rgb(27, 223, 245),
-        rgba(4, 246, 4, 0.995)
-      );
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      background-clip: text;
-      color: transparent;
+    173deg,
+    rgb(27, 223, 245),
+    rgba(4, 246, 4, 0.995)
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 @media screen and (max-width: 500px) {
-  .heading__title__rSection-slider-container{
+  .heading__title__rSection-slider-container {
     display: block !important;
   }
 }
 @media screen and (max-width: 400px) {
-  .heading__title__rSection-slider-container > h4{
-    font-size: 0.5em
+  .heading__title__rSection-slider-container > h4 {
+    font-size: 0.5em;
   }
-  .heading__title__rSection-slider-container > p{
+  .heading__title__rSection-slider-container > p {
     font-size: 1.25em;
   }
 }

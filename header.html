@@ -306,42 +306,14 @@
 </header>
 
 <script>
-  
-var parentItems = document.querySelectorAll("#menu .menu-parent > li");
-var dropdownItems = document.querySelectorAll("#menu .submenu > li");
+  var parentItems = document.querySelectorAll("#menu .menu-parent > li");
+  var dropdownItems = document.querySelectorAll("#menu .submenu > li");
 
-// Hover vào phần tử cha
-parentItems.forEach(function (item) {
-  var parentLink = item.querySelector("a");
+  // Hover vào phần tử cha
+  parentItems.forEach(function (item) {
+    var parentLink = item.querySelector("a");
 
-  item.addEventListener("mouseenter", function () {
-    if (!parentLink.classList.contains("textHome")) {
-      parentLink.style.fontSize = "18px";
-      parentLink.style.backgroundImage =
-        "linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0))";
-      parentLink.style.webkitBackgroundClip = "text";
-      parentLink.style.webkitTextFillColor = "transparent";
-      parentLink.style.backgroundClip = "text";
-    }
-  });
-
-  item.addEventListener("mouseleave", function () {
-    if (
-      !item.classList.contains("active") &&
-      !parentLink.classList.contains("textHome")
-    ) {
-      parentLink.style.fontSize = "16px";
-      parentLink.style.backgroundImage = "none";
-      parentLink.style.webkitBackgroundClip = "initial";
-      parentLink.style.webkitTextFillColor = "initial";
-      parentLink.style.backgroundClip = "initial";
-    }
-  });
-
-  // Hover vào phần tử con
-  var submenu = item.querySelector(".submenu");
-  if (submenu) {
-    submenu.addEventListener("mouseenter", function () {
+    item.addEventListener("mouseenter", function () {
       if (!parentLink.classList.contains("textHome")) {
         parentLink.style.fontSize = "18px";
         parentLink.style.backgroundImage =
@@ -352,7 +324,7 @@ parentItems.forEach(function (item) {
       }
     });
 
-    submenu.addEventListener("mouseleave", function () {
+    item.addEventListener("mouseleave", function () {
       if (
         !item.classList.contains("active") &&
         !parentLink.classList.contains("textHome")
@@ -364,8 +336,34 @@ parentItems.forEach(function (item) {
         parentLink.style.backgroundClip = "initial";
       }
     });
-  }
-});
 
+    // Hover vào phần tử con
+    var submenu = item.querySelector(".submenu");
+    if (submenu) {
+      submenu.addEventListener("mouseenter", function () {
+        if (!parentLink.classList.contains("textHome")) {
+          parentLink.style.fontSize = "18px";
+          parentLink.style.backgroundImage =
+            "linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0))";
+          parentLink.style.webkitBackgroundClip = "text";
+          parentLink.style.webkitTextFillColor = "transparent";
+          parentLink.style.backgroundClip = "text";
+        }
+      });
+
+      submenu.addEventListener("mouseleave", function () {
+        if (
+          !item.classList.contains("active") &&
+          !parentLink.classList.contains("textHome")
+        ) {
+          parentLink.style.fontSize = "16px";
+          parentLink.style.backgroundImage = "none";
+          parentLink.style.webkitBackgroundClip = "initial";
+          parentLink.style.webkitTextFillColor = "initial";
+          parentLink.style.backgroundClip = "initial";
+        }
+      });
+    }
+  });
 </script>
 <script src="./js/scripts.js"></script>
