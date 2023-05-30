@@ -38,7 +38,8 @@
     <div class="gallery-container">
       <div class="gallery">
         <div class="container-anh-banner anh-giu-lailai">
-          <a class="banner-anh" href="#" aria-label="Đi đến trang ảnh 1">
+          <a class="banner-anh" href="#euro-nuocNgoai"
+          onclick="smoothScroll(event)" aria-label="Đi đến trang ảnh 1">
             <img
               class="anh-namTrong-banner"
               src="./image/nuocNgoai/eiffel-banner-euro.webp"
@@ -46,11 +47,13 @@
               preload="metadata"
             />
           </a>
-          <a href="#" class="overlay__banner-title"></a>
+          <a href="#euro-nuocNgoai"
+          onclick="smoothScroll(event)" class="overlay__banner-title"></a>
           <h3 class="banner-title">Châu Âu</h3>
         </div>
         <div class="container-anh-banner anh-can-xoa">
-          <a class="banner-anh" href="#" aria-label="Đi đến trang ảnh 2">
+          <a class="banner-anh" href="#america-nuocNgoai"
+          onclick="smoothScroll(event)" aria-label="Đi đến trang ảnh 2">
             <img
               class="anh-namTrong-banner"
               src="./image/nuocNgoai/state-of-liberty-banner-america.webp"
@@ -58,7 +61,8 @@
               preload="metadata"
             />
           </a>
-          <a href="#" class="overlay__banner-title"></a>
+          <a href="#america-nuocNgoai"
+          onclick="smoothScroll(event)" class="overlay__banner-title"></a>
           <h3 class="banner-title">Châu Mỹ</h3>
         </div>
         <div class="container-anh-banner anh-can-xoa">
@@ -76,7 +80,9 @@
       </div>
     </div>
 
-    <div
+    
+    <section class="gioiThieu__nuocNgoai" id="euro-nuocNgoai">
+      <div
       class="heading__title__hotTour-container heading__title-nuocNgoai"
       style="margin-bottom: 0"
     >
@@ -101,7 +107,6 @@
       </p>
     </div>
 
-    <section class="gioiThieu__nuocNgoai">
       <div class="gioiThieu__Euro-container">
         <div class="gioiThieu__Euro-left">
           <div class="slider-container-Euro-left">
@@ -230,7 +235,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="america-nuocNgoai">
       <div
         class="heading__title__hotTour-container heading__title-nuocNgoai"
         style="margin-bottom: 60px"
@@ -260,35 +265,35 @@
           <div class="america__nuocNgoai-top-left">
             <div class="box-container">
               <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image" style="background-image: url(./image/nuocNgoai/america-album/Bayahibe.webp);"></div>
                 <div class="box-text">
-                  <p class="box-title">demo 1</p>
+                  <p class="box-title">Bayahibe - Dominican Republic</p>
 
-                  <p class="box-description">demo</p>
+                  <p class="box-description">Bayahibe là một thị trấn ở Cộng hòa Dominica, nằm cách La Romana khoảng 10 dặm (16 km) về phía đông bắc bờ biển Biển Caribe</p>
                 </div>
               </div>
               <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image" style="background-image: url(./image/nuocNgoai/america-album/golden-gate-bridge-america.webp);"></div>
                 <div class="box-text">
-                  <p class="box-title">demo 1</p>
+                  <p class="box-title">Golden Gate Bridge</p>
 
-                  <p class="box-description">demo</p>
+                  <p class="box-description">Câu cầu Golden Gate ở San Francisco là một công trình kiến trúc độc đáo và nổi tiếng với kích thước lớn, tầm nhìn tuyệt đẹp...</p>
                 </div>
               </div>
               <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image" style="background-image: url(./image/nuocNgoai/america-album/Machu-Picchu-Aguas-Calientes-Peru.webp);"></div>
                 <div class="box-text">
-                  <p class="box-title">demo 1</p>
+                  <p class="box-title">Machu Picchu</p>
 
-                  <p class="box-description">demo</p>
+                  <p class="box-description">Machu Picchu, nằm ở Peru, là một di tích cổ đại kỳ diệu, nổi tiếng với kiến trúc độc đáo, cảnh quan tuyệt đẹp và sự bí ẩn về nguồn gốc và mục đích của nó.</p>
                 </div>
               </div>
               <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image" style="background-image: url(./image/nuocNgoai/america-album/Pontal-do-Atalaia-in-Arraial-do-Cabo-Brazil.webp); "></div>
                 <div class="box-text">
-                  <p class="box-title">demo 1</p>
+                  <p class="box-title">Pontal do Atalaia</p>
 
-                  <p class="box-description">demo</p>
+                  <p class="box-description">Pontal do Atalaia, tại Brazil, là một bãi biển tuyệt đẹp với cát trắng mịn, nước biển trong xanh và khung cảnh thiên nhiên hoang sơ, thu hút du khách bởi sự yên tĩnh và sự hùng vĩ của nó.</p>
                 </div>
               </div>
             </div>
@@ -357,12 +362,16 @@
         display: flex;
         flex-direction: row;
         border-radius: 24px;
+        overflow: hidden;
       }
-      .box-container .box:first-child {
+      .box-container .box {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 -2px 5px white;
+        transition: all 1s;
       }
       .box:hover {
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 -2px 5px white;
+        box-shadow: -5px 5px 5px rgba(1, 12, 140, 0.378);
+        transition: all 1s;
+        z-index: 10;
       }
 
       .box-image {
@@ -385,17 +394,20 @@
       }
 
       .box-text {
+        width: 60%;
         margin-left: 15px;
       }
       .box-title {
         font-weight: bold;
         margin-bottom: 5px;
+        color: rgb(0, 98, 255);
+        font-size: 20px;
       }
 
-      .box-description {
-        text-align: center;
+      p.box-description {
+        text-align: left;
+        width: 100%;
       }
-
       .america__nuocNgoai-bot-left {
         height: 10%;
       }
@@ -462,9 +474,14 @@
         color: transparent;
       }
       .america-mainImg-container img {
-        height: 100%;
+        position: absolute;
+        bottom: 0px;
+        height: 130%;
         width: auto;
         z-index: 2;
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    
       }
       .america-mainImg-container h2 {
         position: absolute;
@@ -500,6 +517,7 @@
           z-index: -10;
         }
         .america__nuocNgoai-right img {
+          position: relative;
           opacity: 0.5;
           max-height: 700px;
           margin-left: calc(90% - 230px);
@@ -515,6 +533,18 @@
         .america-mainImg-container p#describe-americas__3 {
           display: none;
         }
+        .america-mainImg-container h2{
+          font-size: 85px;
+          bottom: 90px;;
+        }
+      .box-title {
+        
+        font-size: 16px;
+      }
+
+      p.box-description {
+        font-size: 13px;
+      }
       }
     </style>
 
