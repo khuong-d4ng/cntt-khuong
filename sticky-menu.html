@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.container {
+  height: 2000px; /* Chiều cao của trang web để tạo scroll */
+}
+
+.sticky-menu {
+ background-color: transparent;
+ height: 50px;
+ border-bottom: #333 solid 1px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  display: none; /* Mặc định ẩn sticky-menu */
+  z-index: 999;
+}
+
+.sticky-menu a {
+
+  box-sizing: border-box;
+  height: 100%;
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 0 8px;
+  text-align: center;
+  line-height: 28px;
+}
+.sticky-menu a:hover{
+  border-bottom: 2px rgb(0, 98, 255) solid;
+}
+</style>
+</head>
+<body>
+<div class="sticky-menu" id="stickyMenu">
+  <a href="#section1">Section 1</a>
+  <a href="#section2">Section 2</a>
+  <a href="#section3">Section 3</a>
+  <a href="#section4">Section 4</a>
+</div>
+
+<div class="container">
+  <span id="sticky__menu-checkpoint"></span>
+  <h1 id="section"></h1>
+</div>
+
+<script>
+function stickyMenu() {
+  if (window.pageYOffset >= sticky && window.pageYOffset < section1.offsetTop) {
+    menu.style.display = "none"; // Ẩn menu khi cuộn lên trên qua điểm A
+  } else {
+    menu.style.display = "block"; // Hiển thị menu trong các trường hợp còn lại
+  }
+}
+
+function highlightSection() {
+  var menuLinks = document.querySelectorAll('.sticky-menu a');
+  var sections = document.querySelectorAll('h1[id^="section"]');
+
+  sections.forEach(function(section) {
+    var sectionTop = section.offsetTop;
+    var sectionBottom = sectionTop + section.offsetHeight;
+
+    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionBottom) {
+      var sectionId = section.getAttribute('id');
+      menuLinks.forEach(function(link) {
+        link.classList.remove('active');
+      });
+
+      var activeLink = document.querySelector('a[href="#' + sectionId + '"]');
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  });
+}
+
+window.addEventListener('scroll', function() {
+  stickyMenu();
+  highlightSection();
+});
+
+highlightSection();
+
+</script>
+</body>
+</html>

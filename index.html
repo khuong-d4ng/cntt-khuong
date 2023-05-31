@@ -35,6 +35,29 @@
   <body>
     <div include-html="header.html"></div>
     <!--Thuc ra co the dung include, nma ko tien.-->
+    <nav id="navbar" class="sticky">
+      <div class="navbar__sticky-overlay">
+      <div class="navbar__sticky">  
+
+        
+
+        <div class="navbar__logo">
+          <h1>YourAdventure</h1>
+        </div>   
+        <ul>
+        <li><a href="#section-hotTour" onclick="smoothScroll(event)">Hot tour</a></li>
+        <li><a href="#video-banner" onclick="smoothScroll(event)">Phưu lưu</a></li>
+        <li><a href="#section-stories" onclick="smoothScroll(event)">Stories</a></li>
+      </ul>
+
+      <div class="navbar__backToTop">
+      <button onclick="backToTop()">Back to Top<i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+</div> 
+    </div>
+
+    <div class="navbar-border__bot"></div>
+    </nav>
 
     <div class="gallery-container">
       <div class="gallery">
@@ -279,6 +302,7 @@
     </div>
 
     <!-- ================== VIDEO BÊN DƯỚI HEHE ======================= -->
+    <section id="video-banner">
     <div class="video__homePage--container" style="min-height: 200px">
       <video
         preload="metadata"
@@ -330,6 +354,7 @@
       </div>
       <div class="video__homePage--overlay"></div>
     </div>
+  </section>
 
     <style>
       .chart-bigcontainer {
@@ -558,7 +583,43 @@
       includeHTML();
     </script>
 
-    <script></script>
+    <script>
+     // JavaScript cho sticky navbar và cuộn trang
+function smoothScroll(event) {
+  event.preventDefault();
+  var target = event.target.getAttribute("href");
+  var offset = document.querySelector(target).offsetTop;
+
+  window.scrollTo({
+    top: offset,
+    behavior: "smooth"
+  });
+}
+
+// Lấy navbar
+var navbar = document.getElementById("navbar");
+
+// Lấy vị trí của section mà bạn muốn navbar hiển thị
+var sectionPosition = document.querySelector("#section-hotTour").offsetTop;
+
+// Xử lý sự kiện cuộn trang
+window.addEventListener("scroll", function () {
+  // Nếu vị trí cuộn lớn hơn hoặc bằng vị trí section cần hiển thị, thêm lớp "show" vào navbar
+  if (window.pageYOffset >= sectionPosition) {
+    navbar.classList.add("show");
+  } else {
+    navbar.classList.remove("show");
+  }
+});
+
+function backToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+    </script>
     <!-- Script của FontAwesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 

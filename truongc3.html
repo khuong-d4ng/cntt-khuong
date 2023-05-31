@@ -1,77 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <style>
-      .slider__trongNuoc-container {
-        margin: 0 auto;
-        max-width: 600px; /* Giới hạn chiều rộng của slider */
-        overflow: hidden;
-      }
-      .slider__trongNuoc-item {
-        margin: 0 auto;
-        text-align: center;
-        margin: 0 20px;
-      }
-      .slider__trongNuoc-item img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-      .slider__trongNuoc-item .title {
-        color: #fff;
-        font-size: 18px;
-        text-align: center;
-        padding: 10px;
-        background: rgba(0, 0, 0, 0.5);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="slider__trongNuoc-container">
-      <div class="slider__trongNuoc-item">
-        <img src="./image-webp/japan-nature-1-1-min.webp" alt="Image 1" />
-        <p class="title">Tiêu đề 1</p>
-      </div>
-      <div class="slider__trongNuoc-item">
-        <img src="./image-webp/japan-nature-1-1-min.webp" alt="Image 2" />
-        <p class="title">Tiêu đề 2</p>
-      </div>
-      <div class="slider__trongNuoc-item">
-        <img src="./image-webp/japan-nature-1-1-min.webp" alt="Image 3" />
-        <p class="title">Tiêu đề 3</p>
-      </div>
-      <div class="slider__trongNuoc-item">
-        <img src="./image-webp/japan-nature-1-1-min.webp" alt="Image 4" />
-        <p class="title">Tiêu đề 4</p>
-      </div>
-      <div class="slider__trongNuoc-item">
-        <img src="./image-webp/japan-nature-1-1-min.webp" alt="Image 5" />
-        <p class="title">Tiêu đề 5</p>
-      </div>
-      <div class="slider__trongNuoc-item">
-        <img src="./image-webp/japan-nature-1-1-min.webp" alt="Image 6" />
-        <p class="title">Tiêu đề 6</p>
-      </div>
-    </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS cho sticky navbar */
+    .sticky {
+      position: fixed;
+      top: -100px; /* Đảm bảo navbar ẩn đi ban đầu */
+      width: 100%;
+      transition: top 0.3s ease-in-out;
+    }
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".slider__trongNuoc-container").slick({
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          arrows: true,
-          infinite: false,
-          prevArrow: '<button class="slick-prev">Previous</button>',
-          nextArrow: '<button class="slick-next">Next</button>',
-        });
+    .show {
+      top: 0; /* Hiển thị navbar */
+    }
+  </style>
+</head>
+<body>
+  <div include-html="header.html"></div>
+
+  <nav id="navbar" class="sticky">
+    <ul>
+      <li><a href="#america-nuocNgoai" onclick="smoothScroll(event)">Châu Mỹ</a></li>
+      <li><a href="#euro-nuocNgoai" onclick="smoothScroll(event)">Châu Âu</a></li>
+      <li><a href="#asia-nuocNgoai" onclick="smoothScroll(event)">Châu Á</a></li>
+    </ul>
+  </nav>
+
+  <div  class="gallery-container">
+    <!-- Các section và nội dung trong trang web -->
+  </div>
+  <section style="height: 600px; width: 100%; outline: red solid 2px;" id="america-nuocNgoai">
+      
+  </section>
+  <!-------------------------------------------------
+    |||||||||||||||SECTION EUROPE||||||||||||||||||||||
+  --------------------------------------------------->
+  <section style="height: 600px; width: 100%; outline: red solid 2px;" class="gioiThieu__nuocNgoai" id="euro-nuocNgoai">
+    
+  </section>
+
+  <!-------------------------------------------------
+    |||||||||||||||SECTION ASIA||||||||||||||||||||||
+  --------------------------------------------------->
+  <section style="height: 600px; width: 100%; outline: red solid 2px;" id="asia-nuocNgoai">
+     
+  </section>
+
+
+  
+  <script>
+    // JavaScript cho sticky navbar và cuộn trang
+    function smoothScroll(event) {
+      event.preventDefault();
+      var target = event.target.getAttribute("href");
+      var offset = document.querySelector(target).offsetTop;
+
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth"
       });
-    </script>
-  </body>
+    }
+
+    // Lấy navbar
+    var navbar = document.getElementById("navbar");
+
+    // Lấy vị trí của section mà bạn muốn navbar hiển thị
+    var sectionPosition = document.querySelector("#america-nuocNgoai").offsetTop;
+
+    // Xử lý sự kiện cuộn trang
+    window.addEventListener("scroll", function () {
+      // Nếu vị trí cuộn lớn hơn hoặc bằng vị trí section cần hiển thị, thêm lớp "show" vào navbar
+      if (window.pageYOffset >= sectionPosition) {
+        navbar.classList.add("show");
+      } else {
+        navbar.classList.remove("show");
+      }
+    });
+  </script>
+</body>
 </html>

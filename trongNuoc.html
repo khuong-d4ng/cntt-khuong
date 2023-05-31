@@ -36,6 +36,30 @@
   <body>
     <div include-html="header.html"></div>
 
+    <nav id="navbar" class="sticky">
+      <div class="navbar__sticky-overlay">
+      <div class="navbar__sticky">  
+
+        
+
+        <div class="navbar__logo">
+          <h1>YourAdventure</h1>
+        </div>   
+        <ul>
+        <li><a href="#gioiThieu__VN" onclick="smoothScroll(event)">Việt Nam</a></li>
+        <li><a href="#picking__tour" onclick="smoothScroll(event)">Planning</a></li>
+        <li><a href="#slider__hot-place" onclick="smoothScroll(event)">Nổi bật</a></li>
+      </ul>
+
+      <div class="navbar__backToTop">
+      <button onclick="backToTop()">Back to Top<i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+</div> 
+    </div>
+
+    <div class="navbar-border__bot"></div>
+    </nav>
+
     <div class="banner-container">
       <div class="banner-image"></div>
       <h1 class="banner-title-trongNuoc">Vietnam</h1>
@@ -55,7 +79,7 @@
       </p>
     </div>
 
-    <section class="gioiThieu__trongNuoc">
+    <section class="gioiThieu__trongNuoc" id="gioiThieu__VN">
       <div class="gioiThieu__VN-container">
         <div class="gioiThieu__VN-left">
           <div class="gioiThieu__VN-left-top">
@@ -162,7 +186,7 @@
       </div>
     </section>
 
-    <section class="picking__tour-section">
+    <section class="picking__tour-section" id="picking__tour">
       <div class="heading__title__hotTour-container heading__title-trongNuoc">
         <h4>cùng tạo bản đồ du lịch của riêng bạn!</h4>
         <p>
@@ -187,7 +211,7 @@
       <div include-html="vietNam-map-svg.html"></div>
     </section>
 
-    <section>
+    <section id="slider__hot-place">
       <div
         class="heading__title__hotTour-container heading__title-trongNuoc"
         style="margin-bottom: 0"
@@ -215,41 +239,43 @@
       <div class="slider__trongNuoc-container">
         <div class="slider__trongNuoc-item">
           <a class="slider__trongNuoc-moreContent" href="#">
-            <img src="./image-webp/barcelona.webp" alt="Image 1" />
-            <p class="slider__trongNuoc-title">Tiêu đề 1</p>
+            <img src="./image/trongNuoc/PhanSiPang-TamDuong.webp" alt="Image 1" />
+            <p class="slider__trongNuoc-title">Phan Si Păng</p>
           </a>
         </div>
         <div class="slider__trongNuoc-item">
           <a class="slider__trongNuoc-moreContent" href="#">
-            <img src="./image-webp/barcelona.webp" alt="Image 2" />
-            <p class="slider__trongNuoc-title">Tiêu đề 2</p>
+            <img src="./image/trongNuoc/SaPa-LaoCai.webp" alt="Image 2" />
+            <p class="slider__trongNuoc-title">Sa Pa</p>
           </a>
         </div>
         <div class="slider__trongNuoc-item">
           <a class="slider__trongNuoc-moreContent" href="#">
-            <img src="./image-webp/barcelona.webp" alt="Image 3" />
-            <p class="slider__trongNuoc-title">Tiêu đề 3</p>
+            <img src="./image/trongNuoc/SonDong-VIP.webp" alt="Image 3" />
+            <p class="slider__trongNuoc-title">Sơn Đoòng</p>
           </a>
         </div>
         <div class="slider__trongNuoc-item">
           <a class="slider__trongNuoc-moreContent" href="#">
-            <img src="./image-webp/barcelona.webp" alt="Image 4" />
-            <p class="slider__trongNuoc-title">Tiêu đề 4</p>
+            <img src="./image/trongNuoc/Thap-Ba-Ponagar-VinhPhuoc.webp" alt="Image 4" />
+            <p class="slider__trongNuoc-title">Chùa Tháp Bà</p>
           </a>
         </div>
         <div class="slider__trongNuoc-item">
           <a class="slider__trongNuoc-moreContent" href="#">
-            <img src="./image-webp/barcelona.webp" alt="Image 5" />
-            <p class="slider__trongNuoc-title">Tiêu đề 5</p>
+            <img src="./image/trongNuoc/HoiAn.webp" alt="Image 5" />
+            <p class="slider__trongNuoc-title">Hội An</p>
           </a>
         </div>
         <div class="slider__trongNuoc-item">
           <a class="slider__trongNuoc-moreContent" href="#">
-            <img src="./image-webp/barcelona.webp" alt="Image 6" />
-            <p class="slider__trongNuoc-title">Tiêu đề 6</p>
+            <img src="./image/trongNuoc/train-street-HaNoi.webp" alt="Image 6" />
+            <p class="slider__trongNuoc-title">Lòng Hà Nội</p>
           </a>
         </div>
       </div>
+      
+      
     </section>
 
     <style>
@@ -325,32 +351,78 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
-      $(document).ready(function () {
-        var slider = $(".slider__trongNuoc-container");
+     $(document).ready(function () {
+  var slider = $(".slider__trongNuoc-container");
 
-        slider.slick({
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          arrows: true,
-          infinite: false,
-          prevArrow:
-            "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-          nextArrow:
-            "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
-        });
+  function initializeSlider() {
+    var slidesToShow = 4;
+    var slidesToScroll = 4;
+    var centerMode = false;
+    var centerPadding = '0';
 
-        slider.on("afterChange", function (event, slick, currentSlide) {
-          var nextButton = $(this).find(".slick-next");
-          var slideCount = slick.slideCount;
-          var slidesToShow = slick.options.slidesToShow;
+    if ($(window).width() < 800) {
+      slidesToShow = 3;
+      slidesToScroll = 1;
+      centerMode = false;
+      centerPadding = '40px';
+    }
 
-          if (currentSlide + slidesToShow >= slideCount) {
-            nextButton.addClass("slick-disabled");
-          } else {
-            nextButton.removeClass("slick-disabled");
+    slider.slick({
+      slidesToShow: slidesToShow,
+      slidesToScroll: slidesToScroll,
+      arrows: true,
+      infinite: false,
+      centerMode: false,
+      centerPadding: centerPadding,
+      prevArrow:
+        "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+      nextArrow:
+        "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: false,
+            centerPadding: '40px',
+            slidesToShow: 3
           }
-        });
-      });
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+
+    slider.on("afterChange", function (event, slick, currentSlide) {
+      var nextButton = $(this).find(".slick-next");
+      var slideCount = slick.slideCount;
+
+      if (currentSlide + slidesToShow >= slideCount) {
+        nextButton.addClass("slick-disabled");
+      } else {
+        nextButton.removeClass("slick-disabled");
+      }
+    });
+  }
+
+  initializeSlider();
+
+  $(window).on("resize", function () {
+    if ($(window).width() >= 800) {
+      slider.slick("unslick");
+    } else {
+      initializeSlider();
+    }
+  });
+});
+
 
       /*readmore readless thoi ko co j*/
       document
@@ -380,5 +452,47 @@ KHI MÀ XEM WEB TRÊN MOBILE THÌ NÓ SẼ CHUYỂN THÀNH CÁI SLIDER ;(((( -->
     <script>
       includeHTML();
     </script>
+
+
+
+
+<!--------------------NAVBAR ẨN------------------->
+<script>
+  // JavaScript cho sticky navbar và cuộn trang
+function smoothScroll(event) {
+  event.preventDefault();
+  var target = event.target.getAttribute("href");
+  var offset = document.querySelector(target).offsetTop;
+
+  window.scrollTo({
+    top: offset,
+    behavior: "smooth"
+  });
+}
+
+// Lấy navbar
+var navbar = document.getElementById("navbar");
+
+// Lấy vị trí của section mà bạn muốn navbar hiển thị
+var sectionPosition = document.querySelector("#gioiThieu__VN").offsetTop;
+
+// Xử lý sự kiện cuộn trang
+window.addEventListener("scroll", function () {
+  // Nếu vị trí cuộn lớn hơn hoặc bằng vị trí section cần hiển thị, thêm lớp "show" vào navbar
+  if (window.pageYOffset >= sectionPosition) {
+    navbar.classList.add("show");
+  } else {
+    navbar.classList.remove("show");
+  }
+});
+
+function backToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+</script>
   </body>
 </html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YA - Nước Ngoài</title>
+    <link rel="icon" href="./image/logo-favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/nuocNgoai.css" />
+    <script src="./js/scripts.js"></script>
+    <!--import font-awsome-->
+    <script
+      src="https://kit.fontawesome.com/2a4863cf64.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--CÁI NÀY LÀ LINK CSS CỦA SLICK SLIDER-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <meta
+      name="description"
+      content="Tận hưởng trải nghiệm du lịch tuyệt vời với trang web chuyên về du lịch và lữ hành. Đặt vé du lịch online dễ dàng theo tour với sự đa dạng và linh hoạt."
+    />
+    <meta name="author" content="Pham Dang Khuong" />
+  </head>
+  <body>
+    <div include-html="header.html"></div>
+    <nav id="navbar" class="sticky">
+        <ul>
+          <li><a href="#america-nuocNgoai" onclick="smoothScroll(event)">Châu Mỹ</a></li>
+          <li><a href="#euro-nuocNgoai" onclick="smoothScroll(event)">Châu Âu</a></li>
+          <li><a href="#asia-nuocNgoai" onclick="smoothScroll(event)">Châu Á</a></li>
+        </ul>
+      </nav>
+    <div class="gallery-container">
+      <div class="gallery">
+        <div class="container-anh-banner anh-giu-lailai">
+          <a
+            class="banner-anh"
+            href="#euro-nuocNgoai"
+            onclick="smoothScroll(event)"
+            aria-label="Đi đến trang ảnh 1"
+          >
+            <img
+              class="anh-namTrong-banner"
+              src="./image/nuocNgoai/eiffel-banner-euro.webp"
+              alt="Eiffel - Paris"
+              preload="metadata"
+            />
+          </a>
+          <a
+            href="#euro-nuocNgoai"
+            onclick="smoothScroll(event)"
+            class="overlay__banner-title"
+          ></a>
+          <h3 class="banner-title">Châu Âu</h3>
+        </div>
+        <div class="container-anh-banner anh-can-xoa">
+          <a
+            class="banner-anh"
+            href="#america-nuocNgoai"
+            onclick="smoothScroll(event)"
+            aria-label="Đi đến trang ảnh 2"
+          >
+            <img
+              class="anh-namTrong-banner"
+              src="./image/nuocNgoai/state-of-liberty-banner-america.webp"
+              alt="State of Liberty - America"
+              preload="metadata"
+            />
+          </a>
+          <a
+            href="#america-nuocNgoai"
+            onclick="smoothScroll(event)"
+            class="overlay__banner-title"
+          ></a>
+          <h3 class="banner-title">Châu Mỹ</h3>
+        </div>
+        <div class="container-anh-banner anh-can-xoa">
+          <a
+            class="banner-anh"
+            href="#asia-nuocNgoai"
+            onclick="smoothScroll(event)"
+            aria-label="Đi đến trang ảnh 3"
+          >
+            <img
+              class="anh-namTrong-banner"
+              src="./image/nuocNgoai/jp-banner-asia.webp"
+              alt="Ảnh 3"
+              preload="metadata"
+            />
+          </a>
+          <a
+            href="#asia-nuocNgoai"
+            onclick="smoothScroll(event)"
+            class="overlay__banner-title"
+          ></a>
+          <h3 class="banner-title">Châu Á</h3>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------------------
+      |||||||||||||||SECTION AMERICA||||||||||||||||||||
+    --------------------------------------------------->
+    <section id="america-nuocNgoai">
+      
+    </section>
+    <!-------------------------------------------------
+      |||||||||||||||SECTION EUROPE||||||||||||||||||||||
+    --------------------------------------------------->
+    <section class="gioiThieu__nuocNgoai" id="euro-nuocNgoai">
+      
+    </section>
+
+    <!-------------------------------------------------
+      |||||||||||||||SECTION ASIA||||||||||||||||||||||
+    --------------------------------------------------->
+    <section id="asia-nuocNgoai">
+       
+    </section>
+
+
+    <script>
+    // JavaScript cho sticky navbar và cuộn trang
+    function smoothScroll(event) {
+      event.preventDefault();
+      var target = event.target.getAttribute("href");
+      var offset = document.querySelector(target).offsetTop;
+
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth"
+      });
+    }
+
+    // Lấy navbar
+    var navbar = document.getElementById("navbar");
+
+    // Lấy vị trí của section mà bạn muốn navbar hiển thị
+    var sectionPosition = document.querySelector("#america-nuocNgoai").offsetTop;
+
+    // Xử lý sự kiện cuộn trang
+    window.addEventListener("scroll", function () {
+      // Nếu vị trí cuộn lớn hơn hoặc bằng vị trí section cần hiển thị, thêm lớp "show" vào navbar
+      if (window.pageYOffset >= sectionPosition) {
+        navbar.classList.add("show");
+      } else {
+        navbar.classList.remove("show");
+      }
+    });
+  </script>
+  </body>
+</html>
