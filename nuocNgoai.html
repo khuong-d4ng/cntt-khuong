@@ -34,114 +34,37 @@
   </head>
   <body>
     <div include-html="header.html"></div>
-    <style>
-      /* CSS cho sticky navbar */
-      .sticky {
-        position: fixed;
-        top: -100px; /* Đảm bảo navbar ẩn đi ban đầu */
-        width: 100%;
-        transition: top 0.3s ease-in-out;
-        z-index: 999;
-        display: flex;
-        flex-direction: column;
-        height: 60px;
-      }
-      .navbar__sticky-overlay{
-        width: 100%;
-        height: 50px;
-      }
-      .navbar-border__bot{
-        width: 100%;
-        border-bottom: #87878782 .8px solid;
-        box-shadow: 0px 0px 0px .3px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2);
-        margin: 0 auto;
-      }
-      .show {
-        top: 0; /* Hiển thị navbar */
-      }
-      .navbar__sticky{
-        position: absolute;
-        width: 100%;
-        background-color: #fff;
-        display: flex;
-        justify-content: space-between;
-        height: 50px;
-        z-index: 9999;
-      }
-      .navbar__sticky ul{
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-      }
-      .navbar__sticky ul li{
-        list-style: none;
-      }
-      .navbar__sticky ul li a{
-        text-decoration: none;
-        white-space: nowrap;
-        font-size: 16px;
-        color: #555555;
-        font-weight: 600;
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-      .navbar__backToTop{
-        width: 20%;
-        font-size: 14px;
-
-        text-align: center;
-        line-height: 50px;
-      }
-      .navbar__backToTop button{
-        font-size: 16px;
-        background: transparent;
-        height: 100%;
-        width: 100%;
-
-      }
-      .navbar__backToTop button i{
-        font-size: 24px;
-        padding-left: 5px;
-        
-      }
-      .navbar__logo{
-        width: 20%;
-
-      }
-      .navbar__logo > h1{
-        margin-left: 15px;
-        line-height: 45px;
-        background: linear-gradient(173deg, rgb(7, 205, 255), rgb(0, 255, 102));
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 28px;
-  font-weight: 700;
-      }
-    </style>
     <nav id="navbar" class="sticky">
       <div class="navbar__sticky-overlay">
-      <div class="navbar__sticky">  
+        <div class="navbar__sticky">
+          <div class="navbar__logo">
+            <a href="index.html"><h1>YourAdventure</h1></a>
+          </div>
+          <ul>
+            <li>
+              <a href="#america-nuocNgoai" onclick="smoothScroll(event)"
+                >Châu Mỹ</a
+              >
+            </li>
+            <li>
+              <a href="#euro-nuocNgoai" onclick="smoothScroll(event)"
+                >Châu Âu</a
+              >
+            </li>
+            <li>
+              <a href="#asia-nuocNgoai" onclick="smoothScroll(event)">Châu Á</a>
+            </li>
+          </ul>
 
-        
+          <div class="navbar__backToTop">
+            <button onclick="backToTop()">
+              Back to Top<i class="fa-solid fa-arrow-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-        <div class="navbar__logo">
-          <h1>YourAdventure</h1>
-        </div>   
-        <ul>
-        <li><a href="#america-nuocNgoai" onclick="smoothScroll(event)">Châu Mỹ</a></li>
-        <li><a href="#euro-nuocNgoai" onclick="smoothScroll(event)">Châu Âu</a></li>
-        <li><a href="#asia-nuocNgoai" onclick="smoothScroll(event)">Châu Á</a></li>
-      </ul>
-
-      <div class="navbar__backToTop">
-      <button onclick="backToTop()">Back to Top<i class="fa-solid fa-arrow-up"></i></button>
-    </div>
-</div> 
-    </div>
-
-    <div class="navbar-border__bot"></div>
+      <div class="navbar-border__bot"></div>
     </nav>
     <div class="gallery-container">
       <div class="gallery">
@@ -167,7 +90,6 @@
           <h3 class="banner-title">Châu Mỹ</h3>
         </div>
         <div class="container-anh-banner anh-can-xoa">
-          
           <a
             class="banner-anh"
             href="#euro-nuocNgoai"
@@ -214,7 +136,7 @@
     <!-------------------------------------------------
       |||||||||||||||SECTION AMERICA||||||||||||||||||||
     --------------------------------------------------->
-    <section id="america-nuocNgoai" style="z-index: 110;">
+    <section id="america-nuocNgoai" style="z-index: 110">
       <div
         class="heading__title__hotTour-container heading__title-nuocNgoai"
         style="margin-bottom: 60px"
@@ -763,19 +685,20 @@
         event.preventDefault();
         var target = event.target.getAttribute("href");
         var offset = document.querySelector(target).offsetTop;
-  
+
         window.scrollTo({
           top: offset,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       }
-  
+
       // Lấy navbar
       var navbar = document.getElementById("navbar");
-  
+
       // Lấy vị trí của section mà bạn muốn navbar hiển thị
-      var sectionPosition = document.querySelector("#america-nuocNgoai").offsetTop;
-  
+      var sectionPosition =
+        document.querySelector("#america-nuocNgoai").offsetTop;
+
       // Xử lý sự kiện cuộn trang
       window.addEventListener("scroll", function () {
         // Nếu vị trí cuộn lớn hơn hoặc bằng vị trí section cần hiển thị, thêm lớp "show" vào navbar
@@ -787,11 +710,11 @@
       });
 
       function backToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     </script>
 
     <script>

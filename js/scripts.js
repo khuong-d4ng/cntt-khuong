@@ -28,50 +28,6 @@ function includeHTML() {
   });
 }
 
-window.addEventListener("DOMContentLoaded", function () {
-  var anhCanXoaElements = document.querySelectorAll(".anh-can-xoa");
-  var divToResize = document.getElementsByClassName("anh-giu-lailai")[0];
-  var screenWidth =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-
-  function hideAnhCanXoaElements() {
-    for (var i = 0; i < anhCanXoaElements.length; i++) {
-      anhCanXoaElements[i].style.display = "none";
-    }
-    if (divToResize) {
-      divToResize.style.width = "100%";
-    }
-  }
-
-  function showAnhCanXoaElements() {
-    for (var i = 0; i < anhCanXoaElements.length; i++) {
-      anhCanXoaElements[i].style.display = "";
-    }
-    if (divToResize) {
-      divToResize.style.width = "33.33%";
-    }
-  }
-
-  function checkScreenWidth() {
-    screenWidth =
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
-    if (screenWidth < 550) {
-      hideAnhCanXoaElements();
-    } else {
-      showAnhCanXoaElements();
-    }
-  }
-
-  checkScreenWidth();
-
-  window.addEventListener("resize", function () {
-    checkScreenWidth();
-  });
-});
 
 /** ĐOẠN NÀY ĐỂ CUỘN XUỐNG PHẦN HOT TOUUR KHI CLICK NÀO NEW! */
 
@@ -83,7 +39,7 @@ function smoothScroll(event) {
   });
 }
 
-/* ĐIỀU KIỆN CHO QUẢ RESPONSIVE ĐỈNH CON MẸ NÓ CAO: TRÊN 500PX THÌ HIỂN THỊ rSECTION HOME BÌNH THƯỜNG(BẢN DESKTOP) 
+/* ĐIỀU KIỆN CHO QUẢ RESPONSIVE ĐỈNH CAO: TRÊN 500PX THÌ HIỂN THỊ rSECTION HOME BÌNH THƯỜNG(BẢN DESKTOP) 
 DƯỚI < 500PX THÌ HIỂN THỊ BẢN SLIDER HAHAHAH NGONNNNNNNNNNNNN*/
 
 $("#rSection-slider").slick({
@@ -113,6 +69,8 @@ $("#rSection-slider").slick({
   arrows: false,
 });
 
+
+/* stories slider, left stories*/
 $(document).ready(function () {
   var windowWidth = $(window).width();
   var slideToShowNumber = 2;
@@ -176,6 +134,8 @@ $(document).ready(function () {
   });
 });
 
+
+//ẩn mục left-hottour đi khi < 500px. hiển thị slider
 window.addEventListener("DOMContentLoaded", function () {
   var rightContainerHome = document.querySelector(".right-container-home");
   var rSectionSlider = document.querySelector("#rSection-slider");

@@ -29,6 +29,18 @@
       name="description"
       content="Tận hưởng trải nghiệm du lịch tuyệt vời với trang web chuyên về du lịch và lữ hành. Đặt vé du lịch online dễ dàng theo tour với sự đa dạng và linh hoạt."
     />
+    <meta
+      name="keywords"
+      content="du lịch, lữ hành, đặt vé du lịch, tour du lịch"
+    />
+    <meta
+      property="og:title"
+      content="YourAdventure - Tạo ra hành trình của riêng bạn"
+    />
+    <meta
+      property="og:description"
+      content="Tận hưởng trải nghiệm du lịch tuyệt vời với trang web chuyên về du lịch và lữ hành. Đặt vé du lịch online dễ dàng theo tour với sự đa dạng và linh hoạt."
+    />
     <meta name="author" content="Pham Dang Khuong" />
   </head>
 
@@ -37,26 +49,35 @@
     <!--Thuc ra co the dung include, nma ko tien.-->
     <nav id="navbar" class="sticky">
       <div class="navbar__sticky-overlay">
-      <div class="navbar__sticky">  
+        <div class="navbar__sticky">
+          <div class="navbar__logo">
+            <a href="index.html"><h1>YourAdventure</h1></a>
+          </div>
+          <ul>
+            <li>
+              <a href="#section-hotTour" onclick="smoothScroll(event)"
+                >Hot tour</a
+              >
+            </li>
+            <li>
+              <a href="#video-banner" onclick="smoothScroll(event)">Phưu lưu</a>
+            </li>
+            <li>
+              <a href="#section-stories" onclick="smoothScroll(event)"
+                >Stories</a
+              >
+            </li>
+          </ul>
 
-        
+          <div class="navbar__backToTop">
+            <button onclick="backToTop()">
+              Back to Top<i class="fa-solid fa-arrow-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-        <div class="navbar__logo">
-          <h1>YourAdventure</h1>
-        </div>   
-        <ul>
-        <li><a href="#section-hotTour" onclick="smoothScroll(event)">Hot tour</a></li>
-        <li><a href="#video-banner" onclick="smoothScroll(event)">Phưu lưu</a></li>
-        <li><a href="#section-stories" onclick="smoothScroll(event)">Stories</a></li>
-      </ul>
-
-      <div class="navbar__backToTop">
-      <button onclick="backToTop()">Back to Top<i class="fa-solid fa-arrow-up"></i></button>
-    </div>
-</div> 
-    </div>
-
-    <div class="navbar-border__bot"></div>
+      <div class="navbar-border__bot"></div>
     </nav>
 
     <div class="gallery-container">
@@ -303,58 +324,58 @@
 
     <!-- ================== VIDEO BÊN DƯỚI HEHE ======================= -->
     <section id="video-banner">
-    <div class="video__homePage--container" style="min-height: 200px">
-      <video
-        preload="metadata"
-        autoplay
-        muted
-        loop
-        poster="./image-webp/mid-gate-nonwebp (1).webp"
-      >
-        <source src="./image/videos/mountains-81945.webm" type="video/webm" />
-      </video>
-      <div class="video__homePage--title">
-        <a href="#" aria-label="Make own adventure"
-          ><h1 class="video__homePagr--h1--title">
-            <span class="top__title--h1--title">MAKE YOUR OWN </span> <br />
-            <span
-              class="bot__title--h1-title"
-              style="
-                border-bottom: solid 2px rgb(0, 119, 255);
-                background: linear-gradient(
-                  173deg,
-                  rgb(7, 230, 255),
-                  rgba(0, 81, 255, 0.679)
-                );
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                color: transparent;
-              "
-            >
-              ADVENTURE TIME!</span
-            >
-          </h1></a
+      <div class="video__homePage--container" style="min-height: 200px">
+        <video
+          preload="metadata"
+          autoplay
+          muted
+          loop
+          poster="./image-webp/mid-gate-nonwebp (1).webp"
         >
-        <a href="#" aria-label="Join adventure"
-          ><p class="video__homePage--description">
-            Join with us! let make a beutiful adventure
-          </p></a
-        >
+          <source src="./image/videos/mountains-81945.webm" type="video/webm" />
+        </video>
+        <div class="video__homePage--title">
+          <a href="#" aria-label="Make own adventure"
+            ><h1 class="video__homePagr--h1--title">
+              <span class="top__title--h1--title">MAKE YOUR OWN </span> <br />
+              <span
+                class="bot__title--h1-title"
+                style="
+                  border-bottom: solid 2px rgb(0, 119, 255);
+                  background: linear-gradient(
+                    173deg,
+                    rgb(7, 230, 255),
+                    rgba(0, 81, 255, 0.679)
+                  );
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                "
+              >
+                ADVENTURE TIME!</span
+              >
+            </h1></a
+          >
+          <a href="#" aria-label="Join adventure"
+            ><p class="video__homePage--description">
+              Join with us! let make a beutiful adventure
+            </p></a
+          >
+        </div>
+        <!-- =============================================================================================== -->
+        <div class="video__homePage--bottom__text">
+          <p class="video__homePage--bottom__text--p">
+            <span class="video__homePage--bottom__text--p--dong1">
+              Create Your Own Adventure!
+            </span>
+            <br />
+            Embark on a Tailored Journey and Explore Like Never Before!
+          </p>
+        </div>
+        <div class="video__homePage--overlay"></div>
       </div>
-      <!-- =============================================================================================== -->
-      <div class="video__homePage--bottom__text">
-        <p class="video__homePage--bottom__text--p">
-          <span class="video__homePage--bottom__text--p--dong1">
-            Create Your Own Adventure!
-          </span>
-          <br />
-          Embark on a Tailored Journey and Explore Like Never Before!
-        </p>
-      </div>
-      <div class="video__homePage--overlay"></div>
-    </div>
-  </section>
+    </section>
 
     <style>
       .chart-bigcontainer {
@@ -584,41 +605,40 @@
     </script>
 
     <script>
-     // JavaScript cho sticky navbar và cuộn trang
-function smoothScroll(event) {
-  event.preventDefault();
-  var target = event.target.getAttribute("href");
-  var offset = document.querySelector(target).offsetTop;
+      // JavaScript cho sticky navbar
+      function smoothScroll(event) {
+        event.preventDefault();
+        var target = event.target.getAttribute("href");
+        var offset = document.querySelector(target).offsetTop;
 
-  window.scrollTo({
-    top: offset,
-    behavior: "smooth"
-  });
-}
+        window.scrollTo({
+          top: offset,
+          behavior: "smooth",
+        });
+      }
 
-// Lấy navbar
-var navbar = document.getElementById("navbar");
+      // Lấy navbar
+      var navbar = document.getElementById("navbar");
 
-// Lấy vị trí của section mà bạn muốn navbar hiển thị
-var sectionPosition = document.querySelector("#section-hotTour").offsetTop;
+      // lấy vị trí để khi scroll qua đây thì hiện navbar lên
+      var sectionPosition =
+        document.querySelector("#section-hotTour").offsetTop;
 
-// Xử lý sự kiện cuộn trang
-window.addEventListener("scroll", function () {
-  // Nếu vị trí cuộn lớn hơn hoặc bằng vị trí section cần hiển thị, thêm lớp "show" vào navbar
-  if (window.pageYOffset >= sectionPosition) {
-    navbar.classList.add("show");
-  } else {
-    navbar.classList.remove("show");
-  }
-});
+      // Xử lý scroll
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset >= sectionPosition) {
+          navbar.classList.add("show");
+        } else {
+          navbar.classList.remove("show");
+        }
+      });
 
-function backToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
-
+      function backToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     </script>
     <!-- Script của FontAwesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>

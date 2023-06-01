@@ -564,7 +564,7 @@ p.box-description {
 }
 
 @media screen and (max-width: 1024px) {
-  .asia__right-menu-title__a{
+  .asia__right-menu-title__a {
     white-space: nowrap;
   }
 
@@ -572,34 +572,35 @@ p.box-description {
     width: 40%;
   }
   @media screen and (max-width: 800px) {
-    #asia__nuocNgoai-container{
+    #asia__nuocNgoai-container {
       display: flex;
       justify-content: start;
-      flex-direction: column; 
+      flex-direction: column;
       height: 500px;
     }
-    .asia__left{
+    .asia__left {
       width: 100%;
     }
-    .asia__left-content-bot p{
+    .asia__left-content-bot p {
       max-width: 100%;
     }
-    .asia__left-content-bot{
-      -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    .asia__left-content-bot {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 50%,
+        transparent 100%
+      );
       mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     }
-    
-    .asia__right-menu{
+
+    .asia__right-menu {
       margin-top: 30px;
       position: unset;
       transform: unset;
     }
   }
   @media screen and (max-width: 500px) {
-  
-    
-    
-  }  
+  }
 }
 
 /*----------END SECTION ASIA---------------*/
