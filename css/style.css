@@ -139,7 +139,45 @@ body {
 }
 */
 
+.big__gallery-container{
+  position: relative;
+}
+.logo__gallery{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.logo__gallery > h1{
+  background: linear-gradient(173deg, rgb(7, 205, 255), rgb(0, 255, 102));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 800px) {
+  .logo__gallery{
+    top: 50%
+  }
+  .logo__gallery > h1{
+    font-size: 35px
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo__gallery{
+    top: 50%
+  }
+  .logo__gallery > h1{
+    font-size: 40px
+  }
+}
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+
+
 
 .search__header {
   position: absolute;
@@ -1924,25 +1962,90 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
 
 /* TEXT CUA PHAN CONTAINER ALL NEW BEN TRAI'*/
 .left__stories-card-text {
+  width: 80%;
   position: absolute;
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 35px;
 }
-.left__stories-card-text a {
+.lead__stories-card-text__type {
   color: white;
-  font-size: 2em;
+  font-size: 1em;
+
+  text-decoration: none;
+  opacity: .8;
+  display: block;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.content__stories-card-text {
+  display: block;
+  width: 60%;
+  color: white;
+  font-size: 1.7em;
+  opacity: 1;
   font-weight: 700;
   text-decoration: none;
 }
-
-.left__stories-card-text a:hover {
+.content__stories-card-text:hover{
   text-decoration: underline;
 }
-.left__stories-card-text p {
+.time-date__stories-card-text{
   color: white;
-  font-size: 1.7em;
-  opacity: 0.8;
+  font-size: .8em;
+  display: block;
+  margin-top: 30px;
+}
+.description__stories-card-text{
+  margin-top: 20px;
+  font-size: 1em;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+  
+  width: 80%;
+}
+@media screen and (max-width: 1100px) {
+  .description__stories-card-text{
+    height: 20%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  
+  }
+  @media screen and (max-width: 1024px) {
+    .left__stories-card-text{
+      position: absolute;
+      top: 20%;
+  left: 35px;
+  
+  width: 80%; 
+    }
+    .content__stories-card-text{
+      font-size: 1.5em;
+    }
+    .time-date__stories-card-text{
+      font-size: .6em;
+      margin-top: 15px;
+
+    }
+    .lead__stories-card-text__type{
+      font-size: .6em;
+      margin-bottom: 15px;
+    }
+    @media screen and (max-width: 600px) {
+      .lead__stories-card-text__type{
+        font-size: .7em;
+      }
+      .content__stories-card-text{
+        font-size: 1.3em;
+      }
+      .description__stories-card-text{
+        font-size: .8em;
+      }
+    }
+  }
 }
 .stories__image__slider-title {
   font-weight: bold;
@@ -2097,12 +2200,6 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
     font-size: 2em;
   }
 
-  .left__stories-card-text a {
-    font-size: 1.7em;
-  }
-  .left__stories-card-text p {
-    font-size: 1.3em;
-  }
 }
 @media screen and (max-width: 1010px) {
   .heading__bottom-left {
@@ -2145,14 +2242,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
     margin: 0;
   }
 
-  .left__stories-card-text {
-    left: 40%;
-    top: 25%;
-  }
-  .left__stories-card-text p {
-    font-size: 1em;
-    font-weight: 100;
-  }
+  
 }
 @media screen and (max-width: 450px) {
   .heading__bottom-left-fisrt,
