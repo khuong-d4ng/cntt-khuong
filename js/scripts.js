@@ -29,13 +29,40 @@ function includeHTML() {
 }
 
 var parentItems = document.querySelectorAll("#menu .menu-parent > li");
-  var dropdownItems = document.querySelectorAll("#menu .submenu > li");
+var dropdownItems = document.querySelectorAll("#menu .submenu > li");
 
-  // Hover vào phần tử cha
-  parentItems.forEach(function (item) {
-    var parentLink = item.querySelector("a");
+// Hover vào phần tử cha
+parentItems.forEach(function (item) {
+  var parentLink = item.querySelector("a");
 
-    item.addEventListener("mouseenter", function () {
+  item.addEventListener("mouseenter", function () {
+    if (!parentLink.classList.contains("textHome")) {
+      parentLink.style.fontSize = "18px";
+      parentLink.style.backgroundImage =
+        "linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0))";
+      parentLink.style.webkitBackgroundClip = "text";
+      parentLink.style.webkitTextFillColor = "transparent";
+      parentLink.style.backgroundClip = "text";
+    }
+  });
+
+  item.addEventListener("mouseleave", function () {
+    if (
+      !item.classList.contains("active") &&
+      !parentLink.classList.contains("textHome")
+    ) {
+      parentLink.style.fontSize = "16px";
+      parentLink.style.backgroundImage = "none";
+      parentLink.style.webkitBackgroundClip = "initial";
+      parentLink.style.webkitTextFillColor = "initial";
+      parentLink.style.backgroundClip = "initial";
+    }
+  });
+
+  // Hover vào phần tử con
+  var submenu = item.querySelector(".submenu");
+  if (submenu) {
+    submenu.addEventListener("mouseenter", function () {
       if (!parentLink.classList.contains("textHome")) {
         parentLink.style.fontSize = "18px";
         parentLink.style.backgroundImage =
@@ -46,7 +73,7 @@ var parentItems = document.querySelectorAll("#menu .menu-parent > li");
       }
     });
 
-    item.addEventListener("mouseleave", function () {
+    submenu.addEventListener("mouseleave", function () {
       if (
         !item.classList.contains("active") &&
         !parentLink.classList.contains("textHome")
@@ -58,35 +85,8 @@ var parentItems = document.querySelectorAll("#menu .menu-parent > li");
         parentLink.style.backgroundClip = "initial";
       }
     });
-
-    // Hover vào phần tử con
-    var submenu = item.querySelector(".submenu");
-    if (submenu) {
-      submenu.addEventListener("mouseenter", function () {
-        if (!parentLink.classList.contains("textHome")) {
-          parentLink.style.fontSize = "18px";
-          parentLink.style.backgroundImage =
-            "linear-gradient(to right, rgb(253, 211, 0), rgb(254, 0, 0))";
-          parentLink.style.webkitBackgroundClip = "text";
-          parentLink.style.webkitTextFillColor = "transparent";
-          parentLink.style.backgroundClip = "text";
-        }
-      });
-
-      submenu.addEventListener("mouseleave", function () {
-        if (
-          !item.classList.contains("active") &&
-          !parentLink.classList.contains("textHome")
-        ) {
-          parentLink.style.fontSize = "16px";
-          parentLink.style.backgroundImage = "none";
-          parentLink.style.webkitBackgroundClip = "initial";
-          parentLink.style.webkitTextFillColor = "initial";
-          parentLink.style.backgroundClip = "initial";
-        }
-      });
-    }
-  });
+  }
+});
 
 /** ĐOẠN NÀY ĐỂ CUỘN XUỐNG PHẦN HOT TOUUR KHI CLICK NÀO NEW! */
 
@@ -127,7 +127,6 @@ $("#rSection-slider").slick({
   ],
   arrows: false,
 });
-
 
 /* stories slider, left stories*/
 $(document).ready(function () {

@@ -610,26 +610,26 @@ p.box-description {
 
 /*tái sử dụng của trong nước, cái slider 4x6 ấy*/
 @media screen and (max-width: 1024px) {
-  .responsive__title-content-americas{
+  .responsive__title-content-americas {
     font-size: 100px;
   }
-  .america-mainImg-container h2{
+  .america-mainImg-container h2 {
     font-size: 100px;
   }
-  .america-mainImg-container p#describe-americas__1{
+  .america-mainImg-container p#describe-americas__1 {
     font-size: 32px;
   }
-  .america-mainImg-container p#describe-americas__2{
+  .america-mainImg-container p#describe-americas__2 {
     font-size: 32px;
   }
-  .america-mainImg-container p#describe-americas__3{
+  .america-mainImg-container p#describe-americas__3 {
     font-size: 32px;
   }
   @media screen and (max-width: 600px) {
-    .responsive__title-content-americas{
+    .responsive__title-content-americas {
       font-size: 70px;
     }
-    .america-mainImg-container h2{
+    .america-mainImg-container h2 {
       font-size: 80px;
     }
   }

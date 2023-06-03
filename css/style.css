@@ -139,16 +139,16 @@ body {
 }
 */
 
-.big__gallery-container{
+.big__gallery-container {
   position: relative;
 }
-.logo__gallery{
+.logo__gallery {
   position: absolute;
   top: 25%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.logo__gallery > h1{
+.logo__gallery > h1 {
   background: linear-gradient(173deg, rgb(7, 205, 255), rgb(0, 255, 102));
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -159,25 +159,22 @@ body {
   margin-bottom: 5px;
 }
 @media screen and (max-width: 800px) {
-  .logo__gallery{
-    top: 50%
+  .logo__gallery {
+    top: 50%;
   }
-  .logo__gallery > h1{
-    font-size: 35px
+  .logo__gallery > h1 {
+    font-size: 35px;
   }
 }
 @media screen and (max-width: 600px) {
-  .logo__gallery{
-    top: 50%
+  .logo__gallery {
+    top: 50%;
   }
-  .logo__gallery > h1{
-    font-size: 40px
+  .logo__gallery > h1 {
+    font-size: 40px;
   }
 }
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
-
-
-
 
 .search__header {
   position: absolute;
@@ -1972,7 +1969,7 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   font-size: 1em;
 
   text-decoration: none;
-  opacity: .8;
+  opacity: 0.8;
   display: block;
   width: fit-content;
   margin-bottom: 30px;
@@ -1987,62 +1984,60 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   font-weight: 700;
   text-decoration: none;
 }
-.content__stories-card-text:hover{
+.content__stories-card-text:hover {
   text-decoration: underline;
 }
-.time-date__stories-card-text{
+.time-date__stories-card-text {
   color: white;
-  font-size: .8em;
+  font-size: 0.8em;
   display: block;
   margin-top: 30px;
 }
-.description__stories-card-text{
+.description__stories-card-text {
   margin-top: 20px;
   font-size: 1em;
   color: white;
   position: absolute;
   bottom: 30px;
   left: 35px;
-  
+
   width: 80%;
 }
 @media screen and (max-width: 1100px) {
-  .description__stories-card-text{
+  .description__stories-card-text {
     height: 20%;
     overflow: hidden;
     -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  
   }
   @media screen and (max-width: 1024px) {
-    .left__stories-card-text{
+    .left__stories-card-text {
       position: absolute;
       top: 20%;
-  left: 35px;
-  
-  width: 80%; 
+      left: 35px;
+
+      width: 80%;
     }
-    .content__stories-card-text{
+    .content__stories-card-text {
       font-size: 1.5em;
     }
-    .time-date__stories-card-text{
-      font-size: .6em;
+    .time-date__stories-card-text {
+      font-size: 0.6em;
       margin-top: 15px;
-
     }
-    .lead__stories-card-text__type{
-      font-size: .6em;
+    .lead__stories-card-text__type {
+      font-size: 0.6em;
       margin-bottom: 15px;
     }
     @media screen and (max-width: 600px) {
-      .lead__stories-card-text__type{
-        font-size: .7em;
+      .lead__stories-card-text__type {
+        font-size: 0.7em;
       }
-      .content__stories-card-text{
+      .content__stories-card-text {
         font-size: 1.3em;
       }
-      .description__stories-card-text{
-        font-size: .8em;
+      .description__stories-card-text {
+        font-size: 0.8em;
       }
     }
   }
@@ -2199,7 +2194,6 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   .heading__bottom-left {
     font-size: 2em;
   }
-
 }
 @media screen and (max-width: 1010px) {
   .heading__bottom-left {
@@ -2241,8 +2235,6 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   .button__container button {
     margin: 0;
   }
-
-  
 }
 @media screen and (max-width: 450px) {
   .heading__bottom-left-fisrt,
