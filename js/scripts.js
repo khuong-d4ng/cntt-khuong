@@ -193,32 +193,5 @@ $(document).ready(function () {
   });
 });
 
-const emailInput = document.getElementById("email-input");
-      const userLabel = document.querySelector(".user-label");
-
-      emailInput.addEventListener("input", function () {
-        if (this.value !== "") {
-          this.classList.add("input-filled");
-          userLabel.classList.add("label-filled");
-        } else {
-          this.classList.remove("input-filled");
-          userLabel.classList.remove("label-filled");
-        }
-      });
-      const emailInputFocus = document.getElementById("email-input");
-      const userLabelFocus = document.querySelector(".user-label");
-      const defaultLabelText = "Hãy cho chúng tôi biết đánh giá của bạn!";
-      const newLabelText = "Hãy nhập email để gửi đánh giá";
-
-      emailInputFocus.addEventListener("focus", function () {
-        userLabelFocus.textContent = newLabelText;
-      });
-
-      emailInputFocus.addEventListener("blur", function () {
-        if (this.value === "") {
-          userLabelFocus.textContent = defaultLabelText;
-        }
-      });
-
 //cuộn
 window.addEventListener("scroll", myScrollHandler, { passive: true });
