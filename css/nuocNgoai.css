@@ -502,7 +502,7 @@ p.box-description {
 .asia__left-content-top a {
   text-decoration: none;
 }
-.asia__left-content-top p {
+.asia__title-left-content {
   padding-left: 30px;
   font-size: 128px;
   font-weight: 600;
@@ -571,6 +571,9 @@ p.box-description {
   .asia__right {
     width: 40%;
   }
+  .asia__left-content-bot p {
+    font-size: 16px;
+  }
   @media screen and (max-width: 800px) {
     #asia__nuocNgoai-container {
       display: flex;
@@ -606,3 +609,28 @@ p.box-description {
 /*----------END SECTION ASIA---------------*/
 
 /*tái sử dụng của trong nước, cái slider 4x6 ấy*/
+@media screen and (max-width: 1024px) {
+  .responsive__title-content-americas{
+    font-size: 100px;
+  }
+  .america-mainImg-container h2{
+    font-size: 100px;
+  }
+  .america-mainImg-container p#describe-americas__1{
+    font-size: 32px;
+  }
+  .america-mainImg-container p#describe-americas__2{
+    font-size: 32px;
+  }
+  .america-mainImg-container p#describe-americas__3{
+    font-size: 32px;
+  }
+  @media screen and (max-width: 600px) {
+    .responsive__title-content-americas{
+      font-size: 70px;
+    }
+    .america-mainImg-container h2{
+      font-size: 80px;
+    }
+  }
+}

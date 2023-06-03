@@ -2366,3 +2366,20 @@ TẠO ANIMATION LÀM MỞ TỪ TỪ OVERLAY CỦA GALLERY TỪ TRÊN XUỐNG DƯ
   margin-bottom: 8px;
   text-transform: uppercase;
 }
+.right-container-home {
+  display: block;
+}
+
+#rSection-slider {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .right-container-home {
+    display: none;
+  }
+
+  #rSection-slider {
+    display: block;
+  }
+}
