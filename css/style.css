@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500;800&display=swap");
 
-/* CSS cho sticky navbar */
+/* css cho sticky navbar */
 .sticky {
   position: fixed;
-  top: -100px; /* Đảm bảo navbar ẩn đi ban đầu */
+  top: -100px; /* đảm bảo navbar ẩn đi ban đầu */
   width: 100%;
   transition: top 0.3s ease-in-out;
   z-index: 999;
@@ -23,7 +23,7 @@
   margin: 0 auto;
 }
 .show {
-  top: 0; /* Hiển thị navbar */
+  top: 0; /* hiện navbar ra khi thêm class này vào */
 }
 .navbar__sticky {
   position: absolute;

@@ -82,6 +82,7 @@
       <div class="navbar-border__bot"></div>
     </nav>
 
+    <!--3 cai anh o dau`-->
     <div class="big__gallery-container">
       <div class="gallery-container">
         <div class="gallery">
@@ -330,8 +331,6 @@
       </div>
     </div>
 
-    
-
     <!-- ================== VIDEO BÊN DƯỚI HEHE ======================= -->
     <section id="video-banner">
       <div class="video__homePage--container" style="min-height: 200px">
@@ -468,13 +467,14 @@
                 >Những bờ biển đẹp nhất Châu Á
               </a>
               <p class="time-date__stories-card-text">Tháng 6, 2023</p>
-              
-            </div><p class="description__stories-card-text">
-                Có vô số các bãi biển tuyệt đẹp trên thế giới. Tuy nhiên, khi nói đến bãi biển đẹp, Châu Á cũng không thua kém.
-                Một trong số đó là bãi biển tuyệt đẹp trên quần đảo Perhentian ở
-                Malaysia, nơi bạn có thể tận hưởng cát trắng mịn màng, nước biển
-                trong xanh và không khí trong lành của rừng nhiệt đới.
-              </p>
+            </div>
+            <p class="description__stories-card-text">
+              Có vô số các bãi biển tuyệt đẹp trên thế giới. Tuy nhiên, khi nói
+              đến bãi biển đẹp, Châu Á cũng không thua kém. Một trong số đó là
+              bãi biển tuyệt đẹp trên quần đảo Perhentian ở Malaysia, nơi bạn có
+              thể tận hưởng cát trắng mịn màng, nước biển trong xanh và không
+              khí trong lành của rừng nhiệt đới.
+            </p>
           </div>
         </div>
         <div class="right__stories__card-container">
@@ -624,7 +624,6 @@
       includeHTML();
     </script>
 
-    
     <!-- Script của FontAwesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 
@@ -678,98 +677,97 @@ KHI MÀ XEM WEB TRÊN MOBILE THÌ NÓ SẼ CHUYỂN THÀNH CÁI SLIDER ;(((( -->
           behavior: "smooth",
         });
       }
-      
-$("#rSection-slider").slick({
-  centerMode: true,
-  centerPadding: "30px",
-  slidesToShow: 1,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
+
+      $("#rSection-slider").slick({
         centerMode: true,
-        centerPadding: "40px",
+        centerPadding: "30px",
         slidesToShow: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 1,
+            },
+          },
+        ],
         arrows: false,
-        centerMode: true,
-        centerPadding: "40px",
-        slidesToShow: 1,
-      },
-    },
-  ],
-  arrows: false,
-});
+      });
 
+      /* stories slider, left stories*/
+      $(document).ready(function () {
+        var windowWidth = $(window).width();
+        var slideToShowNumber = 2;
+        var slideScrollNumber = 2;
 
-/* stories slider, left stories*/
-$(document).ready(function () {
-  var windowWidth = $(window).width();
-  var slideToShowNumber = 2;
-  var slideScrollNumber = 2;
+        if (windowWidth < 600) {
+          slideToShowNumber = 1;
+          slideScrollNumber = 1;
+        }
+        $("#stories-slider").slick({
+          lazyLoad: "ondemand",
+          infinite: true,
+          slidesToShow: slideScrollNumber,
+          slidesToScroll: slideToShowNumber,
+          prevArrow:
+            "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+          nextArrow:
+            "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+        });
+        updateSlider();
 
-  if (windowWidth < 600) {
-    slideToShowNumber = 1;
-    slideScrollNumber = 1;
-  }
-  $("#stories-slider").slick({
-    lazyLoad: "ondemand",
-    infinite: true,
-    slidesToShow: slideScrollNumber,
-    slidesToScroll: slideToShowNumber,
-    prevArrow:
-      "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-    nextArrow:
-      "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
-  });
-  updateSlider();
+        $(window).on("resize", function () {
+          var newWindowWidth = $(window).width();
+          if (newWindowWidth !== windowWidth) {
+            windowWidth = newWindowWidth;
+            updateSlider();
+          }
+        });
+      });
+      $(document).ready(function () {
+        var slideToShowNumber = 2;
+        var slideScrollNumber = 2;
 
-  $(window).on("resize", function () {
-    var newWindowWidth = $(window).width();
-    if (newWindowWidth !== windowWidth) {
-      windowWidth = newWindowWidth;
-      updateSlider();
-    }
-  });
-});
-$(document).ready(function () {
-  var slideToShowNumber = 2;
-  var slideScrollNumber = 2;
+        function updateSlider() {
+          var windowWidth = $(window).width();
 
-  function updateSlider() {
-    var windowWidth = $(window).width();
+          if (windowWidth < 600) {
+            slideToShowNumber = 1;
+            slideScrollNumber = 1;
+          } else {
+            slideToShowNumber = 2;
+            slideScrollNumber = 2;
+          }
 
-    if (windowWidth < 600) {
-      slideToShowNumber = 1;
-      slideScrollNumber = 1;
-    } else {
-      slideToShowNumber = 2;
-      slideScrollNumber = 2;
-    }
+          $("#stories-slider").slick({
+            lazyLoad: "ondemand",
+            infinite: true,
+            slidesToShow: slideToShowNumber,
+            slidesToScroll: slideScrollNumber,
+            prevArrow:
+              "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+            nextArrow:
+              "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+          });
+        }
 
-    $("#stories-slider").slick({
-      lazyLoad: "ondemand",
-      infinite: true,
-      slidesToShow: slideToShowNumber,
-      slidesToScroll: slideScrollNumber,
-      prevArrow:
-        "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-      nextArrow:
-        "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
-    });
-  }
+        updateSlider();
 
-  updateSlider();
-
-  $(window).on("resize", function () {
-    updateSlider();
-  });
-});
+        $(window).on("resize", function () {
+          updateSlider();
+        });
+      });
     </script>
     <script src="./js/scripts.js"></script>
   </body>
